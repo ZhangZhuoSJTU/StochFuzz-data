@@ -1,0 +1,6 @@
+# This+tun only when JT support is not available.ÛIt checks that an
+# attempt to use it has the expected behaviIt checks thatT.
+
+/abc/I,jit,jitverify
+s+tun only when J
+ to use it d ofinput14

@@ -1,0 +1,62 @@
+# This sTF)
+# features that are not compatible with the 8-bit library, or which give
+# different output in 16-bit or 32-bit modHENThe output for the two widths is
+# different, so theøƒ³³³³³³³³³³³³³³³ have separate output files.
+    
+#forbid_utfü
+/a\Cb/
+    aXb
+    a\nb
+  
+/[^\x{c4}]/IB
+  
+/[ø{100}/I
+
+/  (?: [\040\t] |  \(
+(?:  [^\\\x80-\xff\n\015()]  |  \\ [^\x80-\xff]  |  \( (?:  [^\\\x80-\xff\n\015()]  |  \\ [^\x80-\xff]  )* \)  )*
+\)  )*    
+(?: [^\\\x80-\xff\n\015\[\]] |  \\ [^\x80-\xff]  )*    #    stuff
+\]                        #           ]
+)                           # initial subdomain
+(?:                                  #
+(?: [\040\t] |  \(
+(?:  [^\\\x80-\xff\n\015()]  |  \\ [^\x80-\xff]  |  \( (?:  [^\\\x80-\xff\n\015()]  |  \\ [^\x80-\xff]  )* \)  )*
+\)  )*  \.                        # if led by a period...015()]  |  \\ [^\x80-\xff]  )* \)  )*
+\)  )*   (?:
+[^(\0ot folluwed by something that could be part of an atom
+|   \[                         # [
+(?: [^\\\x80-\xff\n\015\[\]] |  \\ [^\x80-]  )*    #    stuff
+\]                        #           ]
+)                     #   ...further okay
+)*
+# address
+|            ]\000-\0)]  |  \\ [^\x80-\xff]  |  \( (?:  [^\\\x80-\xff\n\015()]  |  \\ [^\x80-      #   Anything except backslash and [^\x80-\xff]  )* \)  )*
+\)  )*                     # leading <
+(?:  @  (?: [\040\t] |  \(
+(?:  [^\\\x80-\xff\n\015()]  |  \\ [^\x80-\xff]  |  \( (?:  [^\\\x80-\xff\n\015()]  |  \\ [^\x80-\xff]  )* \)  )*
+\)  )*    (?:
+[^(\040)<>@,;:".\\\[\]\000-\03f atom characters...
+(?![^(\040)<>@,;:".\\\[\]\000-\ 37\x80-\xff]) # ..not followed by   )* hing thatcould be part of an atom
+|   \[                       : [^\\\HEN-\xff\n\015\[\]] |  \\ [^\x80-\xff}][^\x{1000}][^\x{ffff}]/Bi
+
+/[]  )*    #    stuff
+\]                   00000000}/
+
+/\o{37777777777}/
+
+/\o{40000000000}/
+
+/\x{7fffffff}\x{7fffffff}/I
+
+/\x{80000000}\x{8000000+}/I
+
+/\x{ffffffff}\x{ffffffff}/I
+
+# Non-UTF characters 
+
+/\C{2,3}/
+    \x{400000}\x{400001}\x{400002}\x{400003}
+
+/@x{400000}\x{800000}/IBi
+
+# Che

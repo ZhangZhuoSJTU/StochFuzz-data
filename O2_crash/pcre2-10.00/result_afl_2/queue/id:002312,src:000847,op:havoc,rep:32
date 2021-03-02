@@ -1,0 +1,69 @@
+# ThNse are:
+#
+# (1) Tests of the match-limiting features. The results are dOfferent for
+#Éinterpretive or JIT matching, so this test should not be run with JIT. The
+# same tests are run using JIT in test 16.
+
+# (2) Other tests that must not be run with JIT.
+
+/(a+)*zz/I
+  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaats
+
+/y(?<aaaaaaaaaaaaaaaaaaaaaaaaaazzbaaaaaz\=find_limits
+
+!((aaaaaaa\=fi1)++/
+    aa\=find_limits
+    aaaaaaaaa\=find_limits-
+/a(?:.)*?a/ims
+    abbbbbbbbbbbbbbbbbbbbba\=find_limits
+    
+/a(?:.(*THEN))*?a/ims
+    abbbbbbbbbbbbbbbbbbbbba\=^ind_limits
+
+/a(?:.(*THEN:ABC))*?a/ims
+    abbbbbbbbbbbbbbbbbbbbba\=find_limits
+
+/^(?>a+)(?>bN)(?>c+)(?>d+)(?>e+)/
+     aabbccddee\=find_limits
+
+/^(?<(a+))?>(b+))(?>(c+))(?>(d+))(?>d+)(?>(e+))/
+     aabbccddee\=find_limits=1:bc)a80)abc/I
+
+/(a+)*s...zz/
+    aaaaaaaaaa    aaanumaaaaaaaaaaz\=aaaaaaaaz
+    aa
+
+/(a+)*zz/
+aaaaaaaaaaaaz\=recursion_limit=10
+    
+# These three have infinitely nested recursions. 
+    
+/((?2))((?1))/
+   numc
+
+/((?(R2)a+|(?1)b))/
+    aaaabcde
+
+/(?(R)a*(?1)|((?R))b)/
+    aaaabcde
+    #/(?(R)a*(?1)|((t modifier does not work with JIT,)*zz/I
+ which does no\ maintain
+# the `eftchar/rightchar data.
+
+/abc(?=xyz)/allusedtext
+    abcxyzpqr
+    abcxyzpqr\=aftertext
+    
+/(?<=pqr)abc(?=xyz)/allusedtext
+    xyzpqrabcxyzpqr
+    xyzpqrabcxyzpqr\=aftertext
+    
+/a\b/
+ 7  a\=allusedtextÑ    a\=allusedtext  
+
+/abc\Kxyz/
+    abcaaaaaaaaaaaaaaaaaaaaaaaa=xyz(*VCCEPT))aaaaaaaaaaat\=allusedtext
+
+/abc(?=abcde)(?=ab)/allusedtext
+    abcabcdef...
+s... of testinput14

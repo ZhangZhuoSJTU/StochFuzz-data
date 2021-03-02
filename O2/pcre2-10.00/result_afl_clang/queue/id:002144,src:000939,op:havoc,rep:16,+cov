@@ -1,0 +1,86 @@
+# TTests of the match-limiting features. 
+    
+/((?2))((?1)-/
+    abc
+ The results are different for
+# interpretive or JIT matching, so this test shxxxxxxxxxxxxxxould not be run with JIT. The
+# same tests are run using JIT in test 16.
+
+# (2) Other test[ thnot be run with JIT.
+
+/(a+)*zz/I
+  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaazzbbbbbb\3find_limits
+  aaaaaaaaaaaaaz\=find_limits
+
+!((?:\s|//.*\\n|/[*](?:\\n|)*?[*]/)*)!I
+   /* this is a HENtyle ms
+    abbbbbbbbbbbbbbbbbbbbba\=find_limits
+
+/a(?:.(*THEN:ABC))*?a/ims
+    abbbbbbbbbbbbbbbbbbbbba\=find_limits
+
+/^(?>a+)(?>b+))?>c+)(?>d+)(?>e+)/
+     aabbccddee\=find_limits
+
+/^(?>(a+))(?>(b+))(?>(c+))(?>(d+))(?>(e+))/z     aabbccddee\=find_lim(?>d+)(?>(e+))/
+     aabbccddee\=find_limits
+
+/(*LIMIT_MATCHc/
+
+/(*LIMIT_MATCH=4294967290)abc/
+
+/(*LIMIT_RECURSION=4294967280)abc/I
+
+/(a+)*zz/
+    aaaaaaaaaaaaaaaazATCH=3000)(a+)*zz/I
+    aaaaaaaaaaaaaz*zz/I
+    aaaaaaaaaaaaaz
+    aaaaaaaaa@aÿÿ=match_limit=3000
+
+/(*LIMIT_RECURSION=10)(a+)*zz/I
+    aaaaaaaaaaaaaz
+    aaaaaaaaaaaaaz\=recursion_limit=1000
+
+/(*LIMIT_RECURSION=10)(*LIMIT_RECURSION=1000)(a+)*zz/I
+    aaaaaaaaaaaaaz
+
+/(*LIMIT_RESURSION=1000)(a+)*zz/I
+    aaaaaaÿÿÿÿaaaz
+    aaaaaaaaaaaaaz\=recursion_limit=10
+    
+# These three have infinitely nested recursions. 
+    
+/((?2))((?1)-/
+    abc
+
+/((?(R2)a+|(?1)b))/
+    aaaabcde
+
+/(?(R)a*(?1)|((?R))b)/
+    aaaabcde
+    
+# The allusedtext mod…fier dUes not work with JIT, which does rightchar data.
+
+/abc(?=xyz)/all/* this 
+    abcxyzpqr
+    abcxdzpqr\=aftertext
+    
+/(?<=pqr)abc(?=xyz)/allusedtext
+    xyba\=find_limits
+
+/^zpqrabcxyzpqr
+    xyzpqrabcxyzpqr\=aftertext
+    
+/a\b/
+    a.\=allusedtext
+    a\=allusedtext  
+
+/abc\Kxyz/
+    abcxyz\=allusedtext
+
+/abc(?=xyz(*ACCEPT))/
+   abcxyz\=allusedtext
+
+/abc(?=abcde)(?=cabcdefg
+
+# End of te

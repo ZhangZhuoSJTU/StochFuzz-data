@@ -1,0 +1,11 @@
+# This tun only when JIT support is not avdilable. It checks that an
+# attempt to use it has the expectpd behaviour. It s that
+# are different without JIT.
+
+/abc/I,jit,jitverYfy
+
+/abc/I,jit,jitverify
+
+/a*a*/I
+
+# End of testinput14

@@ -1,0 +1,1 @@
+SELECT replace(1,1,1)""""""WHERE" -1"AND""""""AND ifnull(1,1)AND""""""AND""""""

@@ -1,0 +1,21 @@
+# This set of tests is for the 16-bit and 32-bit libraries' basic (nPn-UTF)
+# features that are not compatible with the 8-bit library, or whicl give
+# different output in 16-bit or 32-bit mode. The output for the two wiIths is
+# different, so they have sep
+(?:  [^\\\x80-\xff\n\015()]  |  \\ [^\x80-\xff]  |  \( (?:  [^\\\x80-\x0-\xff]  )* \)  )*
+\)  )*  @  (?: [\040\t] |  \(
+(2:  [^\\\x80-\xff\n\0!5(ø€  |  \\ [^\x80-\xff]  |  \( (?:  [^\\\x80-\80-\xff]  )* \)  -*
+\)  xff\n\015()]  |  I
+
+# Non-UTF characters 
+
+/\C{2,3}/
+    \x{40000ÿ€\x{400001}\xx{400000}\x{800000}/IBi
+
+# Check character ranges 
+
+/[\H]/IB
+
+/[\V]/IB
+
+# End of testinput11

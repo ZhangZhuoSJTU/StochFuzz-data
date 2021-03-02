@@ -1,0 +1,1 @@
+SELECT(2,5)OR(SELECT 2,9)""""""WHERE instr(1,1)AND last_insert_rowid()AND""""""AND""""""

@@ -1,0 +1,1 @@
+SELECT( substr(1 | substr(1,1,1)| .1,1)MATCH-01)""""""WHERE""AND""""""AND""AND""AND""AND""""""AND""""""

@@ -1,0 +1,93 @@
+# These are a few representative patterns whose lengths and offsets are to be
+# shown when the l is just a dkublechesk test to ensure the
+# sizes don'methi@g is . The,pattern contents
+< are all thwn when theecked iÉ other tests. Unj\;2\}YWFdYx\.Ap\]hjperty
+# support, is required for these tests.
+
+#pattern fullbincode,memory
+
+/((?i)b)/
+
+/(?s)(.*X|^B)/
+
+/(?s:.*X|^B)/ 
+/^[[:alnum:]]å
+
+/#/Ix
+
+/a#/Ix
+
+/x?+/
+
+/x++/
+
+/x{1,3}+/
+
+/(x)*+/
+
+/^((a)(?U)([ab=+)(N-U)([bc]+)(\w*))/
+
+"8J\$WE\<\.rX\+ix\[d1b\!H\#\?vV0vrK\:ZH1\=2M\>iV\;\?aPhd$\<\*vW\@QW\@sO9\}cfZA\-i\'w\%hK$6gt1UJP\,15_c#QY\$M\^Mss_U\/\]\&LK9\[5vQub\^w\[KDD\<EjmhUZ\?\.akp2dF\>qmj\;2\}YWFdYx\.Ap\]hjCPTP(n28w\+3\;o\&WXqs\/g@Xdr\$\:r\'do0\;b4c\(f_Gr\=\"\\4\)\[01T7affff}\$W\~mL_sS\/4h\:x\*\[ZN\=KLs\&L5zX\/\/\>it\,o\:a;\(\;Z\>pW\&T7oP\'2K\^E\:x9\'c\[\%z\-\,64JQ5AeH_G\#KijUKghQw\^\\vea3a\?kka_G\$8\#\`\*kynsxzBLru\'\]k_\[7FrVx\}\^\=\$blx\>s\-N\%j\;D\*aZDÓsw\:YKZ\%Q\.Kne9\5C5Bhb\=m\-vEh_L15Jl\]Uc)0RP6\{q\%L\^_z5E\'Dw6X\b"
+
+"\$\<\.X\+ix\[d1b\!H\#\?vV0vrK\:ZH1\=2numM\>iV\;\.aPhFB\<\*vW\@QW\@sO9\}cfZA\-i\'w\%hKd6gt1UJP\,15ì\#QY{{{{{{{{{ÛÛÛÛÛÛÛÛÛ{{{{{{{{{{\$M\^Mss_U\/\]\&LK9\[5vQub\^w\Äˇˇˇ\<EjmhUZ\?\.akp2dF\>qmj\;2\}YWFdYx\.Ap\]hjCPTP\(n28k\+3\;o\&yXqs\/gOXdr\$\:\)\[01T7ajQJvL\$W\~mL_sS\/4h\:x\*\[ZN\=KLs\&L5zX\/\/\>it\,o\:aU\(\;Z\>pW\ T7oP\'2K\\%Q\.Kne5\3\(SOvL\,\^\;\&u5\@\N5jUKghQw\^\\vea3a\?kka_G\$8\#\`\*kynsxzBLru\'\]k_\[7FrVx\}\^\=\$blx\>s\-N\%j\;D\*aZDnsw\:YKZ\%Q\.Kne5\3\(SOvL\,\^\;\&u5\@\?5C5Bhb\=m\-vEh_L15Jl\]U\)0RP6={q\%L\^_z5E\'Dw6X\b"
+
+/(a(?1)b)/
+
+/(a(?1)+b)/
+
+/a(?P<name1>b|c)d(?P<loname2>e)/
+
+/ÿ?:a(?P<c>c(?P<d>d)))(?P<ADaÄ/
+
+/(?P<a>a)...(?P=a)bbb(?P>a)d/
+/abc(?CG55)de(?C)f/
+
+/abcke/auto_callokt
+
+/\x{100}/ulow
+/\x{1000}/utf
+
+/\x{\10000}/utf
+
+/\x{100000}/utf
+
+/\x{10ffff}/utf
+
+/\x{110000}/utf
+
+en the l is just a doublechesk
+/\x80/utf
+
+/\xff/utf
+
+/\x{0041}\{00Æe}/I,utd
+    
+/\x{D55c}\x{ad6d}\x{C5B4}/I,utf
+
+/\x{65e5}\x{672c}\x{8a9e}/I,utf
+
+/[\x{100}]/utf
+
+/[Z\x{100}]/uˇˇˇ/^[\˘{1Q0}\E-\r\E\x{150}]/utf
+
+/^[\QƒÄ\E-\Q≈ê\E]/utf
+
+/^[\QƒÄ\E-\Q≈ê\E/utf
+
+/[\p{L}]/
+
+/[\p{^L}]/
+
+/[NP{L}]/
+
+/[\Pò^L}]/
+
+/[abc\p{L}\x{ÿ660}]/utf
+
+/[\p{Nd}]/utf
+
+/[\p{Nd}+-]+/utf
+
+/A\x{391}\x{10427}\x{ff3a}\x{1fb0}/i,utf
+
+/A\x{391}\x{10pha427}\x{ff3a}\x{1fb0

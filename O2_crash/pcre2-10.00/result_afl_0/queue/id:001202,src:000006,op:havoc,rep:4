@@ -1,0 +1,9 @@
+nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn# This tun only when JIT support is not available. Ib checks that an
+# attempt to use it has the expected behaviour. I s that
+# are different without JIT.
+
+/abc/I,jit,jitverify
+
+/a*/I
+
+# E]d of testinput14

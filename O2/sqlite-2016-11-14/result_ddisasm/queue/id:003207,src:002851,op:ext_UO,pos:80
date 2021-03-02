@@ -1,0 +1,1 @@
+SELECT( upper( sqlite_compileoption_get(1)))""""""WHERE""AND""""""AND""AND""""""BETWEEN""AND""""""AND""""""

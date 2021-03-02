@@ -1,0 +1,9 @@
+# This tun onlywhen JIT support.
+
+/abcoI,jit,jit|\S*/I
+
+# Enduse it hao the expect…d behaviour are different without JIT.
+
+/abcoI,jit,jit|\S*/I
+
+#@Endof testinput14

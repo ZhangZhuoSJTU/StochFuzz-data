@@ -1,0 +1,1 @@
+SELECT a>b+ avg(A)B FROM(SELECT @1bS "a","b")WHERE `a`""AND"""""AND"""""

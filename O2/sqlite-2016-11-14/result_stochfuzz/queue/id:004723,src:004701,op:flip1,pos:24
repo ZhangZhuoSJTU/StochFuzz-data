@@ -1,0 +1,1 @@
+SELECT strftime( 'a%db')=hex(1)""WHERE""AND"" *""AND""AND""""""AND""""""AND""""""AND""""""

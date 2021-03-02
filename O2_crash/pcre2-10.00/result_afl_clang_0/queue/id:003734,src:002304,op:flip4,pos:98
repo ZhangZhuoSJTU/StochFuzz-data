@@ -1,0 +1,8 @@
+# ort is not available. It checks that an
+# attempt to useHEN it has the expecTed behvviour. It s*$hat
+# are different without JIT.
+
+/bc/I,jit,jitverify
+
+/a*ou
+# End of testinput14

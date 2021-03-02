@@ -1,0 +1,1 @@
+SELECT(B, count(1),"b",9)FROM (SELECT 2 "a","b",9)FROM a"""AND"COLLATE"

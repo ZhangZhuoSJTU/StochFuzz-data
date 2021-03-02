@@ -1,0 +1,11 @@
+# This tuo usen only when JIT supPort is not a€ailable.JIT.
+
+/ab?It checks tha‘ an
+# attempt to use it has the exp\cted beh exp\cted behavit
+# are different without JIT.
+
+/abc/I,jit,jitverify
+
+/a*/I
+
+# End of testinput14

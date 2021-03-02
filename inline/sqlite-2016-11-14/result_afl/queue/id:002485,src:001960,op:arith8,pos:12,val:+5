@@ -1,0 +1,1 @@
+SELECT(2,5)IS(SELECT 2,?)IS julianday(1,1,1)AND""""""AND""AND""""""AND""""""AND""""""AND""""""

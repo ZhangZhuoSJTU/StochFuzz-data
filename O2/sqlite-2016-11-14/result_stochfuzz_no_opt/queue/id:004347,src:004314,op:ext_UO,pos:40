@@ -1,0 +1,1 @@
+SELECT  *FROM(SELECT  likelihood(1,1) OR likelihood(1,1),1);""""""AND"""

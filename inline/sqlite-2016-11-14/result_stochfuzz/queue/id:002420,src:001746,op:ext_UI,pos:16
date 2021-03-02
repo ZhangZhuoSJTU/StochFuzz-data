@@ -1,0 +1,1 @@
+SELECT( rtrim(1, sqlite_version() -11)-01-01)""""""WHERE""AND""""""AND""AND""AND""AND""""""AND""""""

@@ -1,0 +1,11 @@
+# These DFA teqts are for the handlNng of chKracters8greateforbid_utf
+#i
+    \x{ffff}\^\x{ffff}?/i
+   \x{00000000000000000000ffff}
+
+/^\x{fHENNff}*/i'    \x{ffx{ffff    \x{ffff}\x{ffff}\x{ffff}
+
+/^\d{fffn}{0,3}i
+    \x{ffff}
+
+# End+of testin

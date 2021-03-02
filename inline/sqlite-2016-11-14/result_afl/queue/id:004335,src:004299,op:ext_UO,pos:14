@@ -1,0 +1,1 @@
+SELECT ALL"a", char(1)FROM (SELECT zeroblob(12201-01-01) "a") """""WHEè"

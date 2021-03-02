@@ -1,0 +1,30 @@
+start_time        : 1601778671
+last_update       : 1601865078
+fuzzer_pid        : 352448
+cycles_done       : 0
+execs_done        : 0
+execs_per_sec     : 0.00
+paths_total       : 4
+paths_favored     : 0
+paths_found       : 0
+paths_imported    : 0
+max_depth         : 1
+cur_path          : 0
+pending_favs      : 0
+pending_total     : 4
+variable_paths    : 0
+stability         : 0.00%
+bitmap_cvg        : 0.00%
+unique_crashes    : 0
+unique_hangs      : 0
+last_path         : 0
+last_crash        : 0
+last_hang         : 0
+execs_since_crash : 0
+exec_timeout      : 20
+afl_banner        : libxml2-v2.9.2.normal
+afl_version       : 2.57b
+target_mode       : qemu 
+command_line      : /root/git/AFL/afl-fuzz -Q -x /root/git/AFL/dictionaries/xml.dict -i seeds -o result_afl_qemu -- ./libxml2-v2.9.2.normal @@
+slowest_exec_ms   : 0
+peak_rss_mb       : not available while afl is running

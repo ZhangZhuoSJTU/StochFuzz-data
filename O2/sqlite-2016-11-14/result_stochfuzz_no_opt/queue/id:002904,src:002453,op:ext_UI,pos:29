@@ -1,0 +1,1 @@
+SELECT(2,5)IN(SELECT 2,9)GLOB quote(1)""WHERE""AND""LIKE""ESCAPE""AND""AND""LIKE""""AND""""""AND""""""AND""""""

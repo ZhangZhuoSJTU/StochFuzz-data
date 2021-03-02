@@ -1,0 +1,1 @@
+SELECT(2,5)IS(SELECT 2,9) glob(1&1)""""""WHERE""AND""""""AND""AND""""""AND""""""AND""""""AND""""""

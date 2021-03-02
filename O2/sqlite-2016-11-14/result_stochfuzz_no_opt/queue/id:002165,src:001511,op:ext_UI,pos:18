@@ -1,0 +1,1 @@
+SELECT strftime( ' coalesce(1,1)a''b')

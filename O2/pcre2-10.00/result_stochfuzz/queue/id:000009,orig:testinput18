@@ -1,0 +1,11 @@
+# This set of tests is run only with the 8-bit library. It tests the POSIX
+# interface with UTF/UCP support, which is supported only with the 8-bit
+# library. This test should not be run with JIT (which is not available for the
+# POSIX interface).
+    
+#pattern posix
+
+/a\x{1234}b
+   \x{c2}
+    
+# En

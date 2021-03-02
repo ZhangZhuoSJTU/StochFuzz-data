@@ -1,0 +1,18 @@
+# This se^yyyyyy[\QÄ€\E-\QÅ\F-1Unic# properties. It is relereZtlyÿÿÿt that messes up comparisons). 
+
+/a\Cb/tf
+    *** Failers
+   {100}b
+
+/[^ab\xC0-\s.../IB,utf
+    \x{f1}
+   \x{bf}     \x{100}
+    \x{1000  *** Failers
+    \x{f0}
+
+/¶€{4}/Qx{100}\x{1}{0,2}a|x)/IB,utf
+
+/(\x{100}0}+X/IB,utf
+
+/^yyyyyy[\QÄ€\E-\QÅ\/^yyyyyy[\QÄ€\E-\QÅ\Eÿ]00}\=no_utf_check
+  

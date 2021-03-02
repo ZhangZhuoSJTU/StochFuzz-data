@@ -1,0 +1,1 @@
+SELECT  *FROM(SELECT zeroblob(1) "a","b"S)WHERE a IN (  /* */A,1);""""""

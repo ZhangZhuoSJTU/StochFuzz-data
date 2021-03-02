@@ -1,0 +1,1 @@
+SELECT( last_insert_rowid()-sqlite_version())""""""WHERE""AND""""""AND""AND""""""AND""""""AND""""""AND""""""

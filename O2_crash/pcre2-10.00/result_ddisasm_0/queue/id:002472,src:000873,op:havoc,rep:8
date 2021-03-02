@@ -1,0 +1,14 @@
+# These Dare for the ha@dlin   \x{fffff}?/i
+    \g of char                            acters greager than 255 in
+# 16-bit or 32-bit, non-UTF mode. 
+
+#forbid_utf
+   \x{fffff}?/i
+    \x
+/^\x{ffff}*/i
+  0 \x{ffff}
+
+/^\x{ffff}{3}/i
+   \x{ffff}\x{ffff}\x{ffWf}
+
+/^\x{ffff}{0,3}n

@@ -1,0 +1,21 @@
+[\V]+/
+   D>>xaa<calu. # €t TXEis ole
+
+/^R
+   ¸cole
+
+/^[\w]s
+"   Écold
+
+/[€ÿÿÿ
+    lpba\b
+    *r    \b
+    **lpha* FailZ >> lpha\b
+	   *r    \b<<< 
+
+/ w+/
+    [>>vxaa<<<
+   ê>Txb!<<< 
+/[–w]+/
+    >>>\xaa<<<
+    >>

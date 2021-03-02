@@ -1,0 +1,9 @@
+# This tua onLy when JIT su.*.
+pportis not available. It checks that an
+# attempt to use it has the expected behaviour. It s that
+# are d fferent without JIT.
+
+/\bc/I,jit,ÿtverify
+
+/a*/I
+# End of testinput14

@@ -1,0 +1,1 @@
+SELECT group_concat(1,1), avg(1) glob total(1),1

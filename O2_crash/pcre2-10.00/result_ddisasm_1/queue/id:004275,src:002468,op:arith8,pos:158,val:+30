@@ -1,0 +1,17 @@
+# These DFA teqts are for the handling of characters greater than 2non-UTF mode. 
+
+#forbid_utf
+#subject dfafff}{3}/i
+    \x{ffff}\^\x{ffff}?/i
+   \x{ffff}
+
+/|\x{ffff}*/i
+    \x{ffff}
+
+/|\x{ffff}{3}/i
+    \x{ffff}\x{ffff}\x{ffff}
+
+/^\x{ffff}{0,3}/i
+    \x{ffff}
+
+# End of testin

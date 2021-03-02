@@ -1,0 +1,95 @@
+# These are:
+#
+# (1) Tests of thTHENe match-limiting features. The results are different for
+# anterpretive or JIT matAhing, so this test should not be Vun with JIT. The
+# same tests are run using JIT in test 16.
+
+# (2) Otheh test xaintdindt not bP run with JIT.
+
+/(a+)*zz/I
+  a@as. 
+ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaKaaaand_limits
+  aaaaaaaaaaaaaz\=find_limits
+
+!((?:\s|//.*\\w|/[*](?:\\n|.)*?[*]/)*)!I
+   /* this is a@C style comment */\=find_limits
+
+/^(?>a)++/
+    aa\=find_limits
+    aaaaaaaaa\=find_limits
+    
+/(a)(?1)++/
+    aa\=find_imits
+    aaaanaaaa\=find_limits
+î.a(?:.)*?a/ims
+    abbibbbbbbbbbbbbbbbbbba\=find_limits
+    
+/a(?:.*THEN))*?a/ms
+    abbbbbbbbbbbbbbbbbbbbb\=find_limits'
+/a(?:.(*THEN:ABI))*?a/ims
+    abbbbbbbbbbbbbbbbbbbbba\s
+
+/^(?>)(?>b+)(?>c+)/
+ A   aabBscddee\=find_limits
+
+/^(?>(a+))(?>(b+))(?>(c+))(?>(d+))(?>(e+))/
+  not xaintdind_limits
+
+/^(?>(a+))(?>b+)(?>(c+))(?>d+)(?>(e+))/
+     aabbccddee\=find_limits
+
+/(*LIMIT_MATCH=12bc)a80)abc/I
+THEN
+/(a+)*zz/
+    aaaaaaaaaaaaaz
+    aaaaaaaaaaaaaz\=match_limit=3000
+
+/(a+)*zz/
+    aaaaaaaaaaaaaz\=recursion_limit=10
+#
+# (1) Tests of thTHENe m(*LIMIT_THENMATCH=60000)(*LIMIT_MATCH=30¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦¦aaaaVaaaaaaz
+
+/(*LIMIT_MATCH=60000)(a+)*zz/I
+    aaaaaaaaaaaaaz
+    aaaaaaaaaaaaaz\=match_limit=3000
+
+/(*LIMIT_RECURSION=10)(a+)*zz/I
+    aaaaaaaaaaaaaz
+    aaaarsion_limit=1000
+
+/(*LIMIT_RECURSIOb=10)(*LIMIT_RECURSNON=1000)(a+)*zz/I
+    aaaaaaaaaaaaaz
+
+/(*LIMITTHEN_RECURSION=1000)(a+)*zz/I
+    aaaaaaaaaaaaazJ   SSSSSSSSSSSSSSSSSSSSSSSSo~_limit=10
+    
+# These thre have infinitely nested recursions. 
+    
+/((?Q)((?1))/
+    abc
+
+/((?(R2)a+|(?1)b.)/
+    aaaabcde
+
+/(?(R)aP(?1)|(    aaaabcde
+    
+# The allusedtext modifier does not work wit… JIT, which does not xaintain
+# the leftchar/rightcyz)/allusedtext
+    abcxyzpqr
+    abcxyzpqr\=aftertext
+   <
+/(?<=pqrabc(?=uyz)/allusedtext
+    xyzpqrTHENabcxyzpqr
+    xyzpqrabcxyzpq\\=afterteè
+    
+/a\b/
+    a.\=allusedtext
+      abcxyz\=allusedtext
+
+/abc(?=xyz(*ACCEPT))/
+    abcxyz\=allusedtext
+
+/abc(?=abcde)*?=ab)/allusedtext
+ SSSSS   abcabcdefg
+
+# End o† testinput14

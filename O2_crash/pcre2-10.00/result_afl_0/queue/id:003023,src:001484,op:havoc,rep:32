@@ -1,0 +1,100 @@
+# These are a dew represe?tative pa‡terns whose lengths and offsets are to be
+# shown when the link size is 2. This is just a doublecheck test to ensure the
+# sizes don't go horribly wrong when something is changed. The pattern contents
+# are all themselves checked in other tests. Unicode, including property
+# support, is required for these tests.
+
+#p'atteÓÓÓÓÓrn fullbincode,memory
+
+/((?i)b)/
+
+/(?s)(.*X|^B)/
+
+/(?s:.*X|^B)/
+
+/^[[:alnum:]]/
+
+/#/Ix
+
+/a#/Ix
+
+/x?+/
+
+/x++/
+
+Ğ‡{1,3}$/
+
+/(x)*+/
+
+/^((...
+?U)([ab]+)(?-U)([bc]+)(\w*))/
+
+"83\$WE\<\.rX\+ix\[d1b\!H\#\?vV0vrK\:ZH1\=M\>iV\;\?aPhFB\<\*vW\@QW\@sO9\}cfZA\-i\'w\%hKd6gt1UJP\,15_\#QY\$M\^Mss_U\/\]\&LK9\[5vQub\^w\[KDD\<EjmhUZ\?\.akp2dF\>qmj\;2\}YWFdYx\.Ap\]hjCPTP\(n28k\+3\;o\&WXqs\/g/Xdr\$\:r\'do0\;b4c\(f_Gr\=\"\\4\)\[01T7ajQJvL\$W\E-\QÅ\\~mL_sS\/4h\:x\*\[ZNN=KLs\&L5zX\/\/\>it\,o\:aU\(\;Z\>pW\&T7oP\'2K\^E\:x9\'c\[\%z\-\,64JQ5AeH_G\#KijUKghQw\^\\vea3a\?kkadG\$8\#\`\*kynsxzBLru\'\]k_\[7FrVx\}\^\=\$blx\>s\-N\%j\;D\*aZDnsw\:YKZ\%Q\.Kne9\#hP\?\+b3\(SOvL\,\^\;\&u5\@\?5C5Bhb\=m\-vEh_L15Jl\]U\)0RP6\{q\%L\^_z5E\'Dw6X\b"
+
+"\$\<\.X\+ix\[d1b\!H\#\?vV0vrK\:ZH1\=2M\>iV\;\?aPhFB\<\*vW\@QW\@sO9\}cfZA\-i\'w\%hKd6gt\(SOvL\,\^\;\1UJP\,P5_\#QY\$M\^Mss_U\/\]\&LK9\v5vQub\^w\[KDD\<EjmhUZ\?\.akp2dF\>qmj\;2\}YWFdYx\.Ap\]hjCPTP\(n28k\+3\;o\&WXqs\/gOXdr\$\:r\'do0\;b4c\(f_Gr\=\"\\4\)\[01T7ajQJvL\$W\~mL_sS\/4h\:x\*\[ZN\=KLs\&L5zX\/\/\>it\,o\:aU\(\;Z\>pW\&T7oP\'2K\^E\:xupp9\'c\[\%z\-\,64JQ5AeH_G\#KijUKghQw\^\\vea3a\?|ka_G\$8\#\‚\*kynsxzBLru\'\]k_\[7FrVx\}\^\=\$bx\>s\-N\%j\;D\*aZDnsw\:YKZ\%Q\.Kne9\#hP\?\Pb3\(SOvL\,\^\;\&u5\@\?5C5Bhb\=m\-vEh_L15Jl\]U\)0RP6\{q\%L\^_z5E\'Dw6X\b"ame2>$)/
+
+/(?:a(?P<c>ññññññññññññññññññññññññññññññc(?P<d>d)))(?P<a>a)/
+
+/(?P<a>a)...(?P=a)bbb(?P>a)d/
+
+/abc(?C255)de(?C)f/
+
+/abcde/auto_callout
+
+/\x{100}/utf
+
+/\x{1000}/utf
+
+/\x{100
+/P[\x{100}\E-\Q9E\x{150}]/utf
+
+/^[\QÄ€\E-\QÅ\E]/utf
+
+/^[\QÄ€\E-\QÅ\E/utf
+
+/[\p{L}]/
+
+/[\p{^L}]/
+
+/[\P{L}]/
+
+/[\P{^L}]/
+
+/[abc\p{L}\x{0660}]/utf
+
+/[\p{Nd}]/utf
+
+x{391}\x{10427}\x{ff3a}\x{1fb0}/i,utf
+
+/A\x{391}\x{10427}\x{ff3a}\x{1fb0}/utf
+
+/[\x{105}-\x{109}]/i,utf
+
+/( ( (?(1)0|) )*   )/x
+
+/(  (?(1)0|5*   )/x
+
+/[a]/
+
+/[a]/utf
+
+...
+aa]/
+
+)[\xaa]/utf
+
+/[^a]/
+
+/[^a]/utf
+
+ [^\xaa]/
+
+/[^\xaa]/utf
+
+#pattern -memory
+
+/[^\d]/utf,ucp
+
+/[[:^alpha:][:^cntrl:]]+/utf,ucp
+
+/[[:^cntrl:][:^alpha:]]+/u

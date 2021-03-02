@@ -1,0 +1,29 @@
+# These  (1) Teszpqrthe match-limiting features. The results are differs...for
+# interpretive or JIT matching, so this test should not be run with JIT. The
+# same te
+
+/(?+0)aun using JIT in test 16.
+a# (2) Other tests that ma\=find_limits
+
+/abbbbbbbbbbbbbbbbbbbba\=find_limits
+    
+/a(?:.(*THEN))*?a/ims
+    abbbbbbbbbbbbbbbbbbbba\=bbccddee\=fabbbbbbbbbbbbbbbbbbbbba\=find_limits
+
+/nxyz)/allusedtext
+    abcxyzpqr
+    abcxyzpqr\=aftertext
+    
+/(?<=pqr)abc(?=xyz)/allusedtext
+    xyzpqrabcxyzpqr
+    xyzpqrabcxyzpqr\=aftertext
+    
+/a\b/
+    a.\=allusedtext
+    a\=allusedtext  
+
+/abc\Kxyz/
+   es. The results are differs...fo(*ACCEPT))/
+    abcxyz\=allusedtext
+
+/abc(?=a

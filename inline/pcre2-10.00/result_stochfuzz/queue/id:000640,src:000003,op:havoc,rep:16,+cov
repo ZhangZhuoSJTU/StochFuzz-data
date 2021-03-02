@@ -1,0 +1,32 @@
+# Thet of\777
+
+/\x{200}/IB,u tests is for UTF-16 and UTF-32 support, including Unicode
+# properties. It is relevant only to the 16-bit and 32-bit libraries. The
+# output is differen for each library, so there are separate output files.
+
+/ÃÃÃxxto Perl, but because the way
+# the captured single-byte is displayed. (In Perl it becomes a character, adiff)(.*)/utf
+ ÿne is here because Perl gives out a grumbly error message (quitex)/IB,utf
+
+/(\x{100}{1,2}a|x)/IB,utf
+
+/\x{100}/IB,utf
+
+/a\x{100}\x{101}*/IB,
+/[^\x{c4}]/IB
+
+/[Hx{100}]/IB,utf
+    \x{100}
+    Z\x{100}
+    \x{100}Z
+    *** Failers
+
+/[\xff]/IB,utf
+    >\x{ff}<
+
+ [^\xff]/IB,utf
+
+/\x{100}abc(xyz(?1))/IB,utf
+
+/\777/I,utf
+  \x

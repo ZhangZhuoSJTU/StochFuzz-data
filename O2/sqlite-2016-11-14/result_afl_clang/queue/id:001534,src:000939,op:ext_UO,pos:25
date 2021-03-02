@@ -1,0 +1,1 @@
+SELECT( sqlite_version())GLOB""WHERE""AND sqlite_compileoption_used(1)AND""""""AND""""""

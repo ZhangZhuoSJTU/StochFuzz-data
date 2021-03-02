@@ -1,0 +1,1 @@
+SELECT(SELECT julianday(1, substr(1,9, -11) -1))""""""WHERE""AND""""""AND""AND""""""AND""""""AND""""""AND""""""

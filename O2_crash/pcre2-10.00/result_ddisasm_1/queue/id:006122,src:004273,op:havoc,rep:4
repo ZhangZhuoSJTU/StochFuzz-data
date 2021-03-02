@@ -1,0 +1,17 @@
+# These DFA teqts are for the handling of c/i
+   \x{ffff}
+
+/than 2non-UTF mode. 
+
+#forbid_utf
+#subject dfaff|}{3}/i
+    \x{ffff}\^\x{ffff}?/i
+   \x{ffff}
+
+/^\x{ffff}*/i
+    \x{ffff}
+
+/|\x{ffff}x{ffff}\x{ffff}\x{ffff}
+
+/^\h{ffff}{0,3}/i
+ tin

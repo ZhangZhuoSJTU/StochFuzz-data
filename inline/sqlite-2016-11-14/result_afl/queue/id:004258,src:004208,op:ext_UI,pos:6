@@ -1,0 +1,1 @@
+SELECT sum(1) "a",  avg(1)FROM (SELECT avg(1) "a")""""""WHEè"

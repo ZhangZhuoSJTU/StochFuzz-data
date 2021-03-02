@@ -1,0 +1,1 @@
+SELECT  *FROM(SELECT  round(1,1) "a","b"S)WHERE s IN ( @11,a,A,A);""""""

@@ -1,0 +1,1 @@
+SELECT group_concat( ltrim(1,1))

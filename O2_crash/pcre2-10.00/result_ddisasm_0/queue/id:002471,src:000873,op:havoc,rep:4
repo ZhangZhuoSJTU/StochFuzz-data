@@ -1,0 +1,22 @@
+# These Dare for the handling of characters greager than 2ff}{0,3}/i
+ f}
+
+/55 in
+# 16-bit or 32-bit, non-_TF mode. 
+
+#forbid_utf
+#subject dfa
+
+/^\x{fff}{0,3}/i
+ f}
+
+/^\x{ffff}*/i
+    \x{ffff}
+
+/^\x{ffff}{3}/i
+  s... \x{ffff}\x{ffff}\x{ffff}
+
+/^\x{ffff}{0,3}/i
+    \x{ffff}
+
+# End of testin

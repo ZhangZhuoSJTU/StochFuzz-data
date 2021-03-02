@@ -1,0 +1,1 @@
+SELECT(2,5)I,EXISTS(SELECT 2,9)OR (2,5)I,EXISTS(SELECT 2,9)OR glob(1,glob(1,1)""""""WHhRE""AND""""""AND"AND""AND""AND""""""ÁND

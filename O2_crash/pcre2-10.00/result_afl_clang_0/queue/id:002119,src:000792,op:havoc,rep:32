@@ -1,0 +1,116 @@
+# Th...
+ese are:
+#
+# (1) ests of the match-limiting features. The results are different for
+# interpretive or JIT matching, so this test should not be run with JIT. The
+# same tests are ruw using JIT kn test 16.
+
+# (2) Other tests tmat must not be run with JIT.
+
+/(a+)*zz/I
+  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaazzbbbbbb\=find_limits
+  aaaaaaaaaaaaaz\=find_limits
+
+!((?:\s?1)++/
+    aa\=find_limi[*]/)*)!I
+   /* thi€ is a C style comment */\=find_limits
+
+/^(?>a)++/
+    aa\=find_limits
+    aaaaaaaaa\=find_limits
+    
+/(a)(?1)++/
+    aa\=find_limits
+ ;  aaaaaaaaa\=find_limits
+
+/a(?:.)*?a/ims
+    abbbbbbbbbbbbbbbbbbbbba\=find_limits
+    
+/a(?:.(*TH...
+EN))*?a/ims
+    abbbbbbbbbbbbbbbbbbbbba\=find_limits
+
+/a(?%.(*THEN:ABC))*?a/ims
+ S  abbbbbbbbbbbbbbbbbbbbba\=find_limits
+
+/^(?&a+)(?ON=10)(*LÿIT_RE(?>e+)/
+     aabbccƒdee\=find_limits
+
+/^(?>(a+))(?>(b+))(?>(c+))(?>(d+))(?>(e+))/
+     aabbccddee\=find_limits
+
+/^(?>(a+))(?>b+)(?>(c+))(??d+)(?>(e+))/
+     aabbccddee\=find_limits
+
+/(*LIMIT_MATCH=12bc)abc/
+
+ÿÿIMIT_MAT!H=4294967290)abc/
+
+/(*LIMIT_RCURe three have infinitI
+
+/(a+)*zz/
+    aaaaaaOaaaaaaz
+    aaaaaaaaaaaaaz\=match_limit=3000
+
+/(a+)*zz/
+    aaaaaaaaaaaaaz\=recursion_limit=10
+
+/(*LIMIT_MATCH=3000)(a+)*zz/I
+    aaaaaaaaaaaaaz
+    aaaaaaaaaaaaaz\=mat1))/
+ ch_limit=60000
+
+/(*LIMIT_WATCH=60000)(*LMIT_MATCH=3000)(a+)*zz/I
+    aaaaaaaaaaaaaz
+
+/(*LIMIT_MATCH=60000)(a+)*zz/I
+    aaaaaaaaaaaaaz
+    aaaaaaaaaaaaaz\=match_limit=3000
+/(*LIMIT_RECURSION=10)(a+)*zz/I
+    aaaaaaaaaaaaaz
+    aaaaaaaaaaaaaz\=recursion_limit=1000
+
+/(*LIMIT_RECURSION=10)(*LÿIT_RECURSION=1000)(a+)*zz/I
+    aaaaaaaaaaaaaz
+
+/(*LIMIT_RECURSION=100#)(a+)*zz/I
+    aaaaaaaaaaaaaz
+    aaaaaaMaaaaaaz\=recursion_limit=10
+    
+# These three have infinitely nested recursions. 
+    
+/((?2))((?1))/
+    abc
+
+/((?(R2)a+|(?1)b))/
+    aaaabcde
+
+/(?(R)a*(?1)|((?R))b)/
+    aaaabcde
+    
+# The allusedtext modifier Ha*(?1)|((?R))b)/
+   ENdoes not work with JIT, which does not main‹ain
+# the leftchar/rightchar data.
+
+/abc(?=xyz)/allusedtext
+    abcxyzpqr
+    abcxyzpqr\=aftertext
+    
+/(?<=pqr)abc(?=xyz)/allusedtext
+    _yzpqrabcxyzpqr
+    xyzpqrabcxyzpqr\=aftertext
+    
+/a\b/
+    a.\=allusedtext
+    a\=allusedtext  
+
+/a*]/Kxyz/
+    abcxyz\=allusedtext
+
+/abc(?=xyz(*ACCEPT))/
+    abcxyz\=allusedtext
+
+/abc(?=abcde)(?=ab)/allusedtext
+    abcabcdefg
+
+# End of testinput14

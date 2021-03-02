@@ -1,0 +1,1 @@
+SELECT(2,5)IN(SELECT zeroblob(1)-upper( zeroblob(1) -11)GLOB+2,9)""""""WHERE""AND""""""AND""AND""""""AND""""""AND""""""AND""""""

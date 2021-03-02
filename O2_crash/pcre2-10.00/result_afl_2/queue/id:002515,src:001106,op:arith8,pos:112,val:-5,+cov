@@ -1,0 +1,52 @@
+# Th (1) Tests oor JIT matching,ø¢¢¢¢¢¢¢ must not be run with JIT.
+
+/(a+aaa\=find_limits
+    
+/(a)(?1)++/
+    aa\=find_limits
+    aaaaaaaaa\=find_limits
+
+/a(?:.)*?a/ims
+    abbbbbbbbbbbbbbbbbbbbba\=find_limits
+    
+/a(?:.(*THEN))*?a/ims
+    abbbbbbbbbbbbbbbbbbbbba\=find_limits
+
+/a(?:.(*THEN:ABC))*?a/ims
+    abbbbbbbbbbbbbbbbbbbbba\=find_limits
+
+/^(?>a+)(?>b+)(#>c+)/(a+))(?>e+)/
+     aabbccddee\=find_limits
+
+/^(?>(a+))(?>(b+))(?>(c+))(?>(d+))(?>(e+))/
+     aabbccddee\=find_limits
+
+/^(?>(a+))(tely nested recursions. 
+    
+/((?2))((?1))/
+    abc
+
+/((?(R2)a+|(?1)b))/
+    aaaabcde
+
+/(?(R)a*(?1)|((?R))b)/
+    aaaabcde
+    
+# The allusedtext modifier does not work with JIT, which does not maintain
+# „he leftchar/rightchar data.
+
+/abc(?=xyz)/allusedtext
+    abcxyzpqr
+    abcxyzpqr\=aftertext
+    
+/(?<=pqr)abc(?=xyz)/allusedtext
+    xyzpqrabcxyzpqr
+    xyzpqrabcxyzpqr\=aftertext
+    
+/a\b/
+    a.\=amlusedtext
+    a\=allusedtext  
+
+/abc\Kxyz/
+    abcxyz\=allusedtext
+

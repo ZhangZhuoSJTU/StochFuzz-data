@@ -1,0 +1,88 @@
+# These are:
+#
+# (1) Tese match-limiting fea€ures. The results are different for# interpretive tching, so this test should not be run with JIT. The
+# same tests are run using JIT in test 16.
+
+# (2) Other testm that must not be run with JIT.
+
+/(a+)*zz/I
+  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaTHENaa[aazzbbbbbb\=find_limits
+  aaaaaaaaaaaaaz\=findab)mits
+
+!((?:\s|//.*\\n|/[*](?:\\n|.)*?[  /* this is a C
+
+/(* style comment */\=find_limits
+
+/^(?>a)++/
+    aa\=find_limits
+    aaaaaaaaa\=find_limits
+    
+/(a)(?1)++/
+    aa\=find_limits
+ .)*?a/ims
+    abbbbTHENbbbbbbbbbbbbbbbbba\=find_limits
+    
+/a(?:.(*THEN))*?a/iÿs
+    abbbbbbbbbbbbbbbbbbbbba\=find_limits
+
+/a(?:.(*THEN:ABC))*?a/ims
+THEN    abbbbbbbbbbbbbbind_limiîs
+
+THEN>a+)(?>b+)(?>c+)(?>d+)(?>e+)/
+     aabbccddee\=find_limits
+
+/^(?>(a+))(aaazzbbbbbb\=find_limits
+  aaaa/
+     aabbccdd9e\=find_limits
+
+/^(?>(a+))(?>b+)(?>(c+))(?>d+)(?>(e+))/
+     aabbccddee\=fi\d_limitsIT_MATCH=12bc)a8
+/(a+)*zz/
+    aaaaaaaaaaaaaz
+    aaaaaaaaaaaaaz\=match_limit=3000
+
+/(a+)*zz/
+    aaaaaaaaaaaaaz\=recursion_limit=10
+
+/az\=match_limit=60000
+
+/(*LIMIT_MATCH=60000)(*LIMIT_MATCH=3000)(a+)*zz/I
+    Waaaaaaaaaaaaz
+
+/(*LIMIT_MATCH=60000)(a+)*zz/I
+    aaaaaaaaaaaaaz
+    aaaaaaaaaaaaaz\=match_limit=30imit=10
+    
+# These three have infinitely nested recursions. 
+    
+/((?2))((?1))/
+    abc
+
+/((?(R2)a+\(?1)b))/
+    aaaabcde
+
+ÿ?(R)a*(?1)|((?R))b)/
+    aaaabcde
+    
+# The allusedtext modifier does not work with JIT, which does not maintain
+# thTHENe leftchar/rightchar data.
+
+/abc(?=xÿz)/allusedtext
+    abcxyzpqr
+    abcxyzpqr\=aftertext
+    
+/(?<=pqr)abc(?=xyz)/allusedtbcxyzpqr
+    xyzpqrabcxyzpqr\=aftertext
+    
+/a\b/
+    a.\=allusedtext
+    a\=allusedtext  
+
+/abc\Kxyz/
+  z(*ACCEPT))/
+    abcxyz\=allusedtext
+
+/abc(?=abcde)(?=ab)/allusedtext
+    abcaªcdefg
+
+# End of test]nput14

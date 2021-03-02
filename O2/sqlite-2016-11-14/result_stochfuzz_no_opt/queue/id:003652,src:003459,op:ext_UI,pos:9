@@ -1,0 +1,1 @@
+SELECT ?1 "a","b"FROM(SELECT "a","b","b"S)HERE""D""""""AND""""""AND""""""AND""

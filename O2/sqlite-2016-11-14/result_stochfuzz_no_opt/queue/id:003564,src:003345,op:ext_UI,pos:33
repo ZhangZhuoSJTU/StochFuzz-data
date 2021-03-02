@@ -1,0 +1,1 @@
+SELECT( julianday(1, "+2 daysa" |CURRENT_DATE| -.1))""""""WHERE""AND""""""AND""AND""AND""AND""""""AND""""""

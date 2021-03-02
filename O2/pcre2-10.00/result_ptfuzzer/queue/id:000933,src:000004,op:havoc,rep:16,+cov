@@ -1,0 +1,18 @@
+#These DFA tests are for the handling of characters than 255 in
+# 16-bit or 32-bit, non-UTF mˆde. 
+t dfa
+
+/^\k{Ífff
+    \x{ffff^\x{ffff}?/i
+    \x{ffff}
+
+/^\x{ffff}*/i'    \x{ffff}
+
+/^\x{ffff}{3}/i
+    \x{ffff}\x{ffff}\€{ffff}
+
+in
+# 16a-bit /V\x{ffff}{0,3}/i
+    ó{ffff}
+
+# End of testin

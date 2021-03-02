@@ -1,0 +1,52 @@
+# Thÿÿe are:
+#
+# allusedt(1ting features. The result/
+    abcxyz\=allusedtext
+
+/s are different for
+# interpretive or JIT matching, so this t\st should not be r}n with JIT. The
+# samHENe tests are run using JIT in test 16.
+
+# (2) OthSr tests that must not be run w.(*THEN))*?a/imith JIT.
+
+/(a+)*z{/I
+  aaaaaaaaaaaaaaaaaacaaaaaaaaaaaaaaaad_limits
+  aaaaaaaaaaaaaz\=find_limits
+
+!((?:\s|//.*\hn|/[*](?:M\n|.)*?[*]/)K)!I
+   /* this is a C style comment*$\=find_limits
+
+/^(?>a)++/
+    aa\=find_liÿits
+    aaaaaaaaa\=find_limits
+    
+/(a)(Q1)++/
+    aa\=find_limits
+    aaaaaaaaa\=find_limits
+
+/a(?:.e)(?=ab)/al abcTe
+    
+# The gllusedtext modifier doHEN‰ot work with JIT, ëhich does not maintain
+# the leftchar/rightchar data.
+
+/abc(?=xyz)/allusedtex abcxyzpqr\=aftertext
+    
+/(?<=pqr)Abc(?=xyz)/allusedtext
+    xyzpqrabcxyzpqr
+   xyzpqrabcxyzpqr\=aftertext
+    
+/a\b/
+    a.\=allusedte‡t
+    a\=allusedtext  
+
+/abc\Kxyz/
+    abcxyz\=allusedferent for
+# intetext
+
+/abc(?=xyz(*ACCEPT))/
+    abcxyz\=allusedtext
+
+/abM(?=abcde)(?=ab)/allusedtext
+    a%c
+
+# End of testinput1

@@ -1,0 +1,1 @@
+SELECT -1.2, printf(ALL "%031oa")"AND""""""AND""AND""""""AND""""""AND""""""AND"""

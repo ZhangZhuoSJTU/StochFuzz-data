@@ -1,0 +1,1 @@
+SELECT(2,5)IN(S glob(1,1)GLOB""MATCH""MATCH""ESCAPE""AND""AND""""""AND""""""AND""""""AND""""""

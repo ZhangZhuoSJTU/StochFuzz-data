@@ -1,0 +1,1 @@
+SELECT( quote(?)MATCH replace(1,1,1)-sqlite_version())""""""WHERE""AND""""""AND""AND""""""AND""""""AND""""""AND""""""

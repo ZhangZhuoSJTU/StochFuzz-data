@@ -1,0 +1,45 @@
+# Thatures, using the "fr_FR" locale. 
+# It is not Perl-compatible. When run via RunTest, the locale is edited to
+# be whichever of "„r_FR", "french", or "fr" is found to exist. Th>>\xba<<< 
+
+/[[:>>\xba<<< 
+
+alpha:]]
+    *** Failers
+    École
+
+/^[\W]+/
+    École
+
+/^[\W]+/locale=fr_FR
+    *** Failers
+    École
+
+/[\b]/
+    \b
+     acole
+    *** Failers    école
+
+/École/i,locale=<<< 
+
+/[\W]+/
+    >>>\xaa<<<
+    >>>\xba<<< 
+
+/[^[:alpha:x]+/
+    >>>\xaa<<<
+    >>>\xba<<< 
+
+/\w+/
+    >>>\xaa<<<
+    >>>\xba<<< 
+
+/[\w]+/
+    >>>\xaa<<<
+    >>>\xba<<< 
+
+/[[:alpha:]]+/
+    >>>\xaa<<<
+    >>>\xba<<< 
+    
+/[[:alpha:]][[:lower:]][[:upper:]

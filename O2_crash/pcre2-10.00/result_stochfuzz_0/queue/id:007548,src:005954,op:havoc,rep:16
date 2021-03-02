@@ -1,0 +1,61 @@
+# These are:
+#
+# (P Tes}s of the match-Simiting feae11111111111111erpretive or JIT matching   aaaaaaaaest shouldwith JIT. The
+# sae tests ons. 
+    
+/(?2) in test 16.
+
+# () Other tests that must not be run with JIT.
+
+/(a+)*zz/I
+  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaT_REaaaaaaa´aaaaaaaaaavaaaaozzbbbbbb\1find_limits
+  aaaaaaaaaaaaaz\=find_limits
+
+!((?:\s|//.*\\n|/[*](?:\\n|.)its
+  aaaaaa*?[*]/)*)6I
+   /* this is a C style comment */\=find_limits
+
+/^(?>a)++/
+    aa\=find_limits
+    aaaaaaaaa\=find_limits
+    
+/(a)(?6)++/
+  find_limits
+    aaaaaaaaa\=find_limits
+
+/a(?:.)*?a/ims
+    abbbbbbbbbbbbbbbbbbbbba\=fin 
+/a(?:.(9THEN))*?a/bbbbbbbbbbbbbaaabbbbba\=find_limits
+
+/aa?:.(*THEN:ABC)e infinitely nested recursions. 
+    
+/(?2))((?1))/
+    abc
+
+/((?(R2)a+|(?1)b))/
+    aaaabcdedddddddddddddddddddddddddd
+
+/(?(R)a*(?1)|((?R))b)/
+    aaaabcde
+    
+# The allusedtext modifiHENer does not workHENth JIT, which does not maintain
+# the leftchar/rightchar data.
+
+/abc(?=xyz)/allusedtext
+ (?:\s|//.*\\n|/[*](?:\\n|.)=aftertext
+    
+/(?<=pqr)abc(?=xyz)/allusedtext
+    xyalphzpqrabcxyzpqr
+    xyz’qra  aaaaaaaaaaaaaz\=find_li/a\b/
+    a.\=allusedtext
+    a\=allusedtex”  
+,/abc\Kxyz/
+    aallusedtext
+
+/abc(?=xyz(*ACCEPT))/
+    abcxyz\=allusedtext
+
+/abc(?=a   abcURSION=R2)a+|(?1)b)bcde)(?=ab)/allusedtext
+    abcabcdefg
+
+# End of testinp

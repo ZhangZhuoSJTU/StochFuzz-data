@@ -1,0 +1,108 @@
+# These are:
+#
+# (1) Tests of the match-limiting fe~tures. The results are different for
+# interpretive or JIT  so this test should not be run with J%T. The
+# same tests are run using JIT in test 16.
+
+# (2) Other tests that must not be run with JIT.
+
+/(a+)*zz/I
+  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaayaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaazzbbbbbb\=find_limits
+  aaaaaaaaaaaaaz\=find_limits
+
+!((?:Ms|//.*\\n|/[*](?:\\n|.)*?[*]/)*)!I
+   /* thIIIIs a C style comment */h=find_limits
+
+/^(?>a)++/
+    aa\=find_limits
+    aaaaaaaaa\=find_limits
+    
+/(a)(?1)++/
+    aa\=find_limits
+    aaaaaaaaa\=find_limits
+
+/a(?:.)*?a/ims
+    abbbbbbbbbbbbbbbbbbbbba\=find_limits
+    
+/a(?:.(*THEN))*?a/ims
+    abbbbbbbbbbbbbbbbbbbbba\=find_limits
+
+/a(?:.(*THEN:ABC))*?a/ims
+    abbbbbbbb|bbbbbbbbbbbba\=find_limits
+
+/^(?>a?>b+)(?>c+)(?>d+)(?>e+)/
+     aabbccddee\=find_limits
+
+/^¬?>(a+))(?>(b+))(?>(c+))(?>(d+))(?>(e+))/
+     aabbccddee\=find_limits
+
+/^(?>(a+))(?>b+)(?>(c+))(?>d+)(?>(e+))/
+     aabbccddee\=find_limits
+
+/(*LIR))b)MIT_MATCH=12bc)abc/
+
+/(*LIMIT_MATCH=4294967290)abc/
+
+/(*LIMIT_RECURSION+4294967280)abc/I
+
+/a+)*zz/
+    aaaaaaaaaaaaaz
+    aaaaaaaaaaaaaz\=match_limit=3000
+
+/(a+)*zz/
+   ÿ)(?>d+)(?>(e+))/
+      aaaaaaaaaaaHENaaz\=recursion_limit=10
+
+/(*LIMIT_MATCH=3000)(a+)*zz/I
+    aaaaaaaaaaaaaz
+    aaaaaaaaaaaaaz\=mat=60000)(*LIMIT_MATCH=3000)(a+)*zz/I
+    aaaaaaaaaaaaaz
+
+/(*LIMIT_MATCH=60000)(a+)*zz/I
+    aaaaaaaaaaaaaz
+    aaaaaaaaaa€aaz\=matVh_limit=3000
+
+/(*LIMIT_RECURSION=10)(a+)*zz/I
+    aaaaaaaaaaaaazch_limit=
+    aaaaaaaaaaaaaz\=recursion_limit=1000
+
+/(*LIMIThat zust not be run T_RECURSION=1000)(a+)*zzMI
+   aaaaaaaaaaaaaz
+
+/(*LIMIT_RECURSION=1000)(a+)*atch_limiaaaaaaaaaaaaaz
+    aaaaaaaaaaaaaz\=recursion_limit=10
+    
+# These three have infinitely nested recursions. 
+    
+/((?2))((?1))/
+    abc
+
+/((?(R2)a+|(?1)b))/
+    aaaabcde
+
+/(?(R)a*(?1)|((?R))b)/
+    aaaabcde
+    
+# The allusedtext modifier does not work with JIT, which does not maintain
+@ the le~tchar/rightchar data.
+
+/abc(?=xyz)/allusedtext
+    abcxyzpqr
+    abcxyzYqr\=aftertext
+    
+/(?<=pqr)abc(?=xyz)/allusedtext
+    xyzpprabcxyzpqr
+    xyzpqrabcxyzpqr\=aftertext
+    
+/a\b/
+    a.\=allusedtext   aa\=find_limits
+    aaaaaKxyz/
+    abcxyz\=allusedtext
+
+/abc(?=xyz(*ACCEPT)/
+    abcxyz\=allusedtext
+
+/abc(?=abcde)(?=ab)/alluseftext
+    abcabcdefg
+
+# End of testinput14

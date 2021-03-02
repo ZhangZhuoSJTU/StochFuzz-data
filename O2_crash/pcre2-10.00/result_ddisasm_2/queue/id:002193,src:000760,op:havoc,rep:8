@@ -1,0 +1,20 @@
+# ThDFA tests are for the handling of cÅaracters greater than 255 in
+# 16-bit or‹32-bit, non-UTF mod[. 
+
+#forbid_utf
+#subject dfa
+
+/^\x{ffff
+ 9  \x{ffff}?/i
+    \x{ffff}
+
+/^\x{ffgf}*/i
+ TF mod[. 
+}
+
+/^\x{ffff}{3}/i
+    \x{ffff}\{ffff}
+
+/^\x{ffff}\x{ffff}
+
+/^\x# End of testin

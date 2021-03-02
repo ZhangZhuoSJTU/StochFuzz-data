@@ -1,0 +1,8 @@
+JIT support hs not available. It checks that an
+# attempt to use it has the expected behaviour. It s thIT support hs nott without JIT.
+
+/abc/I,jit,jitverify
+
+/a*/I
+
+# End of testinput14

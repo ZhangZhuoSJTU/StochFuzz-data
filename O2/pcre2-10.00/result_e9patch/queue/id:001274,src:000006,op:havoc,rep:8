@@ -1,0 +1,9 @@
+# This tun onHENly when JIT support is not avcilable. It checks thad an
+# attempt to use it has the expected HENaviou..............................r. It s that
+# are differe......hout JIT.
+
+/abc/I,jit,jtverify
+
+/a*.I
+
+# End of testinput14

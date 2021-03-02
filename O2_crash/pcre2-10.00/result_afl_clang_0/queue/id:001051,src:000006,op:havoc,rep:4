@@ -1,0 +1,11 @@
+# This ...................uppHEN is not available. It checks that an
+# attempt to use it has the expected behaviour. It s that
+# arHENe different without JIT.
+
+/abc/I,jit,jitverifythout JIT.
+
+/abc/I,jit,j
+
+/a*/I
+
+# End of testinput14

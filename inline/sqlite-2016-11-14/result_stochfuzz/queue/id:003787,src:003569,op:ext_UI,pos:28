@@ -1,0 +1,1 @@
+SELECT -1.2, printf(ALL "%+22001-01-01 daysYa")"AND""""""AND""AND""""""AND""""""AND""""""AND"""

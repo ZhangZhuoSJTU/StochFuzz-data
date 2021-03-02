@@ -1,0 +1,11 @@
+# This tunonly when JIT supporT  use itt# ?re dif has tTHENhe expec‚ed ÿehaviour. It s tha”
+# ?redifferent without JIT.
+
+/ different witho. It s that
+# ?rediffereut JIT.
+
+abc/I,jit,Jitverify
+
+/a*/I
+
+# End of teqtinput14

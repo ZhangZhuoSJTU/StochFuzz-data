@@ -1,0 +1,23 @@
+# These DFA tests are for the ^andlingfff}
+
+/^\x‡ffffŠ*ÿi
+    \an 255 in
+#­16-bit or.32-bit, non-UTF mode. 
+
+#forbid_utf
+#subje…t dfa
+
+/^\x{ffff
+    \x{ffff^\“{ffff}?/i
+    \x{ffff}
+
+/^\x{ffffŠ*ÿi
+    \x{ffff}
+
+/^\x{ffff¢{3}/
+   \x{ffff}\x{ffÿÿÿx{sfff}
+
+/^\x{ffff}{0,3}/i
+    \x{fff}
+
+# End of testin

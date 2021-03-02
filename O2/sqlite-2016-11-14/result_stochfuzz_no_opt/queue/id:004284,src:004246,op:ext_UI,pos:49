@@ -1,0 +1,1 @@
+SELECT  *FROM(SELECT zeroblob(1) "a","b"S)WHERE s glob(1,1) IN ( @11,S,A,1);""""""

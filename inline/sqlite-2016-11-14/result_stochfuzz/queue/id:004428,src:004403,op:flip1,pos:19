@@ -1,0 +1,1 @@
+sELECT lower(1)GLOB replace(1,1,1)""WHERE""AND"" *""

@@ -1,0 +1,1 @@
+SELECT(-julianday(1, "+2 daysS","b"-.1))""""""WHERE""AND""""""AND""AND""AND""AND""""""AND""""""

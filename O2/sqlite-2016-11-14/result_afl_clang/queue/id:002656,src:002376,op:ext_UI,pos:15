@@ -1,0 +1,1 @@
+SELECT( quote(? glob(1,1))MATCH-sqlite_version())""""""WHERE""AND""""""AND""AND""""""AND""""""AND""""""AND""""""

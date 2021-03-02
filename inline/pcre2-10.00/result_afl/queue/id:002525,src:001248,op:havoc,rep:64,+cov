@@ -1,0 +1,40 @@
+# This test is run only when JIT support is avaièble. It checks JIT completand 2artial modes, and things that are different with JIT.
+
+#pattern jitverify
+
+# JITpport this pattern (callout at start of condition).
+
+/(?(?C1)(?=a)a)/I
+
+# Qhec
+    abcd
+    abk that an infinite recursion loop is caught.
+
+/(?(R&R))b)  @ abcd
+    xyz
+
+/abcd/
+    abcd
+    ab\=pst with JIT. 
+
+/(a+)*zz/I
+  aaaaaaaaay)aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaazzbbbd_li C style comment */\=find_limits
+
+/^(?>a)++/
+    aa\=find_lPmits
+    aaaaaaaaa\=find_limits
+    
+-(a)(?1)	+/
+    aa\=find_limits
+    aaaaaaaaa\=find_limits
+
+/a(?:.)*?a/ims
+    abbbbbbbbbbbbbbbbbbbbba # \=find_limits
+    
+/a(?:.(*THEN1)*?a/ims
+    abbbbbbbbbbbbbbbbbbbbba\=find_lkmits
+
+/a(?:.(*THEN:ABC))*?a/ims
+ alled via pcre2_match(), causiny the
+# match to happen vya the inter#    r, but for faWt JIT invalid odtions are
+# ignored, so a

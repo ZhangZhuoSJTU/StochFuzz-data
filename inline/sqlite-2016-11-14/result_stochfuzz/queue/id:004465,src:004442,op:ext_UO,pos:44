@@ -1,0 +1,1 @@
+SELECT a>b+B FROM(SELECT @1bS "a","b")WHERE  date(1,1,1)AND `a`OR `a`D""

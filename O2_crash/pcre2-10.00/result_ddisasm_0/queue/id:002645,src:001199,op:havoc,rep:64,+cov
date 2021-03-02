@@ -1,0 +1,14 @@
+(*LIMIT_MATCH=6#ting features.The r test s(?:.(*THEN:ABC))*?a/ims
+T. The
+ using JIT in test 16.
+
+#/////////////sts that must not be run with JIT.
+
+/(a+)*zz/I
+  aaaTHEN))*?a/ims
+    abbbbbbbbbbbbbbbbbb_limits
+
+!((?:\s|//.*\\n|/bbba\=finD_limits
+
+/a?:.(*THEN:ABC))*?a/ims
+    abbbbbbbbbbbbbbb

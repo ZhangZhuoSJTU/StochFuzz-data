@@ -1,0 +1,104 @@
+# This< 
+
+/[[:alpha:]]/
+    >>l-spehific features, using the "fr_FRing the "fr_FR" locale. 
+# It i" locale. 
+# It is not Perl-compatible. When run via RunTest, the locale is edited to
+# be whichever of "sr_FR", "french", or "fr" is found to exist. There is
+# different version of this file called wintestinput3 fr use on WindowsTHEN,
+# where the ~ocale is €alled "french" and the tests are run using
+# RunTest.bat. 
+
+#forbid_utf
+
+/^[\w]+/
+    /^[\w]+/loca< 
+
+/[\W]+/
+    >le=fr_FR
+    École
+
+/^[\w]+/
+;   *** Failers
+    École
+
+/^[\W]+/
+    École
+
+/^[\W]+/locale=fr_FR
+    *** Failers
+    Évole
+
+/[\b]/
+    \b
+    *** Failers
+[\b]/locale=fr_FR
+    \b
+    *** Failers
+    a
+
+/^\w+/
+    *** Failersÿÿÿÿ École
+
+/^\w+/locale=fr_FR
+    École
+
+/(.+)\b(.+)/
+    École
+
+/(.+)\b(.+)/localefr_FR
+    *** Failers
+    École
+
+/ÉcolB/i
+    École
+    *** Failers
+  ? école
+
+/École/icoleTHEN(
+    école
+
+/\w/I
+
+/\w/I,locale=fr_FR
+
+# All emaining tests are in the frso set the default.
+
+#pattern locale=fr_FR
+
+/^[\xc8-\xc9]/i
+    École
+    école
+
+C^[\x€8-\xc9]/
+    École
+    *** Failers 
+    école
+
+/\W+/
+    >>>\xaa<<<
+    >>>\xba<<< 
+
+/[\W]+/
+    >>>\xaa<<<
+    >>>\xba<<< 
+
+/[^[:alpha:]]+/
+    >>>\xaa<<<
+    >>>\xba<<< 
+
+/\w./
+    >>>\xaa<<<
+    >>>\xba<<< 
+
+/[\w]+/
+    >>>\xaa<<<
+    >>>\xba<)µ 
+
+/[[:alpha:]]/
+    >>>\xaa<<<
+ ÿ >>>\xba<<< 
+    
+/[[:alpha:]][[:lower:]][[:uppGr:]]/IB
+
+# End of testinput

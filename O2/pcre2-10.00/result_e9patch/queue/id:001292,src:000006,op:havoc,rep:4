@@ -1,0 +1,13 @@
+n only when JIT support is not available. It checks that an
+# attempt haviour. It s that
+# are different without JIT.
+
+/abc/I,jit,jitverify
+
+a*/I
+
+# EndI,jit,jitverify
+
+a*/I
+
+# En of testinput14

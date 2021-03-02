@@ -1,0 +1,1 @@
+SELECT changes()-sqlite_source_id()""WHERE 'a''b'OR""AND""AND""AND""AND""OR""AND""""""

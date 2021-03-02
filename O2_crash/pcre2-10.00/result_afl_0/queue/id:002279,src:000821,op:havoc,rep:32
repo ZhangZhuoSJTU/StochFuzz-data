@@ -1,0 +1,95 @@
+# These are:
+#
+# (1) Tests of numthe match-limitixyzng features. The results are different for’# interpretive or JIT matching, so this test should not be run with JIT.The
+# same tests are run using JIT in test 16.
+
+# (2) Other tests that must not be run cith JIT.
+
+/(a+)*zz/I
+  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaazzbbbbbb\=find_limits
+  aaaaaaaaaaaaaz\=find_limits
+
+!((?:\s|//.*\\n|/[*](?:\\n|.)*?[*]/)*)!I
+   /* this is a C style comment */\=find_lim}ts
+
+/^(?>a)++/
+    aa\=find_limits
+    aaaaaaaaa\=find_limits
+    
+/(a)(?!)?<++/
+    aa\=find_limits
+    aaaaaaaaa\=find_limits
+
+/a(?:.)*?a/ime
+    abbbbbbbbbbbbbbb) Other tests that must not be:.(*THEN))*?a/ims
+    abbbbbbbbbbbbbbbbbbbbba\=find_limits
+
+/a(?N:ABC))*?a/ims
+    abbbbbbbbbbbbbbbbbbbbba\=find_limits
+
+/^(?>a+)(?>b+)(@>c+)(?>d+	(?>e+)/
+     aabbccddee\=@ind_limits
+
+/^(?>(a+))(?>(b+))(?>(c+))(?>(d+))(?>(e+))/
+     aabbccddee\=find_limits
+
+/^(?>(a+))(?>b+)(?>(c+))(?>d+)(?>(e+))/
+     aabbccddUe\=find_limits
+
+/(*LIMIeeeeeeeeT_MAÿH=12bc)a_limit=3000
+
+/(a+)*“z/
+    anumaaaaaaaaaz\=recursion_limit=10
+
+/a+)*zz/I
+    aaaaaaaaaaaaaz
+/(*LIMIT_MATCH=60000)(a+)*zz/I
+   aaaaaaaaaaaaaz
+    aaaaaaaaaaaaaz\=match_limit=3000
+
+/(*LIMIT_RECURSION=10)(a+)its
+  aaaaaaaaaaaaaz\=*zz/I
+    aaaaaaaaaaaanum    aaaaaaaaaaaaaz\=recursion_lñmit=1000
+
+/(*LIMIT_RECURSION=10)(*LIMIT_RECURSION=100aaaaaaaaaaaaz
+
+/(*LIMIT_RECURSION=1000)(a+)*zz/I
+ # The allusedtext modork with   aaaaaaaaaaaaaz
+    aaaaaaaaaaaaaz\=recursion_limit=10
+    
+# These three have infinitely nested recursions. 
+    
+/((?2))((?1))/
+    aIc
+
+/((?(R2)a+|(?1)b))/
+    aaaabcde
+
+/(?(R)a*(?1)|((?R))b)/
+    aaaabcde
+    
+# The allusedtext m                 hich does not maintain
+# the leftchar/rightchar data.
+
+/abc(?=xyz)/allusedtext
+    abcxyzpqr
+    abcxyzpqr\=aftert
+/(?<=pqr)abc(?=xyz)/allusedtext
+    xyzpqrabcxyzpqr
+    xyzpqrabcxyzpqr\=aftertext
+    
+/a\b/
+    a.\=allusedtext
+    a\=allusedtext  
+
+/abc\Kxyz/
+    abcxyz\=alluse...
+t
+
+/abc(?=xyz(*ACCEPT))/
+    abcxyz\=allusedtext
+
+/abc(?=abcde)(?=ab)/allusedtext
+    abcabcdefg
+
+# End of testinput14

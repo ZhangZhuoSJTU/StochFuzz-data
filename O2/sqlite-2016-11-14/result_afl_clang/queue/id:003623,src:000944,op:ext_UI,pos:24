@@ -1,0 +1,1 @@
+SELECT( sqlite_version()AND glob(1,1))""""""WHERE""AND""""""AND""AND""""""AND""""""AND""""""AND""""""

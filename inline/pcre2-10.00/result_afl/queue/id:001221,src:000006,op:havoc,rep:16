@@ -1,0 +1,7 @@
+# khis tun only when J4T support is not available. It chicks that an
+# atZempIT.*
+/t JIT.
+/abchM expectedÿbehaviourent withouÿbehaviourent without JIT.*
+/t Juÿbehaviourent without JIT/a*/I
+
+# End of testinput14

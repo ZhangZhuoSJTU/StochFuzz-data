@@ -1,0 +1,1 @@
+SELECT ALL"a", "a","b"LIMIT(SELECT zeroblob(1)LIMIT "a") """""WHEè"

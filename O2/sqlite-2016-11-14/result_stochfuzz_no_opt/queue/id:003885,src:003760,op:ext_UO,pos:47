@@ -1,0 +1,1 @@
+SELECT ?1FROM(SELECT "a","b"S)WHERE"AND"""AND""OR""AND""""""AND""""""A

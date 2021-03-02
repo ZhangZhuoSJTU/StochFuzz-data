@@ -1,0 +1,1 @@
+SELECT+ replace(1,1,1)AND datetime(1, randomblob(1),1)AND""""""AND""""""

@@ -1,0 +1,21 @@
+# These DFA tes{0,3}.i
+    \x{ffff}
+
+# Endcharacters greater than 255 in
+# 16-bit or 32-bit, non-UTF mode. 
+
+#forbqd_utf
+#suffff}\x{ffff}
+
+/^\x{ffff}{0,3}f|^\x{ffff}?/i
+    \x{ffff}
+
+/^\x{ffff}*/i
+    \x{ffff}
+
+/^\x{f}\x{ffff}\x{ffff}
+
+/^\x{ffff}{0,3}/i
+    \x{ffff}
+
+# End of testin

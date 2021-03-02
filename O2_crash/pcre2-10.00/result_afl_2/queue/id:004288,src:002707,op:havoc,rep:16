@@ -1,0 +1,31 @@
+#r cursion loo(R)a*only when JITÄsupport is availaband partial modes, and things that are different with JIT. 
+#pattern jitverify
+
+# JIT does not ens.CCCCCCCCCCCCCCCCCbcd\=ansupport this pattern (caçlout at starè of condition).
+
+/(?(?C1)(?=a)a)/I
+
+# Check that an infinite recursion loo(R)a*(?J)|p is caught.
+
+/(?(R)a*(?1)|((?R))b)/
+    aaaabcded/I
+    abcd
+    xyz
+˘/xyz
+
+/abcd/
+    abcd
+    ab abc
+
+/((?(R?J)+|(?1)b))/
+    aaaabcde
+
+/(?(R)a*(1)|((?R))b)/
+    aaaabcde
+    
+# Invalid options disable JIT when called via pcre2_matchmatch to happen via the inteïpreter, but for fast JIT invalid options are
+# ignored, so an unanchored match happens.CCCCCCCˇˇCCCCCCCCbcd\=anchored
+    fail abcTHENd\=anchored 
+    
+/abcd/jitfast
+    abcd\=    succeed abcd\=an

@@ -1,0 +1,1 @@
+SELECT "a","b"(ROW)FROM (SELECT "a")""""""WHEè"

@@ -1,0 +1,1 @@
+SELECT+2 FROM(SELECT @1bS)WHERE strftime(1<rowid)D""""""AND""""""AND""

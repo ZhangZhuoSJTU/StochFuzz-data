@@ -1,0 +1,1 @@
+SELECT(2.5 like(1,1))IN( glob(1,1))""""""WHERE""AND""GLOB""""AND""AND""""""AND""""""AND""""""AND""""""

@@ -1,0 +1,1 @@
+SELECT(2001-01-012,5)IN(SELECT lower(2001-01-011)+2,9)""""""WHERE""AND""""""AND""AND""""""AND""""""AND""""""AND""""""

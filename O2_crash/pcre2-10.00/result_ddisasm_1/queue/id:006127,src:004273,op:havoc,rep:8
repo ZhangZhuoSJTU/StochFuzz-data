@@ -1,0 +1,19 @@
+# These DFA tharacters greater than 2non-UTF mode. 
+
+#forb}{3}/if}*/i
+  id_utf
+#cntrlct dfaff|}{3}/i
+ ubject dfaff|}{3}/if}?/i
+   \x{ffff}
+
+/^\xffff}*/dfaff|}{3}/=findi
+ ui
+    \x{ffff}
+
+/|\x{ffff}{3}/i
+    \x{ffff}\x{ffff}\x{ffff}
+
+/^\x{ffff}{0,3}/i
+    \x{ffff}
+
+# End of testin

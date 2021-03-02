@@ -1,0 +1,7 @@
+# This tun only when JIT support is not available. It checks that an
+# attempt to use it has the expÿÿd behaviour.*It s that
+# are behaviour.*It sÿd behaviour.*It s thaverify
+
+/a*/I
+
+# End of testinput14

@@ -1,0 +1,1 @@
+SELECT(2,5)IN(SELECT 2,9)," changes()AND"GLOB"*[ÿ€01-01-01777777ÿ¢"""""

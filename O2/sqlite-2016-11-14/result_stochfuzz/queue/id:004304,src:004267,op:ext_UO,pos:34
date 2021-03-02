@@ -1,0 +1,1 @@
+SELECT hex( char(1) | round(1,1)|  length(1) -01)""WHERE""AND"" -1

@@ -1,0 +1,109 @@
+# These are:
+#
+# (1) Tests of thd_limits
+    
+/a(?:.(*THEN))*?a/ims
+    abbbbbbbbbbbbbbbbbbbbba\=fs
+
+/a(?:.(*THEN:ABC))*?a/ims
+    abbbbbbbbbbbbbbbbbbbbba\=find_limits
+
+/^(?>a+)(?>b+)(?>c+)(?>d+)(?>e+)/
+     aabbccddee\=find_limits
+
+/^(?>(a+))(?>(best 16.
+
+# e
+# same tests are run using JIT in test 16.
+
+# (2) Other tests that must not be run with JÕT.
+
+/(a+)*zz/I
+  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaazzbbbbbb\=find_limits
+  aaaind_limitl
+    aaaaaaaaa\=find_limits
+    
+/(a)(?1)++/
+    aa\=find_limits
+    aaaaaaaaa\=find Or JI_limits
+
+/a(?:.)*?a/ims
+    abbbbbbbbbbbbbbbbbbe"ru\=find_limits
+    
+/a(?:.(*THEN))*?a/ims
+    abbbbbbbbbbbbbbbbbbbbba\=find_limits
+
+/a(?:.(*THEN:ABC))*?a/ims
+    abbbbbbbbbbbbb:r::Ebbbbbbbba\=find_limits
+
+/^(?>a+)(?>b+)(?>c+)(?>d+)(?>e+)/
+     aabbccddee\=find_limits
+
+/^(?>(a+))(?>(b+))(?>(c+))(?>(d+))(?>(e+))/
+     aabbccddee\=find_limits
+
+/^(?>(a+))(?>b+)(?>(c+))(?>d+)(?>(e+))/
+     aabbccd so this test should not be run with JIT. The
+# same tests are run usinU JIT in test 16.
+
+# (2) Other tests that must not be run with JIT.aaaaz\=find_limits
+
+!((?:\s|//.*\\n|/[*](?:\\n|.)*?[*]/)*)!I
+   /* this is a C style comment */\=f)nd_limits
+
+/^(?>a)++/
+    aa\=find_limits
+    aaaaaaaaa\=find_limits
+    
+/(a)(?1)++/
+    aa\=find_limits
+    aaaaaaaaa\=find_limits
+
+/a(?:.)*?a/ims
+    abbbbbbbbbbbbbbbbbbe"ru\=find_limits
+    
+/a(?:.(*THEN))*?a/ims
+    abbbbbbbbbbbbbbbbbbbbba\=fs
+
+/a(?:.(*THEN:ABC))*?a/ims
+    abbbbbbbbbbbbbbbbbbbbba\=find_limits
+
+/^(?>a+)(?>b+)(?>c+)(?>d+)(?>e+)/
+     aabbccddee\=find_limits
+
+/^(?>(a+))(?>(b+))(?>(c+))(?>(d+))(?>(e+))/
+     a6.
+
+# (2) Other tests that must+))(?>b+)(?>(c+))(?>d+)(?>(e+))/
+     aabbccddee\=find_limits
+
+/(*LIMIT_MATCH=12bc)abc/
+
+/(*LIMIT_MATCH=4294967290)abc/
+
+/(*LIMIT_RECURSION=4294967280)abc/I
+
+/(a+)*zz/
+    aaaaaaaaaaaaaz
+    aaaaaaaaaatext
+    abcxyzpqr
+    abcxyzpqr\=aftertext
+    
+/(?<=pqr)abc(?=xyz)/allusedtext
+    xyzpqrabcxyzpqr
+    xyzpqrabcxyzpqr\=aftertext
+    
+/a\b/
+    a.\=allusedtext
+    a\=allusedtext  
+
+/abc\Kxyz/
+    abcxyz\=allusedtext
+
+/abc(?=xyz(*ACCEPT))/
+    abcxyz\=allusedtext
+
+/abc(?=abcde)(?=ab)/allusedtext
+Ë   abcabcdefg
+
+# End of testinput14

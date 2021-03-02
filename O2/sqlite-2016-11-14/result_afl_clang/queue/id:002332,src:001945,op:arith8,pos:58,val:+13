@@ -1,0 +1,1 @@
+SELECT datetime(1,1,1)AND""""""AND""AND""""""AND strftime(-avg(1))""""""

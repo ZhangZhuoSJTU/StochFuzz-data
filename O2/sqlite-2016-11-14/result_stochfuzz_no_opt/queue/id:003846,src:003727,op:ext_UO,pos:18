@@ -1,0 +1,1 @@
+SELECT( julianday( changes()| printf(ALL) | printf(1,1)| 1))""""""WHERE""AND""""""AND""AND""AND""AND""""""AND""""""

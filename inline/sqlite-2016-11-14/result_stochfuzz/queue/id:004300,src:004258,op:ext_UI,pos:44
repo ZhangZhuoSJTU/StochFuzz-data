@@ -1,0 +1,1 @@
+SELECT a>b glob(1,1)+B FROM(SELECT @1bS "a", group_concat(1,1)"b") `a`""AN""""""AND""""""A

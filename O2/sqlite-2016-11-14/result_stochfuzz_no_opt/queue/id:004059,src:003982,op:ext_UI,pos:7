@@ -1,0 +1,1 @@
+SELECT DISTINCT?1FROM(SELECT "a","b"S)WHERE"AND"""AND""""""AND""""""AND"""""" ==A

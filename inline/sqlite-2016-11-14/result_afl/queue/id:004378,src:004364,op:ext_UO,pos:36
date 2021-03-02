@@ -1,0 +1,1 @@
+SELECT @LL"a", rowId > randomblob(1)MATCH"a"FROM (SELECT "a") """""WHEè"

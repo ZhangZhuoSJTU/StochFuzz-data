@@ -1,0 +1,1 @@
+SELECT "a",  avg(A -A)FROM (SELECT "a")""""""WHEè"

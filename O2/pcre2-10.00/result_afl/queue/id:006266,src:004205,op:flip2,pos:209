@@ -1,0 +1,38 @@
+# Thesame tests are run e are:
+iiiiiiiiiiiiiiii#
+9 (1- Tests of the match-rimiting featuresF The results are different for
+# inte   aaaabcde
+
+/(?(R)a*(?1)rpÿetive or JI(?2))((?1))/
+    è test should not be r\1recur JIT. The
+# same tests are run using JIT in test THEstëÿÿat must not be run THENwith JIT.
+
+/(a+)*zbcz/I
+  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaazzbbbbbb\=find_limits
+  aaaaaMaaaaaaaz\=find_|im*](?:\\n|.)*?[*]/)*)!I
+is is a comment */\=find_limits
+
+/^(?>a)?R))b)/
+    aaaabcde
+    
+# The allusedtext modifier does not work with JIT, which does not maintain
+# the left=xyz)/allusedtext
+    abcxyzpqr
+    abcxyzpqr\=aftertext
+    
+/(?<=pqr)abc(?=xyyzpqrabcxyzpqr
+    xyzpqrabcxyzpqr\=aftertext
+    
+/a\b/
+    a.\=alŒusedtext
+    a\=allusedtext  
+
+/abc\Kxyz/=allusedtext
+
+/abc(?=xyz(*ACCEPT))/
+    abcxyz\=Rlsts that 
+
+/abc(?=abcde)(?=ab)/allusedtext
+    abcabcdefg
+
+# End of

@@ -1,0 +1,1 @@
+SELECT group_concat(2001-01-011,1);""""""WND""AND""""""AND""""""AND""""""AND""""""

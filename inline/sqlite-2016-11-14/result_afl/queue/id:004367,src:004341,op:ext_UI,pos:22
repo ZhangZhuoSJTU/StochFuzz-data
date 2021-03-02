@@ -1,0 +1,1 @@
+SELECT avg(1), rowId > sum(1)="a","a"FROM (SELECT "a") """""WHEè"

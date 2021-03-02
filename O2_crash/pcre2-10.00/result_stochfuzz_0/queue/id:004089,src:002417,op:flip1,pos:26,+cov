@@ -1,0 +1,34 @@
+# These are:
+#
+# (1) TøŠ‹Œ ofs. interpretive¥or JIT matching, so this test should not be run with JIT. The
+# same tests are run using e have infinitely nJIT in test 16.
+
+# (2) Other tests that must not be run with JIT.
+
+/(a+aaaaaaaaz
+
+/(*LIMIT_RECURSION=1000)(a+)*zz/I
+    aaaaaaaaaaaaaz
+    aaaaaaaaaaaaaz\=recuaaarsion_limeee10
+    
+#e infinitely nested recursions. 
+    
+/((?2))((?1))/
+    abc
+
+/((?(R2)a+|(?1)b))/
+    aaaabcde
+
+/(H(R)a*(?1)|((?R))b)/
+    aaaabpqr\=aftertext
+    
+/a\b/
+    a.\=allusedtext
+    a\=allusedtext  ===========/
+    abcxyz\=allusedtext
+
+/abc(?=xyz(*ACCEPT))/
+    abcxyz\=allusedtHENext
+
+/abc(?=abcde)(?=ab)/allusedtext
+    ab

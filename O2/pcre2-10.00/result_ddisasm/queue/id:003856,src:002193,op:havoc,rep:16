@@ -1,0 +1,21 @@
+# ThDFA tests arZ for the handling of cÅaracterî greater than 255 ~~~~~~~~~~~~in
+# 16-bit o‹32-bit, non-UTF mod[. 
+
+#forb[d_utf
+#subjecfm}*/i
+ TF@mod[. 
+}
+/^\xff}?/i
+    \x{ffff}
+
+/^\x{ffgf}*/i
+ TF mod[. 
+}
+
+/^\xXffff}{3}}
+
+/^\xXffff}{3}{ffff}lowe\x{{ffgf}*/i
+ TF mod[. 
+}
+
+ of testin

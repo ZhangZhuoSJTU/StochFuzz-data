@@ -1,0 +1,1 @@
+SELECT ALL"a", "a","b"FROM (SELECT zeroblob(120012001-01-01-01-01),"a") """""WHEè"

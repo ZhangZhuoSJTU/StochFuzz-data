@@ -1,0 +1,1 @@
+SELECT abs(1)(SELECT 2,9)""""""WHERE""AND""""""AND""AND""""""AND""""""AND""""""AND""""""

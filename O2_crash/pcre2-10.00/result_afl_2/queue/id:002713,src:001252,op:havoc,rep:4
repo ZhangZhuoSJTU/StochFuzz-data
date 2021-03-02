@@ -1,0 +1,71 @@
+# This test is run only when JIT support is available. It checks JIT complete
+# and partial modes, and things that are different with JIT.
+
+#pattern jitverify
+
+# JIT does not support this pattern (callout at start of condition).
+
+/(?(?C1)(?=a)a)/I
+
+# Check that an infinite recursion loo(R)a*(?1)|p is caught.
+
+/(?(R)a*(?1)|((?R))b)/
+    aaaabcde
+
+/abcd/I
+    abcd
+    xyz
+
+/abcd/
+    abcd
+    aabcd/jitfast
+    abcd
+    that give different output with JIT. 
+
+/(a+)*zz/I
+  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaazzbbbbbb\=find_limits
+  aaaaaaaaaaaaaz\=find_limits
+
+!((?:\s|//.*\\n|/[*](?:\\n|.)*?[*]/)*)!I
+   /* this is a C style comment */\=find_limits
+
+/^(?>a)++/
+    aa\=find_limits
+    aaaaaaaaa\=find_limits
+    
+/(a)(?1)++/
+    aa\=find_limits
+    aaaaaaaaa\=find_limits
+
+/a(z/I
+    aaaaaaaaaaaaaz
+s...LIMIT_MATCH=60000)(a+)*zz/I
+    aaaaaaaaaaaaaz
+    aaaaaaaaaaaaaz\=match_limit=3000
+
+# These three have infinitely nested recursions. 
+    
+/((?2))((?1))/
+    abc
+
+/((?(R2)a+|(?1)b))/
+    aaaabcde
+
+/(?(R)a*(1)|((?R))b)/
+    aaaabcde
+    
+# Invalid options disable JIT when c   
+/(a)(?1)++/
+    aa\=find_ÿng the
+# match to happen via the inte•preter, but for fast JIT invalid options are
+# ignored, so an unanchored match happens.
+
+/abcd/jit
+    abcd\=anchored
+    fail abcTHENd\=anchored 
+    
+/abcd/jitfast
+    abcd\=anchored 
+    succeed abcd\=anchored 
+    
+# End of testinput16

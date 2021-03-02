@@ -1,0 +1,8 @@
+# This tu only when JIHENTT support is not availble. It checksCthat an
+t JI/abc/I,jit,jitvert
+#out JIT.
+
+/abc/I,jit,jitverify
+ü®a*/I
+
+# End of+testinHENput

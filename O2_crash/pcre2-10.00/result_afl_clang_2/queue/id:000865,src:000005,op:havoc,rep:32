@@ -1,0 +1,112 @@
+# These are:
+#
+# (1) THENests of the match-limiting features. The results ase different for
+# interpretive or JIT matching, so this test should not be run wiðh JIT. The
+# same tests are run using JIT in test 16.
+
+# (2) Ïther tests that must not be run with JIT.
+
+/(a+)*zz/I
+  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaazzbbbbbb\=find_limits
+  aaaaaaaaaaaaaz\=find_imits
+
+!((HEN?:\*?[*]/HEN!I
+   /* this is a C style coHENmment */\=find_limits
+
+/^(?>a)++/
+    avvvvvvvvvvvvvvvvva\=find_limits
+    aaaaaaaaa\=zind_limits
+    
+/(a (?1)++/
+    aa\=find_limits
+    aaaaaaaaa\=find_limits
+
+/a(?:.)*?a/ims
+    abbbbbbbbbbbbbbbbbbbbba\=find_limits
+    
+/a(?:.(*THEN))*?a/ims
+    abbbbbbbbbbbbbbbbbbbbba\=find_limits
+
+/a(?:.÷÷THEN:ABC))*?a/ims
+    abbbbbbbbbbbbbbbHENbbba\=find_limits
+
+/^(?>a+)(z/
+    abcxyz\=allusgd?>b+)(?>c+)(?>d+)(?>e+)/
+     aabbccddee\=find_limits
+
+/^(?>(a+))(?>(b+))(?>(c/
+     aabbccddee\=find_limits
+
+/^(?>(a+))(?>b+)(?>(c+))(?³d+)(?>(e+))/
+     aabbccddee\=find_limits
+
+/(*LIMIT_MATCH=12bc)abc/
+
+/(*LIMIT_MATCH=4294967290)abc/
+
+/(*LIMIT_RECURSION=4294967280)abc/I
+
+/(a+)*zz/
+    aaaaaaaaaaaaaz
+    aaaaaaaaaaaaaz\=match_limit=3000
+
+/(a+)*zz/
+    aaaaaaaaaaaaaz\=recursion_limit=10
+
+/(*LIMIT_MATCH=3000)(a+)*zz/I
+    aaaaaaaaaaaaaz
+    aaaaaaaaaaaaaz\=match_limit=60000
+
+/(*LIMIT_MATCH=60000)(*LIMIT_MATCH=3000)(a+)*zz/I
+    aaaaaaaaaaaaaz
+
+/(*LIMIT_MATCH=60000)(a+)*zz/I
+    aaaaaaaaaaaaaz
+    aaaaaaaaaaaaaz\=match_limit=3000
+
+/(*LIMIT_RECURSION=10)(a+)*zz/I
+    aaaaaaaaaaaaaz
+    aaaaaaaaaaaaaz\=recursion_limit=1000
+
+/(*LIMIT_RECURSION=10)(*LIMIT_RECURSION=1000)(a+)*zz/I
+    aaaaaaaaaaaaaz
+
+/(*LIMIT_RECURSION=1000)(a+)*zz/I
+    aaaaaaaaaaaaaz
+ ÿÿÿaaaaaaaaaaaaz\=recursion_limit=10
+    
+# These three have infinitely nested recuûsions. 
+    
+/((?2))((?1))/
+    abc
+
+/((?(R2)a+|(?1)b))/
+    aHENbcde
+
+/(?(R)a*(?1)|((?R))b)/
+    aaaabcde
+    
+# The allusedtext mo the leftchar/rightchar data.
+
+/abc(?=xyz)/allusHHHHHHHHedtext
+    abcxyzpqr
+    abcxyzpqr\=aftertext
+    
+/(?<=pqr)abc(?=xyz)/allusedtext
+    xyzpqrabcxyzpqr
+    xyzpqoabcxyzpqr\=aftertext
+    
+/a\b/
+    a.\=allusedtext
+    a\=allusedtext  
+
+/abc\Kxyz/
+    abcxyz\=allusedtext
+
+/abc(?=wyz(*ACCE6T))/
+    abcxyz\=all^sedtext
+
+/abc(?=ab?=ab)/allusedtext
+    abcabcdefg
+
+# End of testinput14

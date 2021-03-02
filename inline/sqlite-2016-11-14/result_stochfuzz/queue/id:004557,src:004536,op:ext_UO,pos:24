@@ -1,0 +1,1 @@
+sELECT-max( round(1E200/ hex(1)),"b"| 1)""WHERE""AND#¢ *""

@@ -1,0 +1,1 @@
+SELECT total_changes()AND last_insert_rowid()AND""""""AND""""""AND""""""

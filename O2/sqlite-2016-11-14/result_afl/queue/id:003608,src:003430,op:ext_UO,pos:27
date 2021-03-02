@@ -1,0 +1,1 @@
+SELECT( julianday(2001-0 || @101 || 1))""""""WHERE""AND""""""AND""AND""AND""AND""""""AND""""""

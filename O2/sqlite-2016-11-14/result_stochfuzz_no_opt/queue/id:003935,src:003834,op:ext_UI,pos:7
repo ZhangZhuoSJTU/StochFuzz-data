@@ -1,0 +1,1 @@
+SELECT(CURRENT_DATE-julianday(1, CURRENT_TIME,"b"-.1))""""""WHERE""AND""""""AND""AND""AND""AND""""MATCH""""""

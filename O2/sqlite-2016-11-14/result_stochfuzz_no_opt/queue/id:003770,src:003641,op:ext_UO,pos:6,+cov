@@ -1,0 +1,1 @@
+SELECT a.b"a","b"FROM(SELECT avg(1)bS)HERE""AND""""AND""""""AND""""""A

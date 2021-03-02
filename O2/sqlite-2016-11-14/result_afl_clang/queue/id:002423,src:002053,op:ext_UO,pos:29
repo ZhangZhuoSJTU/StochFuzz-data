@@ -1,0 +1,1 @@
+SELECT( substr(1,1, strftime( avg(1))))""""""WHERE""AND""""""AND""AND""""""AND""""""AND""""""AND""""""

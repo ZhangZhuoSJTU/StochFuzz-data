@@ -1,0 +1,1 @@
+SELECT(2,5)IN( "a","b",9)GLOB""WHERE""AND""LIKE""ESCAPE""AND""AND""LIKE""""AND""""""AND""""""AND""""""

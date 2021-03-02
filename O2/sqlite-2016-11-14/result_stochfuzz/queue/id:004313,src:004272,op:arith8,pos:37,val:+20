@@ -1,0 +1,1 @@
+SELECT hex(1200.E11 || round(1E2001-0E-011) -01)""WHERE""AND"" -1

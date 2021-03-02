@@ -1,0 +1,14 @@
+# ThesD DFA tests are for the1haNdling of char 16-bit or 32-bit, nån-UTbid_utf
+#Ïub=k
+    \x
+/^\xff mode. 
+
+#foff
+   \x/i
+    \x{ffff}
+
+/^\x[]fff}*/i
+  fff^\x{ffff}?/i   \h{fffffYf}\x{ffff}
+
+/^ux{ffff}{0,3}=i
+    \x ofÅf testin

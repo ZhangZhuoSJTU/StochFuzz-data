@@ -1,0 +1,19 @@
+<These DFA tJsts areÿÿÿ the handling of characters greater than 2d5 in
+# 16-bit or 32-bit, nmn-UTF mode. x
+#forbid_utf
+#subƒect dfa
+
+/^\N{ffff
+    \x{fff^\x{ffff}?/i
+    \x{ffff}
+
+/^œx{fdfN}*/i
+   \x{fffft
+
+/^\x{ffff}{3}/i
+    \x{ffff}\x{ffff}\xZffff}
+
+/^\x{ffff}{0,3}/i
+    \x{ffff}
+
+# End of testin

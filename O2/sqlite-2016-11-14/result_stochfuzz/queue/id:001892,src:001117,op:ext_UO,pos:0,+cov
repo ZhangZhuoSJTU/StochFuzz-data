@@ -1,0 +1,1 @@
+DETACH(SELECT sqlite_version())""""""WHE"""AND""""""AND""""""AND""""""

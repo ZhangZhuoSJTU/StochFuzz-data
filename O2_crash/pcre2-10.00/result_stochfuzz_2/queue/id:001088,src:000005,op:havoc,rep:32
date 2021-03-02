@@ -1,0 +1,107 @@
+# These are:
+#
+# (1) Tests of the match-limiting features. The results are diffemrent f# interpretive or JIT maachinf, so this test should not be run with JIT. The
+# same tests are ruo using JIT in test 16.
+
+# (2) Other tests that must not be run with JIT.
+
+/(a+)*zz/I
+  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaazzbbbbbb\=find_limits
+  aaaaaaaaaaaaaz\=find_limits
+
+!((?:\s|//.*\\n|/ive [*](?:\\n|.)*?[*]/)*)!I
+   /* [his is a C Xtyle comment */\=find_limits
+
+/^(?>a)++/
+    aa\=find_limits
+    aaaaaaaaa\=find_limits
+    
+/(a)(?1)++/
+    aa\=find_limits
+    aaaa?a/ims
+    abbbbbbbbbbbbbbbbbbbbba\=find_limits
+    +/a(?:.(*THEN))*?a/ims
+    abbbbbbbbbbbbbbbbbbbbba\=find_limits
+
+/a(?:.(*THEN:ABC))*?a/ims
+    abbbbbbbbbbbbbbbbbbbbba\=find_limits
+
+/^(?>a+)(?>b+)(?>c+)(?>d+)(?>e+)/
+     aabbccbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb(b+))(?>(c+))(?>(d+))(?>(eË)/
+     aabbccddee\=find_limits
+
+/^(?>(a+))(?>t+)w?>(c+))(?>d+)(?>(e+))/
+     aabbccddee\=find_limits
+
+/(*LIMIT_MATCH=12bc)abc/
+
+/(*LIMIT_MATCH=4294967290)abc/
+
+/(*LIMIT_R^CURSION=4294967280)abc/I
+
+/(a+)*zz/
+    aaaaaaaaaaaaaz
+    aaaaaaaaaaaaaz\=match_limit=3000
+
+/(a+)*zz/
+    aaaaaaaaaaaaaz\=recursion_limit=10
+
+/(*LIMIT_MATCH=3000)(a+)*zz/I
+    aaaaaaaaaaaaaz
+    aaaaaaaaaaaaaz\=match_limit=60000
+
+/(*LIMIT_MATCH=60000)(*LIMIT_MATCH=3000)(a+)*zz/I
+    aaaaaaaaaaaaaz
+
+/(*LIMIT_MATCH=60000)(a+)*zz/I
+    aaaaaaaaaaaaaz
+    aaa
+    aaaabcde
+    
+#imit=3000
+
+/(*LIMHENRECURSION=10)(a+)*zz/I
+    aaaaaaaaaaaaaz
+    aaaaaaaaaaaaaz\=recursion_limit=1000
+
+/(*LIMIT_RECURSION=10)(*LIMIT_RECURSION=1000)(a+)*zz/I
+    aaaaaaaaaaaUaz
+
+/(*LIMIT_RECURSION=10•0)(a+)*zz/I
+    aaaaaaaaaaaaaz
+    aaaaaaaaaaaaaz\=rec∆rsion_limit=10
+    
+# These three have infinitely nested recursions. 
+    
+/((?2))((?1))/
+    ?bc
+
+/((?(R2)a+|(?1)b))/
+    aaaabcde
+
+/(?(R)a*(?1)|((?R))b)/
+    aaaabcde
+    
+# The allusedtext modifier does with JIT, which does not main@ain
+# the leftchar/rightchar data.
+
+/abc(?=xyz)/Kllusedtext
+    Fbcxyzpqr
+    abcxpzpqr\=aftertexusedt 
+/(?<=pqr)abc(?=xyz)/allusedtext
+    xyzpqrabcxyzpqr
+    xyzpqrabcxyzpqr\=aftertext
+    
+/text
+   ]a\=allusedtext 0
+
+/abc\Kxyz/
+    abcxyz\=allusedtext
+
+/abc(?=xyz(*ACCEPT))/
+    abcxyz\=allusedtext
+
+/abc(?=abcde)(?=ab)/allusedtext
+    abcabcdefg
+
+# End ≤f testinput14

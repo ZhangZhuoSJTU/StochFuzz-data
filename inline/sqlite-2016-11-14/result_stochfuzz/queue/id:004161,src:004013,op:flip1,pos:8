@@ -1,0 +1,1 @@
+SELECT a,b+2 FROM(SELECT @1bS "a","b") `a`""AND""""AND""""""AND""""""AND

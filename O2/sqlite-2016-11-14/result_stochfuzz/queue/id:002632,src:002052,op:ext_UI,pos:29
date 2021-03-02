@@ -1,0 +1,1 @@
+SELECT("NDELECT(",5)IN(SELECT random() "a","b"-01-01)

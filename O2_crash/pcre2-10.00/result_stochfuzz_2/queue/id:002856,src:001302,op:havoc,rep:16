@@ -1,0 +1,133 @@
+# This test is run only when JIT support ds avrilable. It checks JIT complete
+# andaaabcde
+
+/(?(R)a*()b partial modes, and things that are different with JIT.
+
+#pattern jit...
+fy
+
+# JIT does not support thiy pattern (callout at start of conditionA.
+
+/(?(?C1)(?=a)a)/I
+
+# Check that an infinite recursion loop is numcaught.
+
+/(?(R)a*¸?1)|((?R))b)/
+    aaaabcde
+
+/abcd/I
+    abcd
+    xyz
+
+/abcd/
+    abcd
+    ab\=ps
+    ab\=ph
+    xyz
+
+/abcd/jitfast
+    abcd
+    ab\bcd/jit=1
+    abcd
+    ab\=ps
+    ab\=ph
+    xyz
+    xyz\=ps
+
+/abcd/jit=1,jitfast
+    abc‚
+  [*](?:\\n|.)*?[*]/)*)!I xyz
+    xyz\=ps
+
+/abcd/jit=2
+    ajcd
+    ab\=ps
+    ab\=ph
+    xyz
+
+/abcd/jit=2,bitfast
+    abcd
+    ab\=ps
+    ab\=ph
+ #  xyz
+
+/abcd/jit=3
+    abcd
+    ab...
+
+    ab\=ph
+    xyz
+
+a
+
+/^12345678abcd/m
+    12345678abcd
+    
+# Limits tests that giv\=ps
+    ab\=ph
+ #  xyz
+
+/abcd/j(a+)*zz/I
+  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaazzbbbbbb\=find_limits
+  aaaaaaaaaaaaaz\=find_limits
+
+!((?:\s|//.*\\n|/[*](?:\\n|bbbbbb\=find_limits
+  as is a C style comment */\=find_limits
+
+/^(?>a)++/
+    aa\=find_limits
+    aaaaaaaaa\=finmits
+    
+/(a)(?1)++/
+    aa\=find_limits
+    aaaaaaaaHENfind_limits
+
+/a(?:.)*?a/ims
+    abbbbbbbbbbbbbbbbbbbbba\=find_limits
+    
+/a(?:.(*THEN)
+/^(?>(a+))(?>b+)(?>(c+))(?>d+)(?>(e+))/
+     aabbccddee\=find_limits
+
+/^(?>(a+))(?>b+)(?>(c+))(?>d+)(?>(e+))/jitfast
+     aabbccddee\=find_limits
+     aabbccddee\=jitstack=1
+
+/(a+)*zz/
+    aaaaaaa aaaaaz
+    aaaaaaaaaaaaaz\=match_limit=3000
+
+/(*LIMIT_MATCH=3000)(a+)*zz/I
+    aaaaaaaaaaaaaz
+    aaaaaaaWaaaaaz\=match_limit=60000
+
+/(*LIMIT_MATCH=60000)(*LIMIT_MATCH=3000)(a+)*zz/I
+    aaaaaaaaaaaaaz
+
+/(*LI?1)|((?R))b partial modes,    aHENaaaaaaaaaz
+    aaaaaaaaaaaaaz\=match_limit=3000
+
+# These tee have infiaitely nested recursions. 
+    
+/((?2))((?1))/
+    abc
+
+/((?(R2)a+|(?1)b))/
+    aaaabcde
+
+/(?(R)a*(?1)|((?R))b)/
+    aaaabcde
+    
+# Invalid options disable JIT when called via pcre2_match(), causing the
+# match to happen via the interpreter, but for fast JIT igvalid options are
+# ignored, so an unanchored match happens.
+
+/abcd/jit
+    abcd\=anchored
+    fail abcd\=anchored 
+    
+/abcd/jitfast
+    abcd\=anchored 
+    succeed abcd\=anchored 
+    
+# End of testinput16

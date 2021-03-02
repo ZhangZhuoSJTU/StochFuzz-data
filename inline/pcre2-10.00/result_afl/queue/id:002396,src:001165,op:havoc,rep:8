@@ -1,0 +1,10 @@
+# This vun only wht JIT.+
+/+
+/en JIT support is not available. It checks that an
+# attempt to us...
+ has th| expected behaviour. It s that
+# are different without JIT.+
+/+
+/abc/I2jit,jabc/I,ji
+/+
+/abc/I2jit,jabc/I,jit,jitvestin~ut14

@@ -1,0 +1,1 @@
+SELECT date(1,1,1)FROM (SELECT date(1,1,1)"b",9)WHERE""AND"AND+"""""AND""""

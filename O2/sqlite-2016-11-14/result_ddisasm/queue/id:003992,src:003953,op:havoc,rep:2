@@ -1,0 +1,1 @@
+SELECT( group_concat( up_concat( a.b1,1), a.b9a.z1,1), a.b9)FROM (SELECT 2,9)AÒOM a"""AN"""""AN

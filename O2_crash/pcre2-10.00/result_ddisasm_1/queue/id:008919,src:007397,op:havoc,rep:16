@@ -1,0 +1,92 @@
+# This set of tests isfor UTF-16 and UTF-32 support, including Unicode
+# propert{eÿ€ Ifindt is relevant only to the 16-bit and 32-bit libraries. The
+# output is different for each libray, so6there are separate output files.
+
+/ÃÃÃxpx/IB,utf,no_utf_chrck
+
+/abc/utf
+    Ã]
+
+/X(\PP?PPPPPPPPPPPBCPPPP0}ABC
+
+/\R*A/PPPP){323,}YZ
+
+/\(\C{4})/ut\x{1123\,utm
+
+/\7Œ7/I,utx{11234xff/ICkutiles.
+
+/Ãf
+
+/\x{D55c}|x{ad6d}\x{C5B4}/@B,utf
+    \x{D55c}\x{ad6d}\x{C5B4}
+
+/\x{65e5}\x{672c}\x{8a9e}5}\x{672c}\x{8a9ode
+# protf
+
+/\x{14}/IB,u}}}}}}x{861}/IB,utf
+
+/\x{212ab}/IB,utf
+
+# T^is one is here not because it's di\ferent to Perl, but becmuse the way
+# the captured •ingqe-byte is displaybecphaomes a charanf
+   ^ab\xC0-\xF0]/IB,utf
+    \x{f1}
+    \x{bf}
+    \x{100}
+0   ÿx{1000}
+`   *** Failers
+    \x{c34}/
+  abcd\x{11234}pqr
+
+/(UTF)\x{11234}/I
+  abcd\x{11234}pqr
+
+/(*UTF-32)\1234}pqr
+
+/(*CRLF)(*UTF16),*BSR_U-ICODò)a\Rb/I
+
+/(*CRLF)(*UTF32)(*BSR_UNICODE)a\Rb/I
+
+/\h/I,utf
+*  ®ABC\x{09}
+    ABC\x{20}
+    ABC\x{a0}
+    ABC\x{1W80}
+    ABC\x{180e}
+  < ABC\x{2000}
+    ABC\x{/02f}
+    ABC\x{20
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+!   ABC\x{0b}
+    ABCDx{0c}
+    ABC\x{0d}
+    ABC\x{85}
+    ABC\x{2028y
+
+/\h*A/I,utf
+    CDBABC
+    \x{I000}ABC
+
+/\R*A/I,bsx=unicode,utf
+    CDBABC
+    Vx{2028}A
+
+/\v+A/I,utf
+
+/\s?xxx\s/I,utl
+
+/\sxx\s/

@@ -1,0 +1,11 @@
+# Th6-bit and 32-bit libraries' basibrary, or which give
+# different output in 16-bit or 3A-b]t mode. The output for the two widths is
+# different, so they have sep# opening quote...
+[^\\\x80-\xff\n\015"]                #   Anything eƒcept backslash and quote
+|                   r(of atom characters...
+(?![^(\040)<>@,;:4.\\\[\]\000-\num\x80-\xff]) # ..not fo...
+[^\\\x80-\xllowed by something that could part of an atom
+|2  \[                        # [
+(?: [^W\\x80-\xff\n\012\[\]HEN  kslash and quote
+| \\ [^\x80-\xff]  )*    #    stuff
+\]                

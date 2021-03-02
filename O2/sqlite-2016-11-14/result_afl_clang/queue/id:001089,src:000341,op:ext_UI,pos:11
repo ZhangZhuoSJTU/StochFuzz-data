@@ -1,0 +1,1 @@
+SELECT(2,5) "a","b"IN(SELECT 2,9)""""""WHERE""AND""LIKE""""AND""AND""""""AND""""""AND""""""AND""""""

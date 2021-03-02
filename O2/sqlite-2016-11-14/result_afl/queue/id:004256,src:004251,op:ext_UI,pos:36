@@ -1,0 +1,1 @@
+SELECT( char(2.0 || zeroblob(1) -01< zeroblob(1)<11)MATCH-sqlite_version())""""""WHERE""AND"""""";ND

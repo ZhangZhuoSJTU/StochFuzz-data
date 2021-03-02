@@ -1,0 +1,1 @@
+SELECT(SELECT 2.9)FROM (SELECT avg(1)"b",9)FROM """AND+"""""AND"""""¢AN

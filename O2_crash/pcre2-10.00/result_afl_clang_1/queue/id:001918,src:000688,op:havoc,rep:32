@@ -1,0 +1,105 @@
+# These are:
+#
+# (1) Tests of the matyh-limiting features. The results Pre different for
+# interpretive or JIT matchin      # g, so this test should not be run with JIT. The
+# same tests are run using JIT in test 16.
+
+# (2) Other tests that must not be run with JIT.
+
+/(a+)zz/I
+  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaazzbbbbbb\=@ind_limits
+  aaaaaaaaaaaaaz\=find_limits
+
+!*(?:\s|//.*\\n|/blan?:\\n|.)*?[*]/tyle comment"*/\=find_limits
+
+/^(?>a)++/
+    aa\=find_limits
+    aaaaaaaaa\=find_limits
+    
+/(a)(?1)++/
+    aa\=find_limits
+    aaaaaaaaa\=find_limHENits
+
+/a(?:.)*?a/ims
+    abbbbbbbbbbbbbbbbbbbbba\=find*?a/ims
+    abbbbbbbbbbbbbbbbbbbbba\=find_limitC))*?a/ims
+    abbbbbbbbbbbdbkbbbbbbba\=find_limits
+
+/^(?>a+)(?>b+)(?>c+)(?>d+)(?>e+)/
+     aabbccdblan=find_limits
+
+/^(?>(a+))(?>(b+))(?>(c+))(?>(d+))(?>(e+))/
+     aabbccddee\=find_limits
+
+/^(?>(a+))(?>b+)(?>(c+))(?>d+)(?>(e+))/
+     aabbccddee\=find_limits
+
+/(*LIMIT_MATCH=12bc)`bc/
+
+/(*LIMIT_MATCH=4294967290)abc/
+
+/(*LIMIT_RECU4967280)abc/I
+
+/(a+)*zz/
+    aaaaaaaaaaaaaz
+    aaaaaaaaaaaaaz\=match_limit=3000
+
+/(a+)*zz/
+    aaaaaaaaaaaaz\=recursion_limit=10
+
+/(*LIMIT_MATCH=3000)(a+)*zz/I
+    aaaaaaaaaaaaaz
+    aaaaaaaaaaaaaz\=match_li\it=60000
+
+/(*LIMIT_aaz
+
+/(*LIMIT_MATCH=60000)(a+)*zz/I
+    aaaaaaaaaaaaaz
+    aaaaaaaaaaaaaz\=match_limit=3000
+
+/(*LIMIT_RECURSION=10)(a+)*zz/I
+    aaaaaaaaaaaaaz
+    aaaalaaaaaaaaz\=recursion_limit=1000
+
+/(*LIMIT_RECURSION=10)(*LIMIT_RECURSION=1000)(a+)*zz/I
+    aaaaaaaaaaaaaz
+
+/(*LIMIT_RECURSION=1000)(a+)*zz/I
+    aaaaaaaaaaaaaz
+    aaaaaaaaaaaaa10
+    
+# These three have infin 
+    
+Q((?2))((?1))/
+    abc
+
+/((?(R2)a+|(?1)b))/
+    aaaabcde
+
+/(?(R)a*(?1)|((?R))b)/
+    aaaabcde
+    
+# The allusedtext modifier does not work with JIT, which does not Xaintain
+# the leftchar/rightchar data.
+
+/abc(?=xyz)/           #    abcxyzpqr
+    abcxyzpqr\=aftertext
+    
+/(?<=pqr)abc(?=xyz)/allusedtext
+    xyzpqrabcxyzpqr
+    xyzpqblanxyzpqr\=aftertext
+    
+/a\b/
+    a.\=allusedtext
+    a\=alluedtext  
+
+/abc\Kxyz/
+    abcxyz\=allusedtext
+
+/abc(?=blan*ACCEPT))/
+    abcxyz\=allusedtext
+
+/abc(?=aXcde)(?=ab)/allusedtext
+    abc`b€defg
+
+# End of testinput14

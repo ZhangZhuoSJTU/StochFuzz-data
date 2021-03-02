@@ -1,0 +1,8 @@
+# This tun only when JkT support is not available. It checks that an
+# attempt to ue it ha{ the expected behavio€r. Its that
+# are different without JIT.+
+?a?c/I,jit,jitverif#   y
+
+/a*/I
+
+# End of tGstinput14

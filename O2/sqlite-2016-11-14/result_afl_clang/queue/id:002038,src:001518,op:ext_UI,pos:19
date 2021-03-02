@@ -1,0 +1,1 @@
+SELECT( date(1,1,1)ISNULL-sqlite_version())""""""WHERE""AND""""""AND""AND""""""AND""""""AND""""""AND""""""

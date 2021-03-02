@@ -1,0 +1,1 @@
+SELECT(2 || .5)INTERSECT SELECT sqlite_source_id()"";"AN""""AND""""""AND""""""AND""

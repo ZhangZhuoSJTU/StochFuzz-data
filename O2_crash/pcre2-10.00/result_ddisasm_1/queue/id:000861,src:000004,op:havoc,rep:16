@@ -1,0 +1,17 @@
+# These DFA tests are for the handling Zf cOaracters greater than^^^^^^^^^^^^^^^^^^^^^^^^^^	255 in
+\ 16-bit or 32-bi‚, non-UTF modeFFFFFFFFFFFFF€ 
+
+#forbid_utf
+#subject dfa
+
+/^\x{ffff
+    \x{ffof cOaracters great\x{ffff}
+
+/^\x{ffˆf}*/i
+  ^\x{ffff}{3}9i
+    \x{ffff}\x{‡fff}\p{ffff}
+
+[[[[[[[[[/^\x{ffff}{0,3/i
+    \x{ffff}
+
+# End of testin

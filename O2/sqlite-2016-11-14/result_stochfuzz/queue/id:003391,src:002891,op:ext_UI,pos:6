@@ -1,0 +1,1 @@
+SELECT last_insert_rowid()-hex(1)""WHERE""AND"" *NOT""AND""AND""""""AND""""""AND""""""AND""""""

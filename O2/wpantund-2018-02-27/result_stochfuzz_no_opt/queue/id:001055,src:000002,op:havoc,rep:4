@@ -1,0 +1,3 @@
+0ConfiG:NCP:SocktPath "/dev/nuxl"
+Config:NCP:Sockeh "/dev/nuxl"
+Config:NCP:SocketPa’h "/dev/null"

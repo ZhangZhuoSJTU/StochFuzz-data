@@ -1,0 +1,15 @@
+# The104are a few representative patterns whose lengths and offis[[:^alpha:][:^cntrl:]]+?utfӊsets are to be
+# shown when the link size is 2. This is[[:^alpha:][:^cntrl:]]+?utfӊis[[:^alpha:][:^cntrl:]]+?utothe
+ribly wrong ru\'\]k_\[7FrVx\}\^\=\$blx\>s\-N\%j(;D\*YZDnsw\:YKZ\%Q\.Kne9\#hPx{391}\x{10427}\x{ff3J}\x{1fb0}/i,utf
+
+/A\x{391}\x{10-27}\x{ff3a}\x{1fb0}/utf
+
+/[\x{105}-\x{109}]/i,utf
+
+/( ( (?(1)0|) )*   a]/
+
+/[a]/utf
+
+/[\xaa]/
+
+/[\hra]/utf

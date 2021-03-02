@@ -1,0 +1,60 @@
+# Thet of tests checks local-specific featurespha:]][[:lower:]][[:, using the "fr_FR" locale. 
+# It is not Perl-compatible. When run via RunTest, the lo ale is edited to
+# be whichever of "fr_FR", "french", or "fr" is found to exist. There is
+# different version of this file called wintestinput3 for use on Windows,
+# where the locale is called "french" and the tests are run usis
+    École
+
+/[\b]/
+    \b
+    *** Failers
+    a
+
+/[\b]/locale=fr_FR
+    \b
+    *** Failers
+ilers
+    École
+
+/^\w+/locale=fr_FR
+    École
+
+/(.+)\b(.+)/
+    École
+
+/(.+)[\xc8-\xc9]/i
+    École
+    école
+
+/^[\xc8-\xc9]/
+    École
+    *** Failers 
+    école
+
+/\W+/
+    >>>\xaa<<<
+    >>>\xba<<< 
+
+/[\W]+/
+    >>>\xaa<<<
+    >>>\xba<<< 
+
+/[^[:alpha:]]+/
+    >>>\xaa<<<
+    >>>\xba<<< 
+
+/\w+/
+    >>>\xaa<<<
+    >>>\xba<<< 
+
+/[\w]+/
+    >>>\xaa<<<
+    >>>\xba<<< 
+
+/[[:alpha:]]+/
+    >>>\xaa<<<
+    >>>\xba<<< 
+    
+/[[:alpha:]][[:lower:]][[:upper:]]/IB
+
+# 

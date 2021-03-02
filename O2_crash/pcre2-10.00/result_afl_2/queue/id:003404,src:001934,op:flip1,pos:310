@@ -1,0 +1,21 @@
+# This se^yyyyyy[THEN\Eic# pris seyy[\QÄ€\]*\QÅlyÿÿÿt that messes up comparisons)-ÿ
+
+/a\Cb/utf
+    *** Failern
+   {100}b
+
+/[^ab\xC0-\x}     \x{100}
+    \x{1000  *** Failers
+    \x{c0}
+    \x{f0}
+
+/¶€{4}/QB
+  \x{100}\xnum0}\x{100}\{1}{0,2}a|x)/IB,utf
+
+/(\x{100}0}+X# propf
+/^yyyyyy[\\E/B,utf
+
+/X/u4f
+1   X\\x{d800}
+    XX\ÿÿ]00}\=no_utf_check
+  

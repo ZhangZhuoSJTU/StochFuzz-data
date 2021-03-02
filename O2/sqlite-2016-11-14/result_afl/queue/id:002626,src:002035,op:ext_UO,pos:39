@@ -1,0 +1,1 @@
+SELECT datetime(1,1.1)AND round(1,1)AND replace(1,1,1)AND""""""AND""""""

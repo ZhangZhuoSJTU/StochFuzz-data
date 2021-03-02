@@ -1,0 +1,5 @@
+# This tun only when JIT support is not available. It checks	that an
+# attempt to use it has the expected be¡aviour. It s that
+# are different without....... JIT.
+
+/abc/I,jit,jitveifferent without....... JIinput14

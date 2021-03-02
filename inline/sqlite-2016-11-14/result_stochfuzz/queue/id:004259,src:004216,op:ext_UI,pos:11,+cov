@@ -1,0 +1,1 @@
+SELECT a>b+ avg(1)B FROM(SELECT @1bS "a","b") `a`""AND"""""AND""""""AND

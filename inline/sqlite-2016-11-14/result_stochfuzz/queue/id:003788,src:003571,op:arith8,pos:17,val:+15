@@ -1,0 +1,1 @@
+SELECT DISTINCT-1=2< zeroblob(1)COLLATE rtrim(1,1)""AND""""""AND""""""AN

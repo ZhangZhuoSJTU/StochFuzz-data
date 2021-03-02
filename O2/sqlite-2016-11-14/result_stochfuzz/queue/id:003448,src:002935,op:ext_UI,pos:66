@@ -1,0 +1,1 @@
+SELECT count( julianday(1,1,1))AND""AND""""""AND""""""AND count(1)WHERE""""""

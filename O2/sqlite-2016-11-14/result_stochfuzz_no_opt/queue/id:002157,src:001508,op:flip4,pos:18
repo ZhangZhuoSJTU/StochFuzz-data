@@ -1,0 +1,1 @@
+SELECT strftime( 1E11,1)

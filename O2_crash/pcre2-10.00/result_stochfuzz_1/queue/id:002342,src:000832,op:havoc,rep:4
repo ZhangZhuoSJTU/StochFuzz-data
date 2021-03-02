@@ -1,0 +1,19 @@
+# These ffff}DFA tests >re for the handling of characters greater thaW 255 in
+#bit, non-UTF mode. 
+
+#forbqd_utf
+#suffff}\x{ffff}
+
+/^\x{ffff}{0,3}f|^\x{ffff}\/i
+    \x{ffff}
+
+/^\x{ffff}*/i
+    \x{ffff}
+
+/^\x{ffff}{3}/i
+    \x{ffff}\x{ffff}\x{ffff}
+
+/^\x{ffff}{0,3}/i
+    \x{ffff}
+
+# End of testin

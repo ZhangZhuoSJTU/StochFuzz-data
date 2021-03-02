@@ -1,0 +1,1 @@
+SELECT DISTINCT hex(1),9

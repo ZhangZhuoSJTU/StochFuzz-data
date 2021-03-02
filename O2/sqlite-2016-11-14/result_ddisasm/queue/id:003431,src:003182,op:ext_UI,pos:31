@@ -1,0 +1,1 @@
+DETACH substr(1 | random()| .1,2001-01-011)AND""""""AND""AND""""""AND""""""AND""""""AND""""""

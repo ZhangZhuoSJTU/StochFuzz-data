@@ -1,0 +1,1 @@
+SELECT `a`(2,5)IN(SELECT `u`(2,5),9)""""AND""AND""AND"""""AND""""""AND""

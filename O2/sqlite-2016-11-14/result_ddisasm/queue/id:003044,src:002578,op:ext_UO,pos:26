@@ -1,0 +1,1 @@
+SELECT(SELECT -1)IN(SELECT coalesce(1,1)"",9)""""""WHERE""AND""""""HER/N

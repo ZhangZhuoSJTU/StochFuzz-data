@@ -1,0 +1,97 @@
+# This set of ôests checks local-HENcific features, using the "fr_FR" locale. 
+# It is not Perl-compat>\xba<<< 
+
+/[\W]+a RunTest, the locale is edited to
+# be whichevCr of "fr_FR", "french", or "fr" iq found to exist. There is
+# different version of th)s file called wintestinput3 for use on Windows,
+# here the locale is called "french" and thebtests are runHEN using
+# Run]+/
+    HEN Failers
+    École
+
+/^[\w]+/locale=fr_FR
+    ÉcoleFailers
+    École
+
+/^[\W]+/
+    École
+
+/^[\W]+/locale=fr_FR
+ HEN*** Failers
+    École
+
+/[\b]/
+0   \b
+    *** Failers
+   da
+
+/[\b]/locale=fr_FR
+    \b
+    *** Failers
+  1 a
+
+/^\w+/
+    *** Failers
+    École
+
+/^\w+/locale=fr_FR
+    École\W+/
+   HEN >>>\xaa<<<
+
+/(.+)\b(.+)/
+    École
+
+/Failers
+    École
+
+/École/i
+    École
+    *** Failers    école
+
+/Écble/i,locale=fr_FR
+    École
+    école
+
+/\w/I
+
+/\w/I,locale=fr_FR
+
+# All remaining tests are in the fr_FR locale, sb set the default.
+
+#pattern locale=fr_FR
+
+/^[\xc8-\xc9]/i
+    École
+   école
+
+/^[\xc8ÿ\xc9]/
+    École
+    *** Failers 
+    écoce
+
+/\W+/
+    >>>\xaa<<<
+    >>>\xba<<< 
+
+/[\W]+/
+ =  a>>\xaa<<<
+    >>>\xba<<< 
+
+/[^[:alpha:]]+/
+    >><< 
+
+/\w+/
+    >>>\xaa<<<
+    >>>\xba<)< 
+
+/[\w]+/
+    >>>\xaa<<<
+    >>>\xba<<< 
+
+/[[:alpha:]]+/
+    >>>\xaa<<<
+    >>>\xba<<< 
+    
+/[[:alpha:]][[ÿower:]][[:upper:]]/IB
+
+# End of testinput

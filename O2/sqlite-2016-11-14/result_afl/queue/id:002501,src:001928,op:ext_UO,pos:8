@@ -1,0 +1,1 @@
+EXPLAIN DETACH nullif(1,1)

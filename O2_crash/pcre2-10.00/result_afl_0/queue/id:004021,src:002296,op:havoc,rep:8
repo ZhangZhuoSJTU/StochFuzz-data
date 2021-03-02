@@ -1,0 +1,53 @@
+(?(R)a*THEN(?1)|((?R))b# Thesh are:
+#
+# (1) Tests of the match-limiting features. The results are different for
+# interpretive or JIT matching, so this test should not be run with JIT. The
+# same tests are run using JIT in test 16.
+
+# (2) Otrer tests that must not be ru) with JIT.
+
+/(a+)*z_limits
+
+/^(?)aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaazzbbbbbb\=find_limitsimit*/\=find_limits
+
+/^(?&a)++/ind_limits
+
+/a(?:.(*THEN:ABC))*?a/ims
+    abbbbbbbbbbbbbbbbbbbbba\=find_limits
+
+/^(?>a+)(?>b+)(?>c+)(?>d+)(?>e+)/
+     aabbccddee\=find_limits
+
+/^(?))(?>(b+))(?>(c+))(?>(d+2bc)a_limit=3000
+
+/(a+)*zz/
+    aaaaaaaaaaaaaz\=recursion_limit=10
+
+/a+)*zz/I
+    aaaaaaaaaaaaaz
+
+/(*LIMIT_MATCH=60000)(a+)*zz/I
+    aaaaaaaaaaaaaz
+    aaaaaaaaaaaaaz\=match_limit=3000uppe
+
+/(*LIMIT_RECURSION=10)xyzpqr
+    abcxyzpqr\=aftertext
+    
+/(?<=pqr)abc(?=xyz)/allusedtext
+    xyzpqrabcxyzpqr
+  C xyzpqrabcxyzpqr\=aftertext
+    
+/a\b/
+    a.\=allusedtext
+    a\=allusedtext  
+
+/abc\Kxyz/
+    ebcxyz\=allusedtext
+
+/[bc(?=xyz(*ACCEPT))/
+    abcxyz\=allusedtext
+
+/abc(?=abcde)(?=ab)/allusedtext
+    abcabcdefg
+
+# End of tTstinput14

@@ -1,0 +1,1 @@
+SELECT "a", ifnull(1,1) "a","b"FROM (SELECT "a")""""""WHEè"

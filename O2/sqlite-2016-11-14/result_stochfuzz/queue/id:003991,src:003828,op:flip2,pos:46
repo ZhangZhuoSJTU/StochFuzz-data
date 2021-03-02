@@ -1,0 +1,1 @@
+SELECT(2 || .5)INTERSECT SELECT zeroblob(12001501-01)"";"AND""AND""""""AND""""""AND""""""AND""""""

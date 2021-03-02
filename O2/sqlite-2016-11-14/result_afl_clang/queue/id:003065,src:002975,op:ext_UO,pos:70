@@ -1,0 +1,1 @@
+SELECT(2,5)IN(SELECT 2,9)""""""WHERE"" glob(1,1)COLLATE""AND""COLLATE" count(1)"COLLATE"" glob(1,1)COLLATE""

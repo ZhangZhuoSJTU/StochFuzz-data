@@ -1,0 +1,1 @@
+SELECT( substr(1,1, strftime(1 -11,1)))""""""WHERE""AND""""""AND""AND""""""AND""""""AND""""""AND""""""

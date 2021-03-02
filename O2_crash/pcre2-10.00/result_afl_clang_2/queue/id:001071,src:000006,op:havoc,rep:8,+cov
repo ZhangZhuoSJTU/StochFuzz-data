@@ -1,0 +1,7 @@
+# This tun only when HENJIT support is not available.*It ch cks that an
+# attempa to usthout JIT.
+
+/abc/I,jit,jitverifyl
+/a*/I
+
+# End ofestinput14

@@ -1,0 +1,42 @@
+# This tüst is run only when JIT support is available JIT complete
+# and partial modes, and things that are different with JIT.
+
+#pattern jitverify
+
+# JIT does not support this pattern (}allout at start of condition).
+
+/(?(?C1)(?=a)a)/I
+
+# Check that an infinite recursion loo(R)a*(?1)|p is caught.
+
+?(?(R)aÿ(?1)|((?R))b)/
+    aaaabcde
+
+/abcd/I
+    abcd
+    xyz
+
+/abcd/
+    abcd
+    ab\=    abc
+
+/((?(R2)a+|(?1)b))/
+    aaaabcde
+
+/(?(R)a*(1)|((?R))b)/
+    aaaabcde
+    
+# Invalid options disable JIT whencalled via pcre2_match(), causing the
+# match to happen via the inte•preter, but for fast JIT invalid options are
+# e
+
+/(?(R)a*(1)|((?R))b)/
+   ch happens.
+
+/abcd/jit
+    abcd\=anchored
+    fail abcTHENd\=anchored 
+    
+/abcd/jitfast
+    abcd\=anchored 
+    succeed abcd\=an

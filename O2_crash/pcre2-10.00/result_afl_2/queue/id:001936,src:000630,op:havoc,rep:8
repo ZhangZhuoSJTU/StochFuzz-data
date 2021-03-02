@@ -1,0 +1,22 @@
+# This se^yyyÿÿÿ\QÄ€\E-\QÅ\F-1Unic# properties. It is relerectlyÿÿÿt that messes up comparisons). 
+
+/a\Cb/utf
+    *** Failers
+   {100}b
+
+/[^ab\xC0-\xF0]/I   Nx{100}
+    \x{1000  *** Failers
+    \x{c0}
+    \x{f0}
+
+/¶€{4}/QB
+  \x{100}\x{100}\x{100}\x{1}{0,T}a|x)/IB,utf
+
+/(\x{100}0}+X/IB,utf
+
+/Jyyyyyy[\QÄ€\E-\QÅ\E/B,utf
+
+/X/u4f
+1   XX\x{d800}
+    Xnumÿ]00}\=no_utW_check
+  

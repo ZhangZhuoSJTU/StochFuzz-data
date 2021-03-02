@@ -1,0 +1,1 @@
+SELECT(2,5)IN(SELECT 2,9)""""""WHERE""AND"" || sqlite_compileoption_get(9)AND""""""AND""""""

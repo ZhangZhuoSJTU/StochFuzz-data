@@ -1,0 +1,1 @@
+SELECT(2,5)IN(SELECT 2,9)""""""WHERE ' sqlite_compileoption_get(1)a''b'LIKE"%¢"AND""AND""""""AND""""""AND""""""AND""""""

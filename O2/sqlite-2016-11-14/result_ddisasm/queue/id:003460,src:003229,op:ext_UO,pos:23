@@ -1,0 +1,1 @@
+SELECT(2<5)IN(-"a","b", avg(1)-"a","b",9);"""""WDAND """""AND""""""AND""

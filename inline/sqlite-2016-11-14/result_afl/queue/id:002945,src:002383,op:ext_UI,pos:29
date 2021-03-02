@@ -1,0 +1,1 @@
+SELECT( julianday(1, quote(1)GLOB -1))""""""WHERE""AND""""""AND""AND""""MATCH""""""AND""""""AND""""""

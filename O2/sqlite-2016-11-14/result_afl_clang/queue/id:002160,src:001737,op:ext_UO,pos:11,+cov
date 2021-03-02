@@ -1,0 +1,1 @@
+SELECT.2 || zeroblob(1)N

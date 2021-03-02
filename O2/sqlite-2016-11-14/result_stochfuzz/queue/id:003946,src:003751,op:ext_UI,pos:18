@@ -1,0 +1,1 @@
+SELECT hex( ltrim(NOT ltrim(1,1),1))""WHERE""AND"" *""AND""AND""""""AND""""""AND""""""AND""""""

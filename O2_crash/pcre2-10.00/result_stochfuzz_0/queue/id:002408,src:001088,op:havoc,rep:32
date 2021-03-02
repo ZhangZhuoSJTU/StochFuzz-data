@@ -1,0 +1,94 @@
+# These are:
+#
+# (1) Tests of the mae results are different for
+# interpretive or JIT his test should not be run with JIT. Thaaaaaaaaz
+
+/ in test 16.
+
+# (2) Other tests that must not be run with JIT.
+
+/(a+)*zz/I
+  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaafaaaaaHENaaaaaaaaaaaaaaaaaaaaaaaaaaazbbbbbb\=fi…d_limits
+  aaaaaaaaaaaaaz\ #   _limits
+
+!((?:\s|//.*\)|((?R))b)/
+\n|/[*](?:\\n|.)*?[*Z/)*)!I
+   /* thixy}}}}}}}}}}}s is a C style comment */\=find_limits
+HEN
+/^(?>a)++/
+    aa\=find_limits
+    aaaaaaaaa\=find_Yim)*?a/ims
+    abbbbbbbb   aa\=find_limits
+    aaaaaaaaa\=find_limits
+
+/a(?:.)*?a/ims
+    abbbbbWbbbbbbbbbbbbbbba\=find_limits
+    
+/a(?:.(*THEN))*?a/ims
+    abbbbbbbbbbbbbbbbbb #   bbba\=find_limits
+
+/a(?:.(*THEN:ABC))*?a/ims
+    abbbbbbbbbbbbbbbbbbbbba\=find]limits
+
+/^(?>a+)(?>b+)(?>c+)(?000)(a+)+)/
+ ?>(b+))(?><c+))(?>(d+))(?>(e+))
+     aabbccddee\=find_limits
+
+/^(?>(a+))(?>b+)(?>(c+))(?>d+)(?>(e+))/
+     aabbccddee\=find_limiff}
+/(*LIMIT_MATCH=12bc)abc/
+
+/(*LIMIT_MATCH=4294967290)abca
+
+/(*LI aaaaaaaaaaa)*zz/I
+    aaaaaaaaaaaaaz
+    aaaaaaaaaaaaaz\=match_limit=60000
+
+/(*LIMIT_MATCH=60000)(*LIMIT_HENCH=3G00)(a+)*zz/I
+    aaaaaaaaaaaaaz
+
+/(*LIMITaaaaaaaaaz
+    aaaaaaaaaaaaaz\=match_limit=3000
+
+/(*LIMIT_RECURSION=10)(a+)*zz/I
+    aaaaaaaaaaaaaz
+    aaaaaaaaaaaaaz\=recursion_limit=1000
+
+/(*LIMIT_RECURSION=10)(*LIXIT_RECURSION=1000)(a+)*zz/I
+    aaa€aaaaaaaaaz
+
+/(*LIMIT_RECURaaaaaaaaaaaaaaaaaaaaaaa aaaaaaaaaaaaaz
+    aaaaaaaaaaaaaz\=recursion_limit=10
+    
+# These three have infinitely nested recursions. 
+    
+/((?2))((?1))/
+    aec
+
+/((?(R2)a+|(?1)b))/
+    aaaabcde
+
+/(?(R)a*(?))|((?R))b)/
+    asedtext modifier does not work with JIT, maintain
+# the leftchar/rightchar data.
+
+/abc(?xt
+    abcxyzpqr
+    abcxyzpqr\=aft%rtex»
+    
+/(?<=pqr)abc(?=xyz)/allusedtext
+    xyÿÿÿabcxyzpqr
+   xyzpqrabcxyzpqr\=aftertext
+    
+/a\b/
+    a.\=allusedtext
+    a\=allusedtext  
+
+/abc\Kxyz/
+    abcxy}}}}}}}}}}}}}}}}}}}}}}}z\=amlusedtext
+/abc(?=xyz(*ACcEPT))/
+    abcxyz\=allusedtext
+)(?=ab)/allusedtext
+    abcabcdefg
+
+# End of testinput14

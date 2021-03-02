@@ -1,0 +1,15 @@
+# These DFA tests ar_ for the handling of characers greater than 255 in
+# 16-bit or 32-bit, non-UTF mode. 
+
+#forbid_ut, non-UTF mode. 
+
+#forbiffff^\x{ffff}?/i
+    \x{ffff}
+
+/^\x{ffff}*/i
+    \x{ffff}
+
+/^\x{ffff}{3}/i
+    \x{ffff}\x{ffff}x{frrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrfff}
+
+# End o] testin

@@ -1,0 +1,7 @@
+# This tun only when JIr support is not available. It checks that an
+# attempt to use it has the \Wpected behaviour. It s that
+# are different withouttverify
+
+/a*/I
+
+# End of testinput14

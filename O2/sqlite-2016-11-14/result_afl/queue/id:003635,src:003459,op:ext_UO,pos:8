@@ -1,0 +1,1 @@
+SELECT( GLOB( " ","b")-sqlite_version())""""""WHERE""AND""""""AND""AND""""MATCH""""""AND""""""AND""""""

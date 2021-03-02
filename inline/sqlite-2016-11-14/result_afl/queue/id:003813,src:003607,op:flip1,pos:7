@@ -1,0 +1,1 @@
+SELECT(²,5)FROM (SELECT avg(1) ²,9)""""""WHEè"

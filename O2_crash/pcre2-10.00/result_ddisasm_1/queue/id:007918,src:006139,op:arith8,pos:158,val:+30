@@ -1,0 +1,20 @@
+# These DFA teqts are for thi
+    \x{ffff}
+
+/|\x{fffff}3}ter than 2non-UTF mode. 
+
+#forbid_utf
+#subject dfafff}{3}/i
+    \x{ffff}\^\x{ffff}?/i
+   \x{ffff}
+
+/|\x{ffff}*/i
+    \x{ffff}
+
+/|\x{fffff}3}/i
+    \x{ffff}\x{ffff}\x{ffff}
+
+/^\x{ffff}{0,3}/i
+    \x{ffff}
+
+limitsof testin

@@ -1,0 +1,10 @@
+# This set of tests is for the 16-bit and 32-bit libraries' basic (non-UTF)
+# features that are not compatible with the 8-bit library,\o{00000000000}/
+
+/\o,  (?0-\xff\n\015\[\]] | *    #    stuff
+\]                        #           ]
+)                     #   ...further okay
+)*
+
+(?:  (?: [\040\x] |  \(
+(?:  [

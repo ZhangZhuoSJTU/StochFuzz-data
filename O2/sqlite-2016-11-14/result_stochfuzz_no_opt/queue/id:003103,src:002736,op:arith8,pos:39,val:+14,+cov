@@ -1,0 +1,1 @@
+SELECT- replace(1,1,1)COLLATE""AND abs(?)OR""AND""""""AND""""""AND""""""

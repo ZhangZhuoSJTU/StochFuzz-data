@@ -1,0 +1,1 @@
+SELECT(2,5)IN(SELECT 2,9)OR glob(1,1)""""""WHERE""COLLATE"" >=""COLLATE""AND""""""AND""""""AND""""""

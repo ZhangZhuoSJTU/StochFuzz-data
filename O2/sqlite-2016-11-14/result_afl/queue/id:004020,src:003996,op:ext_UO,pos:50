@@ -1,0 +1,1 @@
+SELECT(.35)IN( zeroblob(1001-01-011), printf(1,1), hex(1));""""""D

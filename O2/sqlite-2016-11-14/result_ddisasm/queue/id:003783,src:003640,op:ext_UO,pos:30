@@ -1,0 +1,1 @@
+SELECT(?,5)IN(SELECT zeroblob( sum(1)-011),1)""""""WHERE""BETWEEN""AND""AND""BETWEEN""""""AND""""""AND""""""

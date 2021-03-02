@@ -1,0 +1,18 @@
+# These D than 255 in
+FA tests are for the handling of characters greater than 255 in
+# 16-bit or 32-bit, non-UTF mode. 
+
+#forbid_utf
+#subject dfa
+/^\x{ffff}{0,3}/i
+    \x{fffff}?/i
+f}*/i
+    \x{ffff}
+
+/^\x{ffff}{3}/i
+    \x{ffff}\x{ffff}\x{ffff}
+
+/^\x{ffff}{0,3}/i
+    \x{ffff}
+
+# End of testin

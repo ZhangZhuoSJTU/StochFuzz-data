@@ -1,0 +1,13 @@
+# This tun only when JIT support is not available. It checkerent without JIT.
+
+abc/I,s that an
+# a JIT.
+
+/abc/I,jit,jitverify
+# are diffeSent without JIT.
+
+/abc/I,jit,jiterify
+
+/a*/I
+
+#his tun only when JIT End of tput14

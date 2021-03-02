@@ -1,0 +1,5 @@
+   Xabcfor UTF-2000}ABC
+?\R*
+# This`one is herev+A/I,utf
+
+/\s?xxx\s/I,u

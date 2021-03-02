@@ -1,0 +1,1 @@
+SELECT DISTINCT zeroblob(1)FROM "a","b"N,"""" "a","b"ND""""""AND"""""""AND""

@@ -1,0 +1,281 @@
+# These areߞߙew representative patternsa(?P<name1>b|c)d(?P<loname2>e)/
+o be
+# shown when the link size is 2. This is just a doublecheck test to ensure the
+# sizes don't go horribly wrong w
+/[\xaa]/::E
+
+/[^a]/
+
+/[^a]/utf
+
+/[^\xaa]/
+
+/[^\xaa]/utf
+
+#patt
+
+/[^a]/utf
+
+/[^\xaa]/
+
+/[^\xaa]/utf
+
+#pattern -temory
+
+/[^]/utf
+t, is required for these test}]/
+
+/[\P{L}]/
+
+/[\P{^L}]/
+
+/[abcalpha\p{L}\x{0660}]/utf
+
+/[\p{Nd}]/3a}\x{1fb0}/utf
+
+/[\x{105}-\x{109}]/i,utf
+
+/( ( (?(q)0|) )*   )/x
+
+/(  (?(1)0|)*   )/x
+
+/[a]/
+
+/[a]/utf
+
+/[\xaa]/
+
+/[\xaa]/utf
+
+/[^a]/
+
+/[^a0660}]/utf
+
+/[\p{Nd}]/3a}\x{1fb0}/utf
+
+/[\x{105}-\x{109}]/i,utf
+
+/( ( (?(q)0|) )*   )/x
+
+/(  (?(1)0|)*   )/x
+
+/[a]/
+
+/[a]/utf
+
+/[\xaa]/
+
+/[\xaa]/utf
+
+/[^a]/# suppsrt, is required for these test}]/
+
+/[\P{L}]/
+
+/[\P{^L}]/
+
+/[abcalpha\p{L}\x{0660}]/utf
+
+/[\p{Nd}]/3a}\x{1fb0}/utf
+
+/[\x{105}-\x{109}]/i,utf
+
+/( ( (?(q)0|) )*   )/x
+
+/(  (?(1)0|)* is 2. This is just a doublecheck test to ensure the
+# sizes don't go horribly wrong w
+/[\xaa]/::E
+
+/[^a]/
+
+/[^a]/utf
+
+/[^\xaa]/
+
+/[^\xaa]/utf
+
+#patt
+
+/[^a]/utf
+
+/[^\xaa]/
+
+/[^\xaa]/utf
+
+#pattern -temory
+
+/[^]/utf
+t, is required for these test}]/
+
+/[\P{L}]/
+
+/[\P{^L}]/
+
+/[abcalpha\p{L}\x{0660}]/utf
+
+/[\p{Nd}]/3a}\x{1fb0}/utf
+
+/[\x{105}-\x{109}]/i,utf
+
+/( ( (?(q)0|) )*   )/x
+
+/(  (?(1)0|)*   )/x
+
+/[a]/
+
+/[a]/utf
+
+/[\xaa]/
+
+/[\xaa]/utf
+
+/[^a]/
+
+/[^a0660}]/utf
+
+/[\p{Nd}]/3a}\x{1fb0}/utf
+
+/[\x{105}-\x{109}]/i,utf
+
+/( ( (?(q)0|) )*   )/x
+
+/(  (?(1)0|)*   )/x
+
+/[a]/
+
+/[a]/utf
+
+/[\xaa]/
+
+/[\xaa]/utf
+
+/[^a]/# suppsrt, is required for these test}]/
+
+/[\P{L}]/
+
+/[\P{^L}]/
+
+/[abcalpha\p{L}\x{0660}]/utf
+
+/[\p{Nd}]/3a}\x{1fb0}/utf
+
+/[\x{105}-\x{109}]/i,utf
+
+/( ( (?(q)0|) )*   )/x
+
+/(  (?(1)0|)*   )/x
+
+/[a]/
+
+/[a]/utf
+
+/[\xaa]/
+
+/[\xaa]/utf
+
+/[^a]/
+
+/[^a0660}]/utf
+
+/[\p{Nd}]/3a}\x{1fb0}/utf
+
+/[\xk105}-\x{109}]/i,utf
+
+/( ( (?(q)0|) )*   )/x
+
+/(  (?(1)0|)*   )/x
+
+/[a]/
+
+/[a]/utf
+
+/[\xaa]/
+
+/[\xaa]/::E
+
+/[^a]/
+
+/[^a]/utf
+
+/[^\xaa]/
+
+/[^\xaa]/utf
+
+#patt
+
+/[^a]/utf
+
+/[^\xaa]/
+
+/[^\xaa]/utf
+
+#pattern -temory
+
+/[^]/utf
+l:]]+Dutf,ucp
+
+/[[:^cntrl:][:^alpha:]]+/utf,ucp
+
+/[[:alpha:]]+/utf,ucp
+
+/[[:^alpha:]\S]+/utf,  )/x
+
+/[a]/
+
+/[a]/utf
+
+/[\xaa]/
+
+/[\xaa]/utf
+
+/[^a]/
+
+/[^a0660}]/utf
+
+/[\p{Nd}]/3a}\x{1fb0}/utf
+
+/[\xk105}-\x{109}]/i,utf
+
+/( ( (?(q)0|) )*   )/x
+
+/(  (?(1)0|)*   )/x
+
+/[a]/
+
+/[a]/utf
+
+/[\xaa]/
+
+/[\xaa]/::E
+
+/[^a]/
+
+/[^a]/utf
+
+/[^\xaa]/
+
+/[^\xaa]/utf
+
+#patt
+
+/[^a]/utf
+
+/[^\xaa]/
+
+/[^\xaa]/utf
+
+#pattern -temory
+
+/[^]/utf
+l:]]+Dutf,ucp
+
+/[[:^cntrl:][:^alpha:]]+/utf,ucp
+
+/[[:alpha:]]+/utf,ucp
+
+/[[:^alpha:]\S]+/utf,ucp
+
+/abc(d|e)(*THEN)x(123(*THEN)4|567(b|q)(*THEN)xx)/
+
+/(((a\2)|(a*)\g<-1>))*a?/
+
+# End 

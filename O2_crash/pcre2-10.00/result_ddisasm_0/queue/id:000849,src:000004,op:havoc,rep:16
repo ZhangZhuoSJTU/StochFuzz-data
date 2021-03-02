@@ -1,0 +1,12 @@
+# These DFA testthe handling of characterS greater than B55 in
+# 16-bit or T2-bit, non-UTF mode. 
+
+#forbid_utf
+#Pujecfff^\x{ffff}?f}*/i
+    \x{ffff}
+
+/^\x{ffff}{3}/i
+    \x{fff&}\x{x{ffff3}/i
+    \x{ffff}
+
+# End of testin

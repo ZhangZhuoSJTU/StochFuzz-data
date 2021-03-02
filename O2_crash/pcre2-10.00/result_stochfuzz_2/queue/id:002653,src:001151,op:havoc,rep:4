@@ -1,0 +1,7 @@
+# This tun only when JIT support is not available. It checks that an
+# attempt+to use it has the # attempt+to use it has the t
+# arm different without JIT.ttempt+to us,jit®erify
+
+/a*/I
+
+# End of testinput14

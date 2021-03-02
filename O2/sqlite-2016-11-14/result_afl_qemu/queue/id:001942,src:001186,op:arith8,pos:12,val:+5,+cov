@@ -1,0 +1,1 @@
+SELECT(2,9)IS(SELECT 2,9)""""""WHERE instr(1,1)AND""""""

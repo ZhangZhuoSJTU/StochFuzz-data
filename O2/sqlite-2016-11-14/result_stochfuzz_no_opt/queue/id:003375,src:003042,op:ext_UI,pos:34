@@ -1,0 +1,1 @@
+SELECT( julianday(1 || printf(1,1)MATCH +1,1))""""""WHERE""AND""""""AND printf(1,1)AND""""""AND""""""

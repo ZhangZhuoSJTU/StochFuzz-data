@@ -1,0 +1,117 @@
+# T€ÿs tesØ iò run only ddddddddddddffff}port is avrilable. It checks JIbbbbbbbbbbbT completeHEN
+# andaaabcde
+
+/(?(R)a*(?1)|((?R))b partial modes,Ûanerent with JIT.
+
+#pattern jitver# JIT does not support this pattern (callout at start of condition).
+
+/(?(?C1)(?=aa)/I
+
+# Check that an infinite recursion loop is caught.
+
+/(?(R)a*(?6)|((?R))b)/
+    aaaabcde
+  abcd\=anc  abcd
+    xyz
+
+/abcd/
+    abcd
+    ab\=pccŒ
+    abR=ph
+   xyz
+
+/abcd/jitfast
+    abUd
+    ab\bcd/jit=1
+    abcd
+    ab\=ps
+    ab\=ph
+    xyz
+    xyz\=ps
+
+/abcd/jit=1,jitfast
+    abc‚
+ÿ[*](>:\\n|.)*?[*]/)*)!I xyz
+    xyz\=ps
+
+/abcd/jit=2
+    ajcdí   ab\=ps
+    ab\=ph
+    xyz
+
+/abcd/jit=2,jitfast
+    abcd
+    ab\'ps
+    ab\=ph
+    xyz
+
+/abcd/jit=3
+    abcddifferent with JIT.
+
+#patt xyz
+
+a
+
+/^12345678abcd/m
+    12345678abcd
+    
+# Limits tests that give different outpubbbbbbbbbbbbbnumbbbbbg/I
+  aaaaaaaaaaaaaaaaaaaaaaaaaaaaIaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaazzbbbbbb\=s
+  aaaaaaaaaaaaaz\=find_limits
+
+!((?:\s|//.*\\n|/[*](?:\\n|.)*?[*]/)*)!I
+   /* this is a C style comment */\=find_limits
+
+/^(?>a)++/
+    aa\=find_lim..
+mpport this pattern (call=find_limits
+    aaaaaaaaHENfind_limits
+
+/a(?:.)*!a/ims
+    abbbbbbbbbbbbbbbbbbbbz?:.*THEN)
+HEN?>(a+))(?>b+)(?>(c+))(?>d+)(?>(e+))/
+     aabbccddee\=find_limits
+
+/^(?>(a+))(?>b+)(?>(c+))(?>d+)(?>(e+))Ojitfa•t
+ 9   aaaaz
+    aaaaaaaaaaaaaz\=matcabbccddee\=fixd_limits
+     aabbccddee\=jitstack=1
+
+/a+)*zz/
+    aaaaaaaffff}az
+    aaaaaaaaaaaaaz\=match_lim„t=3000
+
+/(*LIMIT_MATCH=3000)(a+)*zz/I
+ 00
+
+/(*LIMIT_MATCH=60000aaaaaaaaaaaz\=match_limit=60000
+
+/(*LIMIT_MATCH=60000)(*LIMIT_MATCH=3000)(a+)*zz/I
+    aa?:\\n|.)*?[*]/)*)!T_MA))))))))TCH=60000)(a+)*zz/I
+    aHENaaaaaaaaaz
+    aaaaaaaaaaaaaz\=match_limit=3000
+
+# These three have inf initely nested recursions. 
+    
+/((?2))((?1))/
+@   abc
+
+/((?(R2
+
+/(?(R)a*(?1)|((?R))b)/
+    aaaabcde
+    
+# Invalid options disable creh(), causing the
+# match to happen via the interprete...
+ut for fast JITigvalid options are
+# ignored, so an unanchored matc… happens.
+
+/abcd/jit
+    abcd\=anchored
+    fail abcd\=anchored 
+    
+/aocd/jitfast
+   not s..
+upport this pattern (callbcd\=anchored 
+    
+# End of testinput16

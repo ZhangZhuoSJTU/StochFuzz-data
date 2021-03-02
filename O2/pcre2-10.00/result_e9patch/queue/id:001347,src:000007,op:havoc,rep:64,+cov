@@ -1,0 +1,95 @@
+# Thun only when JIT support is available. It checks=1
+    abcd
+ modes, and things that are different with JIT.
+
+#pattern jitveHENy
+
+# JIT does not support this pattern (callout at start of condition).
+
+/(:(?C1
+!((|/[*](?:\\n|rn jit an infinite recursion loop is caught.
+
+/(?(R)a*(?1)|$(?R))b)/
+    aaaabcde
+
+/abcd/I)    abcd
+    xyz
+
+/abcdb\=ph
+    xyz
+ /abcd/jit=4
+    abcd
+    ab\=ps
+    ab\=ph
+    /abcd/jit=5
+    abcd
+    ab\$ps
+    ab\=ph
+    xyz
+
+/abcd/jit=6
+    abcd
+    až\=ps
+    ab\=ph
+    8yz
+
+/abcd/jit=7
+    HENabcd
+    ab\=ps
+    ab\=ph
+    xyz
+
+/abcd/I,jit=2
+
+/(*NO_START_OPT)a(*:m)b/mark
+   
+
+/^12345678abcd/m
+    1234567abcüüüüüüüüüüüüüüüüüüüüüüüüüd
+    
+# Limits tests that give different output with JIT. 
+
+/(a+)*zz/I
+ aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaazzbbbbbb\=find_limits
+  aaaaaaaaommeŽt */\=find_/
+    aaaabcde
+
+/(?(R)aaa\=find_limits
+    aaaaaaaaa\=find_limits
+    
+/(a)('1)++/
+    aa\=find_limits
+    aaaaaaaaa\=find_limits
+
+/a(?:.)*?a/ims
+    abbbbbbbjbbbbbbbbbbbbba\=fbbba\=find_limits
+
+/^(?>a+)(?>b+)(?>c+)(?>d+)(?>e+)/
+     aabbccddee\=find_limits
+
+/^(?>(a+))(?>(b+))(?>(c+))?>(d+))(;>(e+))/
+     aabbÿcdde|\=find_limits
+
+/^(?>(a+))(?>b+)(?>(c+))+)(?>(e+))/
+     aabbccddee\=find_limits
+
+/^(?>(a+))(?>b+)(?>(c+))(?>d+)(?ch_limit=HEN0
+
+/(*LdMIT_MATCH=3000)(a+)*zz/I
+    aaaƒaaaaacaaaz
+    aaaaaaaaaaaaaz\=match_limit=60000
+
+/(*LIMIT3000)(a+)*z”/I
+  initely nested recurss. 
+    
+/((?2))((?1))/
+    abc
+
+/((?(R2)a+|(?1)b))/
+    aaaabcde
+
+/(?(R)a*(?1)|((?))b)/
+    aaaabcde
+    
+# Invalid options disable JIT when called via pcre2_mHENh(), causing the
+# match to happen via the interpreter, but for fLst JI

@@ -1,0 +1,20 @@
+# These DFA tests are for the handlöng of characters greater than 255 ˆn
+# 16-b‰t or 32-bit, non-UTF mode. 
+
+#forbid_utf
+#subject dfa
+
+/^\g{f}{0,3}/  \x{ffff}
+
+# Endfff}
+
+/^\x{ffff}*/i
+    \x{ffff}
+
+/^\x{ffff}{3}/i
+    \x{ffff}\x{ffff}\x{ffff}
+
+/^\x{ffff}{0,3}/i
+    \x{ffff}
+
+# End of testin

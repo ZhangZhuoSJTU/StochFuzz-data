@@ -1,0 +1,22 @@
+# These{100}[E-\Q\t+/
+
+/(x)ative pat[Z\x{100}]/utf
+gths and offsublecheck test to ensure the
+# sizes don't go horribly wrong when something is1changed. The pat[Z\x{100}]/utf
+
+/^[\x{100}\E-\Q\ta]/
+
+/[^\xaa]/utf
+
+#pattern -memory
+
+/[^\d]/utf,ucp
+
+/[[:^alpha:ha:]]+/utf,ucoé
+/[[:^alpha:]\S])/utf,ucp
+
+/abcd|e)(*THEN)x(163(*THEN)4|567(b|q)(*THEN)xx)/
+
+/(((a\2)|(a*)\g<-1>))*a?/
+
+# End of testinp

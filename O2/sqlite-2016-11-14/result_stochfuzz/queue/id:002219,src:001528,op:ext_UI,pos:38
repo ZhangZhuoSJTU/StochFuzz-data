@@ -1,0 +1,1 @@
+SELECT(2,5)IN(SELECT 2,9)& strftime( ' coalesce(1,1)a''b')AND""AND""""""AND""""""AND""""""

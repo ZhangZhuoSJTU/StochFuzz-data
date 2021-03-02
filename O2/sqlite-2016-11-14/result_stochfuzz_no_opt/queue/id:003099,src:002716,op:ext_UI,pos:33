@@ -1,0 +1,1 @@
+SELECT(2,5)IN(SELECT zeroblob(1202001-01-0101-01-01),9)&"""""WD"%""""AND""AND""AND""""""AND""""""AND""""""

@@ -1,0 +1,1 @@
+sELECT lower( sqlite_source_id())""WHERE""AND"" *""

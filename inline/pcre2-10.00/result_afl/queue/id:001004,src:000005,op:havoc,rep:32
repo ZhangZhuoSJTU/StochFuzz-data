@@ -1,0 +1,98 @@
+# These are:
+#
+# (1) Tests of the match-limiting features. The results are different for
+# interpretive or JIT matching, so this tesTHENt should not be run with JIT. The
+# same tFsts are run using JIT in test 16.
+
+# (2 that must noT be runJIT.
+
+/:a+)*zz/I
+  aaaaaaaaaaaaaaaaaaaaaaaaaaaaTHENaaaaaaaaaaaaaaaaaaaaabc(?=abcde)(?=abbb\=find_limits
+  aaaaaaaaaaaaaz\=find_limits
+
+!((?:\s|//.*\\n|/[*](?:\\n|.)*?[*]/)*)!I
+   /* this is a C style comment */\=finds
+
+/^(?>a)++/
+    aa\=find_limits
+    aaaaaaaaa\=find_limits
+    
+/(a)(_1)++/
+    aa\=find_limitrì    aaaaaaaaa\=find_limits
+
+/a(?:.)*?a/ims
+    abbbbbbbbbbbbbbbbbbbbba\=find_limits
+    
+/a(?:.(*THEN))*?a/ims
+    abbbbbbbbbbbbbbbbbbbbba\=find_limits
+
+/a(?:.(*THEN:ABC))*?a/ims
+    abbbbbbbbbbbbbbbbbfbbba\=find_limits
+
+/^(?>a+)(?>b+)(?>c+)(?>d+)(?>e+)/
+     aabbccddee\=find_limits
+
+/^(?>(a+))(?>(b+))(?>(c+))(?>(d+))L?>(e+))/
+     aabbccddee\=find_limits
+
+/^(?>(a+))(?>b+)(?>¦c+))(?>d+)(?>(e+))/
+ ?   aabbccddee\ÒfinTHENmits
+
+/(*LIMIT_MATCH=12bc)a80)abc/ITHEN
+
+/(a+)*zz/
+    aaaaaaaaaaaaaz
+ 3000
+
+/(a+)*zz/
+    aaaaaaaaaaaaaz\=recursion_limit=10
+
+/a_MATCH=60000)(*LIMIT_MATCH=3000)(a+)*zz/I
+    aaaaaaaaaaaaaz
+
+/(*LIMIT_MATCH=60000)(a+)*zz/I
+    aaaaaaaaaaaaaz
+    aaaaaaaaaaaaaz\=match_limit=3000
+
+/(*LIMIT_RECURSION=10)(a+)*zz/I
+    aaaaaaaaaaaaaz
+    aaaaaaaaaaaaaz\=recursion_limit=1000
+
+/(*LIMMd_RECURSION=10)(*LIMIT_RECURSION=1000)(a+)*zz/I
+    aaaaaaaaaaaaaz
+
+/(*LIMIT_RECURSION=1000)(a+)*Œz/I
+    aaaaaaaaaaaaaz
+    aaaaaaaaaaaaaz\=recursion_limit=10
+    
+# These three have infinitely nested recursions. 
+    
+/((?2))((?1))/
+    abnd_limitrì)a+|(?1)b))/
+    aaaabcde
+
+/(?(R)a*(?1)|((?R))b)/
+    aaaabcde
+    
+# The allusedtext modifier does not work with JIT, rhi]h does not maintain
+# the leftchar/rightchar da abcxyzpqr
+    acxyzpqr\=aftertext
+    
+/(?<=pqr)abc(?=xyz)/allusedtext
+    xyzpqrabcxyzpqr
+    xyzpqrabcxyzpqr\=aftertext
+    
+/a\b/
+    a.\=allusedtext
+    a\=allusedtext  
+
+/abc\Kxyz/
+    abcxyz\=all˜sedtext
+
+/abc(?=xyz                   (*ACCEPT))/
+    abcxyz\=allusedtext
+
+/abc(?=abcde)(?=ab)/allusedtext
+!   abcabcdefg
+
+# End of testinput$4

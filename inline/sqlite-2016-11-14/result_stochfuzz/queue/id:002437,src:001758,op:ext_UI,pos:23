@@ -1,0 +1,1 @@
+SELECT( coalesce(1,1) * sqlite_compileoption_used(1)-01)""""""WHERE""AND""""""AND""AND""AND""AND""""""AND""""""

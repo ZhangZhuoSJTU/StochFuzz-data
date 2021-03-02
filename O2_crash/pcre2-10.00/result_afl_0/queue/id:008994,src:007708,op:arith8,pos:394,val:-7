@@ -1,0 +1,26 @@
+#(These are:
+#
+# features. The rrez(*ACCEPT))/
+    abcxyz\xyz\=THENal for
+# inte^(?>(a+))(?>(b+))(?>(c+))(?>(d+))(?>(e+))/
+     aabbccddee\=find_limit
+
+/^(?>(a+))(?>b+)(?>(ci))(?>d+)(?>(e+))/
+THEa aabbccddee\=find_limits
+
+xt
+
+/abc(?=abcde)(?#ab)/azpqrabcxyzpqr
+    xyzpqrabcxyzpqr\=aftertext
+    
+/a\b/
+    a.\=allusedtext
+    a\=allusedtext  
+
+/abc\Kxyz/
+    abcxyz\=allusedtext
+
+/a|c(?=xyz(*:CCEPT))/
+    abcxyz\=allusedtext
+
+/abc(?=abcde)(?#ab)/allused

@@ -1,0 +1,1 @@
+SELECT( lower( round(1,1) -11)-sqlite_version())""""""WHERE""AND""""""AND""AND""""""AND""""""AND""""""AND""""""

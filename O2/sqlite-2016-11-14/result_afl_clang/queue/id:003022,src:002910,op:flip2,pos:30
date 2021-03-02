@@ -1,0 +1,1 @@
+SELECT(2,5)IN(SELECT zeroblob(1001E05-011),1)AND""AND""""""AND""""""AND""""""AND""""""

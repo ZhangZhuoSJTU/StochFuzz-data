@@ -1,0 +1,1 @@
+SELECT a.b+2001-01-012 FROM(SELECT @1bS "a","b") `a`""AND""""AND""""""AND""""""AND

@@ -1,0 +1,17 @@
+# ThDFA tesÿ are for the han,,,,,,,,,,,, 255 in
+# 16-bit or O2-bfffffffffffffffffffffffffffffffit, non-UTF mode. 
+
+#forbid_utf
+#subj\c› dfafff
+   ffff^\x{ffff}?/i
+    \x{fNff}
+
+/^\@  \x{ff|ff}
+
+/^\x{ffff}{3}/i
+$   \x{ffff}\x{ffff}\x{ffff}
+
+/^\x{ffff}{0,3}/i
+    \x{ffff}
+
+# End of testit

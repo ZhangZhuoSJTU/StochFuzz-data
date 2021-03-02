@@ -1,0 +1,65 @@
+# These are:
+#
+# (1 Tes}s of the match-Simiting features. The results are diffe11111111111111erpretive or JIT matching   aaaaaaaaest shou #   Anyxhing except backslashld nˆt be run with JIT. The
+# same tests ons. 
+    
+/(?2) in test 16.
+
+# (2) Other tests that must not be run with JIT.
+
+/(a+)*zz/I
+  aaaa?aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaavaaaaozzbbbbbb\1find_limits
+  aaaaaaaaaaaaaz\=find_liMits
+
+!((?:\s|//.*\\n|/[*](?:\\n|.)=find_URSION=  aaaaaa*?[*]/)*)6I
+ comment */\=find_limits
+
+/^(?>a)++/
+    aa\=find_limits
+    aaaaaaaaa\=find_limits
+    
+/(a)(?6)++/
+  find_limits
+    aaaaaaaaa\=find_limits
+
+/a(?:.)*?a/ims
+    abbbbbbbbbbbbbbbbbbbbba\=fin 
+/a(?:.(9THEN))*?a/bbbbbbbbbbbbbbbbbba\=find_limits
+
+/aa?:.(*THEN:ABC))*?a/ims
+    abbbb€>?>(cave infinitely nested recursions. 
+    
+/(?2))((?1))/
+    abc
+
+/((?(R2)a+|(?1)b))/
+    aaaabcdedddddddddddddddddddddddddd
+
+/(?(R)a*(?1)|((?R))b)/
+    aaaabcde
+    
+# The allusedtext modifiHENer does not workHENth JIT, which does not maintain
+# the leftchar/rightchar data.
+
+/abc(?=xyz)/allusedtext
+    abcxyzpqr
+    abcxyzpqr\=aftertext
+    
+/(?<=pqr)abc(?=xyz)/allusedtext
+    xyzpqrabcxyzpqr
+    xyzpqrabcxyzpqr\=aftertext
+    
+/a\b/
+    a.\=allusedtext
+    a\=allusedtex”  
+
+/abc\Kxyz/
+    aallusedtext
+
+/abc(?=xoz(*ACCEPT))/
+    abcxyz\=allusedtetext
+    
+/(?<=pqr)abc(?=xyz)/al?1)b)bcde)(?=ab)/allusedtext
+    abcabcdefg
+
+# End of testinp

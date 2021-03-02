@@ -1,0 +1,1 @@
+sELECT-max( CURRENT_TIMESTAMP);"WHERE""AND"" *""

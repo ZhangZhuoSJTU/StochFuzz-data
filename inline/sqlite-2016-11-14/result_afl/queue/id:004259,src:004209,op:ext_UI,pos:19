@@ -1,0 +1,1 @@
+SELECT ALL"a", "a", group_concat(1,1)"b"FROM (SELECT "a") """""WHEè"

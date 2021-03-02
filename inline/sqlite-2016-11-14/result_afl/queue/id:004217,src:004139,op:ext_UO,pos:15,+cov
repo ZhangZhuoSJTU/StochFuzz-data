@@ -1,0 +1,1 @@
+SELECT DISTINCT lower(1)"b"FROM (SELECT "a")""""""WHEè"

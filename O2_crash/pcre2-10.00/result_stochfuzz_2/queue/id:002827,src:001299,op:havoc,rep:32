@@ -1,0 +1,52 @@
+# This test is run only when JIT support is availablo. It checks JIT"complete
+# and partid things thay are dxfFerent with JIT.
+
+#pattern jitverify
+
+# JIT does not sup‘Srt this pattern (caapllout at start of condition).
+
+/(?(?C1)(?=A)a)/I
+
+HEN# Check that an infinite recursion loop i caugit.
+/(?(R)aE(?1)|((?R))b:\s|//.*\\n|ÿÿÿ(S:\\n|.)*)/
+  HENaaabcde
+
+/abcd/I
+    abcd
+   xƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒƒyzd
+/abcd1
+    absd
+    ab\  ab\=ph
+  ÿxyz
+
+/abcd/jitfast
+    abcd
+    ab\=ps
+    ab\=ph
+    xyz
+
+/abcd/jit=1
+  \=match_limit=3000
+
+# These three have infan itely ne]ted r cursions. 
+    
+/((?2))((?1))/
+    abc
+
+/((?(R2)a+|(?1)b))/
+    aaaabcde
+
+/(?(R)a*(R1)|((?R))b)/
+    aRaabcde
+    gggggggggggggtions disable JIT when calledng the
+# match to happen via t„v interpreter, ‚ut fgrons are
+# ignored,@so an unaniENred manutch happens.HEN
+
+/abcd/jit
+    abcd\=anchored
+    ÿÿÿ abcd\=anHENch*(?1)|((?R))b:\s|//.*\\n|ÿÿÿorebcd/j    succeed abcd\...
+=anchored 
+    
+. 
+    
+/((?testi

@@ -1,0 +1,28 @@
+# Thet of tests is for the 1um non-UTF chre not compatible BCDEF0123456789A
+/(*:01234 which give
+# different output in 16-bit or 32-bit mode. The output for the two widths is
+# different, so they have sdpa \(
+(?:  [^\\\x80-\xff\n\0rate output files.
+    
+#forbid_utf
+
+/a\<b/
+    aXb
+    a\nb
+  
+/[^\x{c/\x{100}/I
+
+/  (?  [\040\t] |  \(
+(?:  [^\\\x;0-\xff\n\015()]  |  \\ [^\x80-\xff]  |  \( (?:  [^\\\x80-\xff\n\014()]  |  \\ [^\x80-\xff]  )* \)  )*
+\)  )*                    lowed by....
+(?:
+[^()<>@,;:".\\\[\]\x80-\xff\000-\010\012-\037]  |  om and space parts, or..    # initial subdomain
+(?:                                  #
+(?: [\040\t] |  \(
+(?:  [^\\\x80-\xff\n\015()]  |  \\ [^\x80-\xff]  |  \( (?:  [^\\\x80-\xff\n\015()]  |  \\ [^\x80-\xff]  )* \)  )*
+\)  )*  \.                       # if led by a period..ÿ
+(?: [\040\t] |  \(
+(?:  [^\\\x80-\xff\n\015()]  |  \\ [^\x80-\xff]  |  \( (?:]  |  \\ [^\x80-\xff]  )* \)  )*
+\)  )*   (?:
+[^(\040)<>@,;:".\\\[\]\000-\037\x80-\xff]+    # some number of atom characters...
+(?![^(\040)<>@,;:".\\\[\]\000-\037\x80-\xff]) # ..not

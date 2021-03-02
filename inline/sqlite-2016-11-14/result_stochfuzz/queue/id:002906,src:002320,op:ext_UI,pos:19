@@ -1,0 +1,1 @@
+SELECT( time(1,1,1)ISNULL-sqlite_version())""""""WHERE""AND""""""AND""AND""""MATCH""""""AND""""""AND""""""

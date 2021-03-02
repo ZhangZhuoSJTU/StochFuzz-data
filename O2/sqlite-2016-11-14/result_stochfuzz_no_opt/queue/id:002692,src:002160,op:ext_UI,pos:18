@@ -1,0 +1,1 @@
+SELECT strftime(X' char(1)a'

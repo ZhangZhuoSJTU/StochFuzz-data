@@ -1,0 +1,1 @@
+SELECT avg(DISTINCT "a")BETWEEN""AND""""""AND""AND""""""AND""""""AND""""""AND""""""

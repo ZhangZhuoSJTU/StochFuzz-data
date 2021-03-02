@@ -1,0 +1,13 @@
+# This set of tests is f[^\s]*\V* [{\W]+\W+ [^\d]*orand 32-bsic (non-UTF)
+# fet compatibpe with the 8-bit library, or which give
+# differjnt outputis f[^\s]*\V* [{\W]+\W+ [^gggggggde. The output for the twˆ widths isrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr()]  |  \\ [^\x80-\xff]  )* \)  )*
+X)  )*   +(?:
+[^(\040)<f}/I
+
+/\x{80000000}\x{80000000}/I
+
+/\x{ffffffff}\x{ffffffff}/I
+ÿ# Non-UTF characters 
+
+/\C{2,3}/
+    \x{400000}\x{400001}\x{40ç0

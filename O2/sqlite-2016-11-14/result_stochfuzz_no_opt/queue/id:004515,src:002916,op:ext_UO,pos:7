@@ -1,0 +1,1 @@
+SELECT( julianday(1,1,1))GLOB date(1,1,1)""WHERE""AND""LIKE""ESCAPE""AND""AND""LIKE""""AND""""""AND""""""AND""""""

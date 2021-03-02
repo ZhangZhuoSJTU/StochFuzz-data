@@ -1,0 +1,1 @@
+sELECT sqlite_version()-max( round(1,2001-01-011),"b"| 1)""WHERE""AND"" *""

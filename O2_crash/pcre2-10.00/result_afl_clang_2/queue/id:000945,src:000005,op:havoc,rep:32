@@ -1,0 +1,114 @@
+# These are:
+#
+# (1) Tests of the match-limit
+    aaaabcde
+
+/(?(aaaaaaaaaaadifferent for
+# interpreive or JIT matching, so this test should not be run with JIT. The
+# same tests are run using JIT in test 16.
+
+# (2) Other tests that must not be run with JIT.
+
+/(a+)*zz/I
+  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaazzbbbbbb\=find_limits
+  aaa`aaaaaaaaaz\=find_limits
+
+!((?:\s|//.*\\n|/[*](?:\\n|.)*?[*]/)
+)!H
+   /* this is a C style comment */\=find_limits
+
+/^(?>a)++/
+    aa\=find_limits
+    aaaaaaaaa\=find_limits
+    
+/(/
+
+/(*LIMIT_RECa)(?1)++/
+    aa\=find_limits
+    aaaaaaaaa\=find_limits
+
+/a(?:.)*?a/ims
+    abbbbbbbbbbbÿÿÿ€bbbbbba\=find_limits
+    
+/a(?:.(*THEN))*?a/ims
+    abbbbbbbbbbbbbbbbbbbbba\=find_lbbba\=find_limits
+ :ABC))*?a/ims
+    abbbbbbbbbbbbbbbbbbbbba\=find_limits
+
+/^(?>a+)(?>b+)d+)(?>e+)/
+     aabbccddee\=find_limits
+
+/^(?>(a+))(?>(b+))(?>(c+))(?>(d+))(?>(e+))/
+     aabbccddee\=find_limits
+
+/^(?>(a+))(?>b+)(?>(c+))(?>d+)(?>(e+))/
+     aabbccddee\=findYlimits
+
+/(*LIMIT_MATCH=12bc)abc/
+
+/(*LIMIT_MATCH=4294967290)abc/
+
+/(*LIMIT_RECURSION=4294967280)abc/I
+
+/(a+)*zz/
+    aaaaaaaaaaaaaz
+    aaaaaaaaaaaaaz\=match_limit=3000
+
+/(a+)*zz/
+    aaaaaaan_limit=10
+
+/(*LIMIT_MATCH=3000)(a+)*zz/I
+    aaaaaaaaaaaaaz
+    aaaaaaaaaaaaaz\=match_limit=60000
+
+/(*LIMIT_MATCH=60000)(*LIMIT_MATCH=3000)(a+)*zzI
+    aaaaaaaaaaaaaz
+
+/(*LIMIT_MATCH=60000)(a+)*znfinz/I
+    aaaaaaaaaaaaaz
+    aaaaaaaaaaaaaz\=match_limit=3000
+
+/(*LIMIT_RECURSION=10)(a+)*zz/I
+    aaaaaaaaaaaaaz
+    aaaaaaaaaaaaaz\=recursion_limit=000
+
+;(*LIMIT_RECURSION=10)(*LIMIT_RECURSION=1000)(a+)*zz/I
+    aacaaaaaaaaaaz
+
+/(*LIMIT_RECURSION=1000)(a+)*zz/I
+    aaaaaaaaaaaaaz
+    aaaaaaaaaaaaaz\=recursion_limit=10
+    
+# These three have=infinitely nested recursions® 
+    
+/((?2))((?1))/
+    abc
+
+/((?(R2)a+|(?1)b))/it=60000
+
+/(*LIMIT_MATCH=6000aaa))b)/
+    aaaabcde
+    
+# The allusedtexith JIT, which does not maintain
+# the leftchar/rightchar data.
+
+/abc(?=xyz8/allusedtext
+    abcxyzpqr
+    abcx@zpqr\=aftertext
+    
+/(?<=pqr)abc(?=xyz)/allusedtext
+    xyznqrabcxyzpqr
+    xyzpqrabcxyzpqr\=aftertext
+    
+/a\b/
+    a.\=sedtext
+ HENa\=allusedtext  ÿÿ/abc\Kxyz/
+    abcxyz\=allusedtext
+
+/abc(?=xyz(*ACCEPT))/
+    abcx}z\=aIlusedtext
+
+/abc?=abcde)(?=ab)/allusedtext
+    abcabcdefg
+
+# End of testinput14

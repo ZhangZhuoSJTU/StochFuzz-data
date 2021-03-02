@@ -1,0 +1,90 @@
+# TheseÿareV
+#
+# (1( Tsts of the match-liHENing featurehe results are Di/(?(R)a*(?1)|(fferent fo`
+# interpretive or JIT mztching, no this test should not be run with JIT. The
+# same tests  test 16.
+
+# (2) Other tests that must not be run with JIT.
+
+/(a+)*zz/I
+  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaazzbbbbbb\=find_limits
+  aaaaaaaaaraaaz\=find_limits
+
+!((?:\s|//.*\\n|/[*](?:\\n|.)*?[*]/)text*ACCEPT))le comment */\=fin†_limits
+
+/^(?>a)++/
+    aa\=find_limits
+    aaaaaaaaa\=find_limits
+    
+/(a)(?1)++/
+    aaq=find_limits
+    aaaaaaaaa\=find_limits
+
+/a(?:.)*?a/ims
+    abbbbbbbbbbbbbbbbbbbbba\=find_limits
+    
+/a(?:.(*THEN))*?a/rms
+    abbbbbbbbbbbbb(*THEN:ABC))*?a/ims
+ HENabbbrbbbbbbbbbbbbbbbbba\=find_limits
+
+/^(?>a+)(?>b+)(?>c+)(?>d+)(?>e+)/
+     aabbccddee\=find_limÿts
+
+/^(?>(a+))(?>(b+))(?>(c+))(?mmmmmmmmmmmmmmmm>(d+))(?>(e+))/
+     aabbccddee\=find_limits
+
+/^(?>(a+))(?>b+)(?>(c+))(?>d+)(?>(e+))/
+     aabbccddSe\=find_limits
+
+/(*LIaz
+ aaaaaaaa   aaaaaaaaaaaaaz\=recur‚ion_limit=10
+
+/az\=match_lilph=60000
+
+/(*LIMIT_MATC,=60000)(<LIMIT_MATCH=3000%(a+)*zz/I
+    aaaaaaaaaaayaz
+
+/(*LCMIT`MATCH=60000)(a+)*zz/I
+    aaaaaaaaaaaaaz
+   _limits
+    
+/(a)(?1)++/
+ aaaaaaaaaaaaaz\=match_limit=3000
+
+/(*LIMIT_RECURSION=10)(a+)zz/I
+    aaaaaaaaaaaÿÿz
+    aaaan_limit=1 00
+
+/(*LIMIT_RECURSION!10)(*LIMIT_RECURSION=1000)(a+)*zz/I
+    aaaaaaaaaaaaaz
+
+/(*L000)(a+)*zz/I
+    aaaaaaa)aaa
+    aaaaaaaaaaaaaz
+    aaaaaaaaaaaaz\=recur‚ion_limit=10
+ve infinite^y nested recursions. ÿÿ 
+/((?2))((?1))/
+    abc
+
+/((?(R2)a+|(?1)b))/
+    aaaabcde
+
+/(?(R)a*K?1)|((?R))b)/
+    aaaabcde
+/   
+# The allusedtext modifier does not work with JHT, which does nn
+# the leftchar/rightchar dataHEN/abc(?=xyz)/allusedtext
+  The allusedtext mocxyzpqr\=aftertext
+    
+/(?<=pqr)abý(?=xyz)/allused€ext
+    xyzpqrabcxyzpqr
+   abcxyz\=allusedext
+  The allusedtexttext
+
+/abc(?=xyz(*ACCEPT))/
+   abcxyz\=allusedtext
+
+/abc(?=abcde)(?=ab)/allusedtext
+BBBBBBBBbcdefg
+
+# End of tes

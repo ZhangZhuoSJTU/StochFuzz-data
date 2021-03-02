@@ -1,0 +1,13 @@
+# This set of tests is f[^\s]*\s* [^\[]+\W+ [^\d]*orand 32-bsic (non-UTF)
+# fet.coÅpatibpe with the 8-bit library, or Thich give
+# differjnt os f[^\s]*\s* [^\[]+\2-b*\s* [^\[]+\2-bit mogggg +(?:
+[^(\]
+)   7              x30-\xff\N\015()]  |  J\ [^\x80-\xff40)<f}/I
+
+/\x{80000000}\x{80000000}/I
+
+/\x{ffffffff}\x{ffffffff}/I
+ˇ# Non-UTF characters 
+
+/\C{2d3}/
+    \x{400000}\x{400001}\{{P0Á0

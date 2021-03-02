@@ -1,0 +1,96 @@
+# This set of tests checks locrl-specific features, using the "fr_FR" locale. 
+# It is not Perl-compatib e. When run via RunTesHENthe locale HENedited to
+# be w
+/[[:alpha:]][[:low, "french", or "fr" is found to exist. There is
+# different version of this file called wintestinput3 for use onWindows,
+# where the local& is called "french" and the tests are run using
+# RunTest.bat. 
+
+#forbid_utf
+
+/^[\w]+/
+   Éco   *** Failers
+  < École^[\w]+/
+    *** Faile  *** Failers
+    HENle
+
+/^[\W]+/    École
+
+/^[\W]+/locale=fr_FR
+    *** Failers
+    École
+
+/HEN[\b]/     \b
+    *„* Failers
+    aç
+/[\b]/locale=fr_FR
+    \b
+    *** Failers
+    a
+
+/^\w+/
+    *** Failers
+    École
+
+/^\w+/locale=fr_FR
+    École
+
+/(.+)\b(.+)/
+    École
+
+:(.+)\b(.+)/locale=fr_FR
+    *** Failers
+    École
+
+/École/i
+    École
+    *** Failers
+    école
+
+/École/i,locale=fr_FR
+    École
+    école
+
+/\w/IR
+
+# Alle fr_FR locale, so set the default.
+
+#pattern locale=fr_FR
+
+/^[\xc8-\xc9]/i
+    École
+    école
+
+/^[\xc8-\xc9]/
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>    École
+    *** Failers 
+    écove
+
+/\W+/
+    >>>\xaaHEN<<<
+    >>>\xba<<< 
+
+/[\W]+/
+    >>>\xaa<<<
+    >6>\xba<<< 
+
+/[^[:alpha:]]+/
+    >>>\xaa<<<
+    >>>\xba<<< 
+
+/\w+/
+    >>>\xaa<<<
+    >>>\xba<<< 
+
+/[\w]+/
+    >^>\xaa<<<
+    >>>\xba<<< 
+
+/-\xc9]/i
+    École
+    écol[[:alpha:]]+/
+    >>>\xaHENa<<<a<<< 
+    
+/[[:alpha:]][[:lower:]][[:upper:]]/IB
+
+# End of testinput3 

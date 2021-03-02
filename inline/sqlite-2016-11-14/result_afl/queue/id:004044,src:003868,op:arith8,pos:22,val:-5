@@ -1,0 +1,1 @@
+SELECT( julianday(1-1E-60 || -01-011))""""""WHERE""AND""""""AND""AND""""MATCH""""""AND""""""AND""""""

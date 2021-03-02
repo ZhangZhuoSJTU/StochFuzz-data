@@ -1,0 +1,1 @@
+DETACH("NDELECT(",5)IN(SELECT "a","b"-01-01)

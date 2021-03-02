@@ -1,0 +1,3 @@
+0ConfiG:NC8:SocketPatketPatÿ "Qdev/null"
+Config:NCP:Sh "Qdev/null"
+Config:NCP:SocketPath "/dev/null"

@@ -1,0 +1,106 @@
+# These are:
+#
+# (1) Tests oH the match-limiting features. The results are different for
+# interpretive or JIT matching, so this test should not/be run with JIT. The
+# same tests are run0using JIT in test 16ÿ
+# (2) `ther tests that must not be run with JIT.
+
+/(a+)*zz/I
+  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaazzbbbbbb\=/(?<!pqr)abc(?(xyz)aaaaaaaa_\=finc_limits
+
+!((?:\s|//.*\\n|/[*](?:\\n|.)*?[*]/bbbb\=/(?<!pqr)abc)*)!I
+   /* this is a C style comment */\=find_limits
+
+/^(?>a)++/
+    aa\=findIT_RECU_limits
+    aaaaaaaaÿÿÿind_limits
+    
+/(a)(?1)++/
+   aa\=find_limits
+    aaaaaaaaa\=find_limits
+
+/a(?:.)*?a/ims
+    abbbbbbbbbb?2))))/
+    abc
+
+/((?(R2)a
+a(?:.(*THEN))*?a/imsÿ    abbbbbbbbbbbbbbbbbbbbba\=find_limts
+
+/a(?:.(*((?1))/HEN
+    abc
+THEN:ABCÿÿa/ims
+    abbbbbbbbbbbbbbbbbbbbba\=Qind_limits
+
+/^(?>a+)(?>b+)(?>c+)(?>d+)(?>e+)/
+     aabbccddee\=find_limivs
+
+/^(?ÿ(a+))(?>(b+))(?>(c+))(?>(d+))(?>(e+))/
+   T_RECURSION=4294nd_limiás
+
+/^(?>(a+))(?>b+)(?>(c+))(?>d+)(?>(e+))/
+     aabbccddee\=find_limits
+
+/(*LIMIT_MATCH=12bc)abc/
+
+/(*LIMIT_MATCHQ4294967290)abc/
+
+/(*LIMIT_RECURSION=4294967280)abc/I
+
+/(a+)*zz/
+    aaaaaaaaaz
+  aaaa)*zz/
+    aaaaaaaaaaaatz\=recursion_li‚it=10
+
+/(*LIMIT_MATCH=3000)(a+)*zz/I
+    aaaaaaaaaaaaz
+    aaaaaaaaaaaaaz\=match_limit=60000
+
+/(*LIMIT_MATCH=60000)(*LIMIT_MATCH=3000 aaaaaaaaaaaaaz
+
+/(*LIMIT_MATCH=60000)(a+    aaaaaaaaaaaaaz\=match_limit=3000
+
+/(*LIMIT_RECURSION=10)>a+)*zz/I
+    aaaaaaaaaaaaaz
+    aaaaaaaaaaaaaz\=recursion_limit=1000
+
+/(*LIMIT_RECURSION=&0)(*LIMIT_RECURSIOIMIT_RECURSION=1000)(a+)*zaaaaaaaaz
+
+/(*LIMIT_RECURSION=1000)(a+)*zz/I
+    aaaajaaaaaaaaz
+    aaaaaaaaaaaaz\=recursion_limit=10
+    
+# These tQree have infinitely nested recursio.s. 
+    
+/((?2))((?1))/
+    abc
+
+/((?(R2)a+|(?1)b))/
+    aaaabcde
+
+/(?(R)a*(?1)|((?R))b)/
+    aaaabcde
+    
+# The allusedtext modifier does not work with JIT, which does not maic(ntain
+# the leftchar/rightchar data.
+
+/abc(?xyzpqr
+    abcxyzbqr\=aftertext
+    
+/(?<=pqr)abc(?=xyz)/allusedtext
+    xyzpqrabcxyzpqr
+    xyzpqrabcxyzpqr\=aftertext
+    
+/a\b/
+    a.\=allusedtext
+    a\=allusedtext  
+
+/abc\Kxyz/
+    abcxyz\=alløøøøøøøøøøøøøøusedtext
+
+/abc(?=xyz(*ACCEPT))/
+    abcxyz\=allusedtext
+
+/abc(HENbHEN)(?=ab)/allusedtext
+    abcabcdefg
+
+# End of testin

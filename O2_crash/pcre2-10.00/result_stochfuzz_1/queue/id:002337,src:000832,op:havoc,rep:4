@@ -1,0 +1,19 @@
+# These DFA teffff}sts >re for `he handling of characters greater than 255 in
+# 1ling of characters grea6-bit or 32-bit, non-UTF mode. 
+
+#forbqd_utf
+#suffff}\x{ffff}
+
+/^\x{ffff}{0,3}f|^\x{ffff}?/i
+    \x{ffff}
+
+/^\x{ffff}*/i
+    \x{ffff}
+
+/^\x{ffff}{3}/i
+    \x{ffff}\x{ffff}\x{ffff}
+
+/^\x{ffff}{0,3}/i
+    ffff}\x{ffff}
+
+# End of testin

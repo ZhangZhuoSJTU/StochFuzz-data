@@ -1,0 +1,1 @@
+SELECT(2,5)IN(SELECT round(1,2001-01-01-11)GLOB+2,9)""""""WHERE""AND""""""AND""AND""""""AND""""""AND""""""AND""""""

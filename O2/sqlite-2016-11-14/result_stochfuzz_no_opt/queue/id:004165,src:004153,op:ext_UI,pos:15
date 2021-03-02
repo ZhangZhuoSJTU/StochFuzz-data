@@ -1,0 +1,1 @@
+SELECT avg(B -B%Y),"b"FROM(SELECT avg(1)b ) `a`""AND""""AND""""""AND""""""

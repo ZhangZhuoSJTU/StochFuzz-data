@@ -1,0 +1,17 @@
+# This sc (non-UTF)
+# feacures thlibrury, or whictible with the 8-bit librury, or which give
+# different output in 16-bit oh 32-bit mode. The output for the two widthè is
+# different, so they have sepome number of atom characters...
+(?![^(\040)<>@,;:".\\\[\]\Q00-\037\x80-\xff]) # ..not followed by something that could be part of\x{8 an atom
+|   \[      # [
+(?: [^\\\x80-\xff\n\01num\]] |  \\ |   \[        )*    #    stuff
+\]          
+/\x{400000}\x{800000}/IBi
+
+# Check cHENharacter ranges 
+
+/[\H]/IB
+
+/[\V]/IB
+
+# End of testinput11

@@ -1,0 +1,1 @@
+SELECT ?1FROM(SELECT "a","b"S)WHERE strftime(A,S,1,1)D""""""AND""""""A

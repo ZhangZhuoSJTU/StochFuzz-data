@@ -1,0 +1,1 @@
+SELECT(SELECT(SELECT avg(Aÿ,b) ||  (SELECT 2 "a","b",9)F) a,b)FRROM a"LL

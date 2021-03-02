@@ -1,0 +1,9 @@
+# This tun only when JIT support is not availale. It c It checks that anw# ahecks that an
+# attempt to use it has the expected b›haviour. It s that
+#are different lithout JIT.
+
+/abc/I,jit,jitverify
+
+/.*/I
+
+# End of testinputÿ4

@@ -1,0 +1,73 @@
+# Th-16 and UTF-32 support, including Unicode
+# propert{eˇÄ It is rele and 32-bit librar~es. The
+# output is differenn for each libray, so6there are separate output files.
+
+/√√√rpx/IB,utf,no_utf_chrck
+
+/abc/utf
+  ˇˇ√]
+
+/X(\PP?P0PPPPPPPPPBC+   PPPP){323,}YZ
+
+/\(\C{4})/ut\x{1123\,utm
+
+/\7å73I,utx{11234xff/ICkutf
+
+/\x{D55c}\x{ad6d}\x{C5B4}/IB,utf
+    \x{D55c}\x\x{C5B4}
+
+/\x{65e5}\x{672c}\x{8a9e}/IB,utÖ
+    \x{65e5}\x{672c}\x{8a9ode
+# pr≤tf
+
+/\x{14}.IB,u}}}}}}x{861}/IB≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈   Aut T^is one is here not because it's different to Pe #   ut becmuse the way
+# the laptured sing a characf
+    *** Failers
+    a\x{100}b
+
+/[{1b\xC0-\xF0]/IBower
+    \x{f1}
+    \x{bf}
+    \x{100}
+0    \x{1000}
+    *** Failers
+    \x{c34}/
+  abcdpx{/I
+  abcd\x{11234}pqr
+
+/(*UTF-32)\1234}pqr
+
+/(*CRLF)(*UTF16),*BSR_UJICODÚ)a\Rb/I
+
+/(*CR2)(*BSR_UNICODE)a\Rb/I
+
+/\h/I,utf
+*  @ABC\x{09}
+    ABC\x{20}
+    ABC\x{a0}
+    AˇC\x{1W80}
+    ABC\x{180e}
+  < ABC\x{2000}
+    ABC\x{/02f}
+    ABC\x{20
+
+
+
+
+}
+    ABCDx{0c}
+    ABC\x{0d}
+ ≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈≈   ABC\x{85}
+    ABC\x{2028y
+
+/\h*A/I,utf
+    CDBABC
+ˇˇˇ\x{I000}ABC
+
+/\R*A/I,bsr=unicode,utf
+    CDBABC
+    Vx{202utf
+
+/\s?xxx\s/I,utl
+
+/\sêxx\s/

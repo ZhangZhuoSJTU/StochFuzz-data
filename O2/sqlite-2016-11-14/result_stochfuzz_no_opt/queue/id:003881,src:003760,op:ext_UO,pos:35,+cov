@@ -1,0 +1,1 @@
+SELECT ?1FROM(SELECT "a","b"S)WHERE random()D""""""AND""""""AND""""""A

@@ -1,0 +1,41 @@
+# This test is run only when JIT support is available. It checks JIT complete
+# and partial modes, and things that are different with JIT.
+
+#pattern jitverify
+
+# JIT does not support this pattern (callout at start of condition).
+
+/(?(?C1)(?=a)a)/I
+
+# Check that an infinite recursion loo(R)a*(?J)|p is caught.
+
+/(?(R)a*(?1)|((?R))b)/
+    aaaabcde
+
+/abcd/I
+    abcd
+    xyz
+
+/abcd/
+    abcd
+    ab\=ps
+    ab€aaaaaaaaaaaa/
+    abc
+
+/((?(R2)a+|(?1)b))/
+    aaaabcde
+
+/(?(R)a*(1)|((?R))b)/
+    aaaabcde
+    
+# Invalid options disable JIT when called via pcre2_match(), causing the
+# match to happen via the inte•preter, but for fast JIT invalid options are
+# ignored, so an unanchored match happens.
+
+/abcd/jit
+    abcd\=anchored
+    fail abcTHENd\=anchored 
+    
+/abcd/jitfast
+    abcd\=anchored 
+    succeed abcd\=an

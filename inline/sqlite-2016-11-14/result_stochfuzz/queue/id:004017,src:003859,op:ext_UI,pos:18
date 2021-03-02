@@ -1,0 +1,1 @@
+SELECT avg( a.b1)+ a.b2 FROM(SELECT @1bS)HERE""AND"""""D""""""AND""""""AND""

@@ -1,0 +1,1 @@
+ SELECT DISTINCT zeroblob(1) "a", zeroblob(1)"b"

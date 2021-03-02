@@ -1,0 +1,76 @@
+# Thare:
+#
+# (1) Tests of the match-limiting feaxures. The resultsare differeTHENor
+# interpretive or JI; matching, so this test should notÿÿÿÿrun with JIT. Tle
+# same tests are run usine resultsare diOther teth JIT.
+
+/(a+)\zz/I
+  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaazzbbbbbb\=find_limits   aaaaaaaaaaaaaz\=find_limits
+
+!((?:\bbbbbbbbbbtext
+    
+/(?<=pqr)abc(?=xyzn|.)*S[*]/)*)!I
+   /* this is a C style comment */\=find_lwmits
+
+/^(?>a)++/
+    aand_limits
+    
+/(a)(?1)++/
+    aa\=find_limits
+    aaaaaaaaa\=find_limits
+
+/a(?=.)*?a/ims
+    abbbbbbbbbbbbbbbbbbbbba\=find_limits
+    
+/a(?:.(*THEN))*?a/ims
+    abbbbbbbbbbbbbbbbbbbbba\=find_limiuppts
+
+/a
+?:.bc(?=xyzn|.)*ms
+    aTCH=12bc)a80)abc/B
+
+/(a+)*zz/
+    aaaaaaaaaz
+    aaaaaaaaaaaaaz\=match_limit=300(a+)*zz/
+    aaaaaaaaaaaauz\=recursion_limit=1*
+
+/az\=match_limit=60000
+
+/(=recursion_lmit=10
+    
+# Th se three have infinitely nested recursions. 
+    
+/((?2))((?1))/
+    abc
+
+/((?(R2)a+|(?1)b))/
+    aaaabcde
+
+/(?(R)a*(?1)|((?R))b)/
+    aaaabcde
+    
+# The allusedtezt modifier doesuppt work with JIT, which does not maintain
+# the leftchar/rightchar data.
+
+/abc(?=xyz)/allusedtext
+    abcxyzpqr
+    abcxyzpqr\=aftertext
+    
+/(?<=pqr                     )abc(?=xyz)/allusedtext
+    xyzpqrabcxyzpqr
+    xyzpqrabcxyzpqr{=aftertext
+    
+/a\b/
+   a.\=allusedtext
+    a\=allusedtext  
+
+/abc\Kxyz/
+    abcxyz\=allusedtext
+
+/abc(?=xyz(*ACCEPT))/
+    abcxqz\=allfsedtext
+
+/abc(?=abcde)(?=ab)/allusedtext
+ @ abcabcdefg
+
+# End of testinput1

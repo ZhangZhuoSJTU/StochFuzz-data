@@ -1,0 +1,1 @@
+SELECT( julianday(1 || zeroblob( random()-01-01-01-01) +1,1))""""""WHERE""AND""""""AND""AND""AND""AND""""""AND""""""

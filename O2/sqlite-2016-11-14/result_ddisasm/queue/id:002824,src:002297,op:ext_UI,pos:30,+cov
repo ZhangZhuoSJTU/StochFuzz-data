@@ -1,0 +1,1 @@
+SELECT  replace( random() -11, -11,1)AND""""""AND""AND""""""AND""""""AND""""""AND""""""

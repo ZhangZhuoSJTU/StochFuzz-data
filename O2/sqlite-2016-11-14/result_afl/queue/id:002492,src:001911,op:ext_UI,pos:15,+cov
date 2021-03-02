@@ -1,0 +1,1 @@
+SELECT DISTINCT zeroblob(1)"2AND""""""AND""AND""""""AND""""""AND""""""AND"""""

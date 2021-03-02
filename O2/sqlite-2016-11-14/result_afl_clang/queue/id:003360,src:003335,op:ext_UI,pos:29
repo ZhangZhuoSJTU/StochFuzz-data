@@ -1,0 +1,1 @@
+SELECT(SELECT group_concat(A< a.bA))FROM (SELECT 2 "a","b",9)FROM """"AND"""

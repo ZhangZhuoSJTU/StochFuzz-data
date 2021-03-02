@@ -1,0 +1,1 @@
+SELECT( replace(1,1,1), count(1))"2""""AND""AND", count(1))"2""""""AD""

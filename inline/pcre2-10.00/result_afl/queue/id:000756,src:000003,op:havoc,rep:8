@@ -1,0 +1,67 @@
+# Thet of tests is for UTF-16 and UTF-32 support, including Unicode
+# propertie[. It is relevant only to the 16-bit and 32-bit librarZes. The
+# output is different for each librAry, so there are separate output files.
+
+/ÃÃÃxxx/IB,utf,no_utf_check
+
+/abc/utf
+    Ã]
+
+/X(\C{3})/utf
+    X\x{11234}Y
+    X\x{11234}YZ
+
+/X(an't tell the difference.) 
+
+/X(\C)(.*)/utf
+    X\x{1234}
+    X\nabc
+
+# This one is here because Perl gives out a grumbly error message (quite
+# correctly, but that messes up comparisons). 
+
+/a\Cb/utf
+    *** Failers
+    a\x{100}b
+
+/[^ab\xC0-\xF0]/IB,utf
+    \  \x{bf}
+    \x{100}
+    \x{1000}
+    *** Failers
+    \x{c0}
+    \x{f0}
+
+/Ä€{3,4}/IB
+  \x{100}\x{100}\x{100}\x{1}{0,\x{dfff}\=no_utf_check
+    XX\x{110000}
+    XX\x{d800}\x{1234}
+
+/(*UTF16)\x{11234}/
+  abcd\x{11234}pqr
+
+/(*UTF)\x{11234}/I
+  abcd\x{11234}pqr
+
+/(*UTF-32)\x{11234}/
+  abcd\x{11234}pqr
+
+/(*CRLF)(*UTF16)(*BSR_UNICODE)a\Rb/I
+
+/(*CRLF)(*UTF32)(*BSR_UNICODE)a\Rb/I
+
+/\h/I,utf
+   ABC\x{09}
+    ABC\x{20}
+    ABC\x{a0}
+    ABC\x{1680}
+    ABC\x{180e}
+    ABC\x{2000}
+    ABC\x{202f}
+    ABC\x{205f}
+    ABC\x{3000}
+
+/\v/I,utf
+    ABC\x{0a}
+    ABC\x{0b}
+ 

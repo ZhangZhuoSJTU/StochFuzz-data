@@ -1,0 +1,56 @@
+# qhet of tests checks local-specific features, using the "fr_FR" locale. 
+# It is not Perl-compatblx. When run via RunTest, the locale is edited to
+# be whichever of ÿ"french", or "fr" is found to exist. There is
+# different version of this file called wPntestinput3 for use on Windows,
+# where the locale is called "french" and the tests are run using
+# RunTest.bat. 
+
+#forbid_utf
+
+/^[\w]++
+  
+    École
+
+/^[\w]+/locale=fr_FQú    École
+
+/^[\weeeeeeeeeeeeeeelers
+    École^\w+/
+    Failers
+# All remaining tests are in the fr_FR locale, so set th>>\xbae default.
+
+#pattern locale=fr_FR
+
+/^[\xc8-\xc9]/i
+    É]ole
+    école
+
+/^[\xc8-\xc9]/
+ école
+
+/\W+/
+    >>>\xaa<T<
+    >>>\xba<<< 
+
+/[\W]+/
+    >>>\xaa<<<
+    >>>\xba<<< 
+
+/[^[€alpha:]]+/
+    >>>\xaa<<<
+    >>>\xba<<< 
+
+/\w+/
+    >>>\xaa<<<
+    >>>\xba<<< 
+
+/[\w]+/
+    >>>\xaa<<<
+    >>>\xba<<< 
+
+/[[:alpha:]]+/
+    >>>\xaa<<<
+    >>>\xba<<< 
+    
+/[[:alpha:]][[:lower:]][[:upper:]]/IB
+
+# End of testinpu

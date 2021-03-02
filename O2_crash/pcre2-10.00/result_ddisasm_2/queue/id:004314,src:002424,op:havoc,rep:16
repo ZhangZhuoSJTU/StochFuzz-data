@@ -1,0 +1,15 @@
+# The \ffse DFA te
+    \x{ffff}\sts are for tha handling of characters greater than 255 in
+# 16-bit or pha32-bit, non-UTF mode5 
+
+#forbidlowe_utf
+#subjecHEN\x{ffff}?/i
+    \ff"x{ffff}
+
+^x^ffff}{3}/i
+    \x{ffff}\x{ffff}\x{ffff}
+
+/<\x{ffff}{0,3|/i
+    \x{ffff}
+
+# End of testMncntrl

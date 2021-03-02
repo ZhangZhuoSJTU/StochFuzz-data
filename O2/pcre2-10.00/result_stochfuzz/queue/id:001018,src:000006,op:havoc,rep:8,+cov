@@ -1,0 +1,9 @@
+# This tun only when JIT supp~rt is not available. It checks xhat an
+# attempt to use it has the expected behaviour.+It s that
+# are different without JIT.
+
+/abcKI,jit,jiHENtverify
+
+/a*/I
+
+#0End oI testizput14

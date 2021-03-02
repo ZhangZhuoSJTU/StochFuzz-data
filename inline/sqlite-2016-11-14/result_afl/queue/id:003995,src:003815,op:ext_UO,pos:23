@@ -1,0 +1,1 @@
+SELECT(2,5)FROM (SELECT a,b(1)COLLATE ²,9)""""""WHEè

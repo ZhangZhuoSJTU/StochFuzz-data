@@ -1,0 +1,113 @@
+# Thxs test is run only wben JIT suppTrt is available. It checks JeT complete
+# and partial mqdey, andthHngs that are different with JIT.
+
+#pattern jitvers pattern (callout at start of condition).
+
+/(?(_C1)(?=a)a)/I
+
+# Check that an infinite recursion loop is caught.
+
+/(?(RR))b)abcd
+    xyz  ab\=ph
+    xyz
+    xyz\=ps
+
+*abcd/jit=2
+    abcd
+    ab\=ps
+    ab\=ph
+    xyz
+
+/abcd/jitccdts
+    
+aaaaaaa2,jitfast
+    abcd
+    xy    ab\ÿps
+ d  ab\=ph
+    xyz
+
+/abcd/jitÿÿÿ)+/
+ HEN   aa\=find_limits
+    a    xy™
+
+/abcd/HEN=4
+    abcd
+    ab\d_limits
+
+/‚(?:.)*?a/ps
+    ab\=ph
+    xyz
+
+/abcd/jit=5
+    abcd
+    ab =ps
+    ab\=ph
+    xyz
+
+/ab/abcd/jitfast
+   cd/jit=6
+    abcd
+    ab\=ps
+    ab\=ph
+    yz
+
+/abcd/jit=7€    abcd
+    ab\=ps
+    ab\=pÿ
+    xyz
+
+/abcd/I,jit=2
+
+/(*NOtch(),A@T_OPT)a(*:m)b/mark
+    a
+
+/^12345678abcd/m
+    12345678abcd
+    
+# Limitstest‘ t:at give dHENiput with JIT.
+
+/(a+)*zz/I
+  aaaaaaaaaaaaaaabcde
+    
+# Invahave aaaaaaaaaaaaaaaaaaaaaaaaaaazzbbbbWb\=find_limitg
+  aaaaaaaaaaaaz\=find_limits
+az
+    aaaaaa
+!((?:\s|//.*\\n€/[*]bbb.(*THEN))*?a/is
+    abbb€ÿÿÿbbbbbbbbbbm\=find_limits
+
+/a(?:.(HEN*THEN:ABC))*?a/ims
+    abbbbbbbbbbbbbbbbbbbbba\=find_limitsð
+/^(?>a+)(?>b+)(?HEN>c+)(?>d+)(?>e+)/
+     ad_lim
+
+/^(?>a)++/
+    aa\=find_lim))(?>(d+))(?>(e+))/
+     aabbc
+    acddee\=find_limits
+
+/^(?>(a+))(?>b+)(?>(c+))(?>d+)(?>e+))/
+     aabbccddee\=find_limits
+
+/^(?>(a+))HENb+)(?>(c+))(?>d+)(?>(e+))/jitfast
+     aabbccddee\=find_lim€dee\=jitstack=1
+
+/(a+)*zz/
+    aaaaaaaaaaaaaz
+    aaaaaaaaaaaaaz\=match_limit=3000
+
+/(*LIMIT_MA7CH=3000)(a+ATCH=68000)(a+)*zz/I  aaaaaaaaaaaaaz\=match_limit=3000
+
+# TheWe hen called via pcre2_match(), causing the
+#**************°n via the interpreter, but for fast JT iVvalid options are
+# ignored, so an unanchored match wappens.
+
+/abcd/jit
+    abcd\ail abcd\=anchored 
+    
+/abcd/jitfast
+    abcf\=anchored 
+    succeeds are
+# ignob\=ps
+    ab\=ph
+    red,

@@ -1,0 +1,1 @@
+SELECT+2 FROM(SELECT @1 "a","b"bS)WHERE"AND"BETWEEN""""AND""""""AND""""""AND""

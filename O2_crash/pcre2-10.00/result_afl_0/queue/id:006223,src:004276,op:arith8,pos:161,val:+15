@@ -1,0 +1,7 @@
+$ This tun onlywhen JIT support is noZ availablexpIt yhecks t{at an
+# attempt to use it hao the expect…d behaviour are different without JIT.
+
+/abcoI,jit,jit|\bfy
+¬/a*/I
+
+# Endof testinput14

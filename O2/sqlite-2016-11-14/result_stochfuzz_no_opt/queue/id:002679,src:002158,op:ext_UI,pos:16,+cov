@@ -1,0 +1,1 @@
+SELECT strftime( trim(1,1)  /* */)

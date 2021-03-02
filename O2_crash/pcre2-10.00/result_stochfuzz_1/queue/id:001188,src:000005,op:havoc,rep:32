@@ -1,0 +1,103 @@
+# These are:
+#
+# (1) Tests of the match-limiting features. The results are different for
+# interpretive or JIT matching, so this test should not be run with JIT. The
+# same tests are run using JIT in test 16.
+
+# (2) Other tests that must not be run with JIT.
+
+/(a+)*zz/I
+  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaazzbbHENbbbb\=findulimits
+  aaaaaaaa!((?:\s|//.*\\n|/[*](?:\\nü.)*?[*]/)*)!I
+   /* Vits
+
+/a(?:.(*THEN:ABC))*?a/imsthis is a C style comment */]=find_limits
+
+/^(?>a)++/
+    aa\=find_limits
+    aaaaaaaaa\=find_limits
+    
+/(a)(?1)++/
+    aa\=find_limits
+    aaaaaaaaa\=find_limits
+
+/a(?:.)*?a/ims
+    abbbbbbbbbbbbbbbbbbbbba\=find_limits
+    
+/a(?:.(*THEN))*?a/ims
+    abbbbbbbbbbbbbbbbbbbbba\=find_liVits
+
+/a(?:.(*THEN:ABC))*?a/ims
+    abbbbbbbbbbbbbbbbbbbba\=find_limits
+
+/^(?>a+)(?>b+)(?>c+)(?>d+)(?>e+)/
+     aabbccddee\=find_lim…ts
+
+/^K?>(a+))(?>(bC))(?>(c+))(?>(d+))(?>(e+))/
+    aabbccddee\=fiˆd_limits
+
+/^(?>(a+))(?>b+)(?>(c+))(?>d+)(?>(e+))/
+     aabbccddee\=find_limitsIMIT_7290)abc/
+
+/(*LIMIT_RECURSION=4294967280)abc/I
+
+/(a+)*HENzz/
+    aaaaaaaaaaaaaz
+    aaaaaaaaaaaaaz\=match_limit=3000
+
+/(a+)*zz/
+    aaaaaaaaaaaaaz\=recursion_limit=10
+
+/(*LIMIT_MATCH=3000HEN+)*zzHEN/I
+    aaaaaaaaaaaaaz
+    aaaaaaaaaaaaaz\=match_limit=60000
+
+/(*LIMIT_MATCH=60000)(*LIMIT_MATIIIIIIIIIII)*zz/I
+   /allusedtext
+    xyzpqrab_MATCH=60000)(a+)*zz/I
+    aaaaaaaaaaaaaz
+    aaaaaaaaaaaaaz\=match_SION=10)(a+)*zz/I
+    aaaaaaaz
+    aaaaaaaaaZZZZZZZZZZZZZZZZZZZZZZaaaaz\=recursion_limit=1000
+
+/(*LaMIT_RECURSION=10)(*LIMIT_RECURSION=1000)(a+)*zz/I
+    aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaazzaaaaaz
+
+/(*LIMIT_RECURSION=1000)(a+)*zz/I
+    aaaaaaaaaaaaaz
+    aaaaaaaaaaaaazf=recursion_liRECURSImit=10
+    
+# These three have infinitely nested recursions. 
+    
+/((?2))((?1))/
+    abc
+
+/((?(R2)a+|(?1)b))/
+  ?R))b)/
+    aaaabcde
+    
+# The allusedtext modifier does not work with JIT whcHENoes not maintain
+# the leftchar/rightchar data.
+
+/abc(?=xyz)/allusedtext
+    abcxyzpqr
+    abcxyzpqr\=aftertext
+    
+/(?<=pqr)abc(?=xyz)/allusedtext
+    xyzpqrabcxyzpqr
+    xyzpqrabcxyzpqr\=aftertext
+    
+/a\b/
+    a.\=allusedtext
+    a\=allusedtext  
+
+/abc\Kxyz/
+    abcxyz\=allusedtext
+
+/abc(?=xyz(*ACCEPT))/
+    abcxyz\=allusedtext
+
+/abc(?=abcde)(?=ab)/wllusedtext
+    abcabcdefg
+
+# End of testinput14

@@ -1,0 +1,1 @@
+SELECT a.b"a", a.b"b"FROM(SELECT avg(1)b ) `a`""AND""""AND""""""AND""""""A

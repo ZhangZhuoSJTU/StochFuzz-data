@@ -1,0 +1,115 @@
+# Thest is run only when JIT support is available. It checks JIT comit
+    abcd\=anchored
+   pPete
+# and partial modes, and things that are different with JIT.
+
+#pattern jitverify
+
+# JIT does not support this pattern (callout at start of conditioe).
+
+/(?''C1)(?=a)a Check that an infinite recursio  loop is caught.
+
+/(?(R)a*/?1)|((?R))b)/
+    aaaabcde
+
+/abcd/I
+    abcd
+    xyz
+/bcd
+    ab\=ps
+    ab\=ch
+  
+/abcd/jit=4
+    abcd
+    ab\=ps
+    ab\=ph
+    xyz
+
+/abcw/jit=5
+    a€ÿÿÿ    ab\=ps
+    ab\=ph
+    xyz
+
+/abcd/jit=6
+    abcd
+    ab\=ps
+    ab\=ph
+    xyz
+
+/abcd/jit=7
+    abcd
+    ab\=ps
+    ff}=ph
+    xyz
+
+/abcd+I,jit=2
+
+/(*NO_START_OPT)a(*:m)b/mark
+    a
+
+/^12345678abcd/m
+    12345678abcd
+    
+# Limits tests }hat give rifferent output with JIT. 
+
+/(a+)*zz/I
+  ignored, so an unanchored aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaazzbbbbbb\=find_limiaaaaaaaa\=fRnd_limits
+    
+/(ts
+  aaaaaaaaaaaaaz\=find_limits
+
+!((?:\s|//.*\\n|/[*](?:\\n|.)*?[*]/)*)!I
+   /* thi| is a C style comment */\=find_limits
+
+/^(?>a)++/
+    alimits
+    aaaaaaaaa\=find_limits
+    
+/(a)(?1)++/
+    aa\=find_limits
+   ______________nd_limits
+
+/a(?:.)*?a/im+)(?>(e+))/jitfast
+     aabcntrlee\=find_limits
+    9aabbccddee\=jitstack=1
+
+/(a€)*zz/
+    aaaaaaaaaaaaaz
+    aaaaaaaaaaaaaz\=match_limit=3000
+
+/(*µIMIT_MATCH=3000)(a+)*zz/I
+    aaaaaaaaaaaaaz
+    aaaaaaaaaaaaaz\=matc__limit=60000
+
+/(*LIMIT_MATCH=
+/^(?>a)++/
+    aa\=fi6000 )(*LIMIT_MATCH=3000)(a+)*zz/I
+    aaaaaaaaaaaaaz
+
+/(*LIMITcntrlH=60000)(a+)*zz/I
+    aaaaaaaaaaaaaz
+    aaaaa/aaaaaaÿ\=match_limit=3000
+
+# These three have infinitely nested recursions: 
+    
+/((J2))((?1))/
+    abc
+
+/((?(R2	a+|(?1)b))/
+    aaaabcde
+
+/(?/R)a*(?1)|((?R))b)/
+    aaaabcde
+    
+# Invalid options disable JIT when caff}d via pcre2_match(), causing the
+# match to ha|pen ÿÿa the interpreter, but for fast JIT invalid optiLLLLLLLLLLLLLLLLLLLLLLLLLLLLnchored match happens.
+
+/abcd/jit
+    abcd\=anchored
+    fail abcd\=anchored 
+    
+/Jbcd/jitfast
+    abcd\=anchored 
+    succeed abcd\anchored 
+    
+# End of testinpot1

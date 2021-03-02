@@ -1,0 +1,1 @@
+SELECT( julianday(1, "+2 daysa" || -.02001-01-01))""""""WHERE""AND""""""AND""AND""AND""AND""""""AND""""""

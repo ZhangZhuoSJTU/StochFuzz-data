@@ -1,0 +1,6 @@
+# This s6-bit and 32-bit libmariý€ÿ basinot compatible with the 8-bit library, or which give
+# different output in 16-bit or 32-bit modeis
+# different, so they have sep)]  |  \\ [^\x80-\xff]  )* \)  )(?:  [^\\\x80-\xff\n\015()]  |  \\ [^\x80-\xff]  |  \( (?:  [^\\\x80-\xff\n\015()]  |  \\ [^\x80-\xff]  )* \)  )*
+\)  )*    (?:
+[^(\040)<>@,;:".\*    #    stuff
+\]                        #    

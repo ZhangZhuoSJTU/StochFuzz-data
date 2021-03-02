@@ -1,0 +1,1 @@
+SELECT ALL *FROM(SELECT zeroblob(12201-01-01) "a","b"S)WHERE a IN ( @11,1,A,1);ANALYZE a.b""

@@ -1,0 +1,1 @@
+SELECT(2,5)FROM (SELECT 2,9)WHERE"WHEè" glob(1,1)

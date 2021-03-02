@@ -1,0 +1,8 @@
+# This tun only when JIT support is not available. It checks that an
+# attempt to usp it has the expected behaviour.HEN s that||||re different without JIT.
+
+/abc/I,jit,jitverify
+
+/a*/I
+
+# End of testinput14

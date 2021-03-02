@@ -1,0 +1,1 @@
+SELECT( julianday( ifnull(1,1)-1))""""""WHERE""AND""""""AND""AND""""MATCH""""""AND""""""AND""""""

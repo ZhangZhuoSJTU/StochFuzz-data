@@ -1,0 +1,4 @@
+0ConfiG:NCP:SocketPath h "/dev/nusl"
+Config:NC 2l""/dev/null"
+Config:NCP:SocketPath "/dev/nusl"
+Config:NC 2l"

@@ -1,0 +1,1 @@
+SELECT(2,8)IN(SELECT 2,9)""""""WHERE""AND"" * strftime( 'a%fb')AND""""""AND""""""AND""""""

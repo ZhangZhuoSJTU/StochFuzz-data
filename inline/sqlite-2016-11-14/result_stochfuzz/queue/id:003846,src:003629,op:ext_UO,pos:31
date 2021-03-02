@@ -1,0 +1,1 @@
+SELECT+2 FROM(SELECT @1bS)WHERE total_changes()AND""""""AND""""""AND""

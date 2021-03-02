@@ -1,0 +1,1 @@
+SELECT  *FROM(SELECT "a","b"CURRENT_TIMESTAMP1,1,1,1);""""""AND""""""A

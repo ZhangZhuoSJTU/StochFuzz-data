@@ -1,0 +1,1 @@
+SELECT( upper( ltrim(12001-01-01,1))-sqlite_version())""""""WHERE""AND""""""AND""AND""""""AND""""""AND""""""AND""""""

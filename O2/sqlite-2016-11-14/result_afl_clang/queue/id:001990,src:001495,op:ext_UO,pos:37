@@ -1,0 +1,1 @@
+SELECT likelihood(1,1)MATCH likely(1)GLOB""""AND""""""AND""""""AND""""""

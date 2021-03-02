@@ -1,0 +1,1 @@
+SELECT( julianday(1<<  sqlite_source_id() || 1))""""""WHERE""AND""""""AND""AND""AND""AND""""MATCH""""""

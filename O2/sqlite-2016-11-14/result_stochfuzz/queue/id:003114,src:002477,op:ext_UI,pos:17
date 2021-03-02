@@ -1,0 +1,1 @@
+SELECT( replace(12001-01-01,1,1)/0)""""""WHERE""AND""""""AND""AND""AND""AND""""MATCH""""""

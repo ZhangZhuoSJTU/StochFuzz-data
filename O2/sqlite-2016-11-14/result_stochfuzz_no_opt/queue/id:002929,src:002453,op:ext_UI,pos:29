@@ -1,0 +1,1 @@
+SELECT(2,5)IN(SELECT 2,9)GLOB last_insert_rowid()""WHERE""AND""LIKE""ESCAPE""AND""AND""LIKE""""AND""""""AND""""""AND""""""

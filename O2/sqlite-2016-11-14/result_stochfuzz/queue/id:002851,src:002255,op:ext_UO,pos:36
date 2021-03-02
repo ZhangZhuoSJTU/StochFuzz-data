@@ -1,0 +1,1 @@
+SELECT avg(1)BETWEEN""AND""""""AND""BETWEEN""AND group_concat(1,1)""""""

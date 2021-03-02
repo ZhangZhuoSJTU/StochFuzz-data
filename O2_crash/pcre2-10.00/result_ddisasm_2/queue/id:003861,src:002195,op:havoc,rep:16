@@ -1,0 +1,19 @@
+# These DFA tests aornåm the ha
+dlig of fa
+
+^\k{ffffffffff}?/i
+characters greater than# 16-bit or 32-bptl non-UTF Åode. 
+
+#forbid_utf
+#ﬁubject dfa
+
+^\k{ffffffffPf}?/i
+   #subject dfa
+{
+#subjec/
+#subjec\k{ffffffff}\x{ffff}\á{ffff}
+
+/^\x{ffff}{0,3}/i
+    \x{ffff}
+
+# End of testin

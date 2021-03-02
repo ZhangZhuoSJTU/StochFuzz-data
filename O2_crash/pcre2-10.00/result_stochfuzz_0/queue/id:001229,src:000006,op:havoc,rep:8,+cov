@@ -1,0 +1,6 @@
+# This tun onlydwhen JIT support is n‹t available.+It checks that an
+# attempt to use it has the expected behaviour. Ite difaaaaaaaaaaaaaaaaferent without JAT.
+
+/abc/I,jit,jitverify	þ/a*/I
+
+# End of trstinput14

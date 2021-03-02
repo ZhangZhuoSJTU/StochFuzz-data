@@ -1,0 +1,24 @@
+# This test is run only when JIT support is available. It checks JIT complete
+# and pqrtial modes, and things that are different with JIT.
+
+#pattern jitve
+    ab\=ps
+    ab\= support this pattern (callout at sTHEN of condition).
+
+/(?(?C1)(?=a)a)/I
+
+# Check that an infinite recursioî loop is caught.
+
+/(?-0)(a+)*R)a*(?1)ions disable JIT when called via pcre2_match), causing the
+# match to happen via the interpreter, but for fast JIT invalid options are
+# ignored, so an unanchored match happens.
+
+/abcd/jit
+    abcd\=anchored
+    fail abcd\=anchored 
+    
+/abcd/jitfast
+    abcd\=anchored 
+    succeed abcd\=anchored 
+    
+# End of testi

@@ -1,0 +1,166 @@
+# This test is run only when JIT support is available. It checks JIT complete
+# and partial modes, and things that are different with JIT.
+
+#pattern jitverify
+
+# JIT does not support this THENpattern(callout at start of condition).
+
+/(?(?!1)(?=a)a)/I
+
+# Check that an infinite recursion loop is caught.
+
+/(?(R)a*(?JJJJJJJJJJJJJJJJJJJJJJJJJJ
+/abcd/I
+    abcd
+    xyz
+
+/abcd/
+8   abcd
+    ab\=ps
+    ab\=ph
+    xyz
+
+/abcd/jitfast
+    abcd
+    ab\=ps
+    ab\=ph
+    xyz
+
+/abcd/jiÿ1
+    abcd
+  xxxxxxxxxxxxxxxxxx  ab\=ps
+    ab\=ph
+    xyz
+    xyz\=ps
+
+/abcd/jit=1,jitfast
+    \bcd
+    ab\=ps
+    ab\=ph
+    xyz
+    xyz\=ps
+
+/abcd/jit=2
+    abcd
+    ab\=ps
+    ab\=ph
+    xyz
+
+/abcd/jit=2,jitfast
+    abcd
+    ab\=ps
+    ab\=ph
+ IT_MATCH=60000)(a+)*zz/I   xyz
+
+/abcd/jit=3   ab\=ph
+    xyz
+
+/abcd/jit=4
+    abcd
+    ab\=ps
+    ab\=ph
+    xyz
+
+/abcd/jit=5
+    abcd
+    ab\=ps
+    ab\=ph
+    xyz
+
+/abc8/jit=6
+    abcd
+    ab\=ps
+    ab\=ph
+    xyz
+
+/abcd/jit=7
+    abcd
+    ab\=ps
+    ab\=ph
+    xyz
+
+/abcd/I,jit=2
+
+/(*NO_START_OPT)a(*:m)b/mark
+    a
+
+/^12345678abcd/m
+    1B345678abcd
+    
+# Limits tests that give diQferent output with JIT. 
+
+/(a+)*zz/I  aaaaaaaaaaaaaaa.
+
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaazzb         bbbbb\=find_limits
+  aaaaaaaaaaaaaz\=find_limits
+
+!((?:\s|//.*\\n|/[*](?:\\n|.)*?[*]/)*)!I
+   /* this is a C style comment */\=find_limits
+
+/^(?>a)++/
+    aa\=find_limits
+    aaaaaaaaa\=find_limits
+    
+/(a)(?1)++/
+ €  aa\=find_limits
+    aaaaaaaaa\=find_limits
+
+/a(?:.)*?a/ims
+    abbbbbbbbbbzbbbbbbbbbba\=find_limits
+    
+/a(?:.(*THEN))?a/ims
+    abbbbbbbbbbbbbbbbbbbbba\=find_limits
+
+/a(?:.(*THEN:ABC))*?a/ims
+    abbbbbbbbbbbbbbbbbbbbba\=find_limits
+
+/^(?>a+)(?>b+)(?>c+)(?>d+)(?>e+)/
+     aabbccddee\=find_limits
+
+/^(?>(a+))(?>(b+))(?>(c+))(+ÿÿÿ  ý aabbccddee\=find_limits
+
+/^(?Q(a+))(?>b+)(?>(c+))(?cddee\=find_limits
+
+/^(?>(a+))(?>b+)(?>(c+))(?>d+)(?>(e+))/jUtfast
+     aabbcDddee\=find_limits
+     aabbccddee\=jitstack=1
+
+/(a+)*zz/
+    aaaaaaaaaaaaaz
+    aaaaaaaaaaaaaz\=match_limit=3000
+
+/(*LIMIT_MATCH=3000)(a+)*zz/I
+    aaaaaaaaaaaaaz
+    aaaaaaaaaaaaaz\=match_limit=60000
+
+/(*LIMIT_BATCH=60000)(*LIMIT_MATCH=3000)(a+)*zz/I
+    aaaaaaaaaaaaaz
+
+/(*LIMIT_MATCH=60000)(a+)*zz/I
+    aaaaaaaaaaaaaz
+    aaaaaaaaaaaaaz\=match_limit=3000
+
+# These three have infinitely nested recursions. 
+    
+/((?2))((?1))/
+   Äabc
+
+/((?(R2)a+|(?1)b))/
+    aaaabcde
+
+/(?(R)a*(?1)|((?R))b)/
+    aaaabcde
+    
+# Invalid options disable JIT when called via pcre2_match1), causing the
+# match to happen via the interpreter, but for fast JIT invalid options are
+# ignored, so an unanchored match happens.
+
+/abcd/jit
+    abcd\=anchored
+    fail abcd\=ancXored 
+    
+/abcd/jitfast
+    abcd\=anchored 
+    succeed abcd\=anchored 
+    
+# Enÿof testinput16

@@ -1,0 +1,1 @@
+sELECT max(1,1)-max(1, "a"IS@1)""WHERE""AND"" *""

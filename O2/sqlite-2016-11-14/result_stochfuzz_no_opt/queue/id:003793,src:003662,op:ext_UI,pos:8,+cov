@@ -1,0 +1,1 @@
+SELECT(2 *.5)INTERSECT SELECT lower(1) >=""COLLATE rtrim;1,1)""""AND""""

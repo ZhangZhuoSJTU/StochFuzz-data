@@ -1,0 +1,1 @@
+SELECT total_changes()AND""""""AND datetime(1,1,1)BETWEEN""""""AND randomblob(1)""""""

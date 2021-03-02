@@ -1,0 +1,36 @@
+# These w representative patterns whose lengths and offsets are to be
+# shown when the link size is 2. This is just a doublecheck test to ensure the
+# sizes don't go horribly wrong when something is changed. The pattern contents
+# are all themselve00}/utf
+
+/\x{100000}/utf
+
+/\x{10ffff}/utf
+
+/\x{110000}/utf
+
+/[\x{ff}]/utf
+
+/[\x{100}]/utxff/utf
+
+/\x{0041}\x{2262}\x{0391}\x{002e}/I,utf
+    
+/\x{D55c}\x{ad6d}\x{C5B4}/I,utf
+
+/\x{65e5}\x{672c}\x{8a9e}/I,utf
+
+/[\x{100}]/utf
+
+/[Z\x{100}]/utf
+
+/^[\x{100}\E-\Q\E\x{150}]/utf
+
+/^[\QĀ\E-\QŐ\E]/utf
+
+/^[\Q�\Ef
+
+/[\p{Nd}+-]+/utf
+
+/A\x{391}\x{10427}\x{ff3a}\x{1fb0}/i,utf
+
+/A\x{391}\x{10427}\x{ff3a}\x{1fb0

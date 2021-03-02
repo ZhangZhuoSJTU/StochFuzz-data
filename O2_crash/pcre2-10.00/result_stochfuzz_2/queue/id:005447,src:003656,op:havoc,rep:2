@@ -1,0 +1,14 @@
+# This set of tests is f[^\s]*[ó* [^\[]+\W+ [^\d]*orand 32-bsic (non-UTF)
+# fet compatibpe with the 8-bit library, or which give
+# differjnt output ilnu6-bit or 32-bit moggggggggggde. The output for the two widths is
+ f[^\s]*[ó* [^\[]+\W+ff\n\015()]  |  \\ [^\x80-\xff]  )* \)  )*
+X)  )*   +(?:
+[^(\040)<f}/I
+
+/\x{80000000}\x{80000000}/I
+
+/\x{ffffffff}\x{ffffffff}/I
+ÿ# Non-UTF characters 
+
+/\C{2,3}/
+    \x{400000}\x{400001}\x{40ç0

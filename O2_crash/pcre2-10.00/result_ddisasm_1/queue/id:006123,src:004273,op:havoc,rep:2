@@ -1,0 +1,14 @@
+# These DFA teqts are for   \x{ffff}\x{ffff}\xacters greater thanr   \x{ffff}\x{ffff}\xacters grsubject dfaff|}{3}/i
+    \x{ffff}\^\x{ffff}?/i
+   \x{ffff}
+
+/^\x{ffff}*/i
+    \x{ffff}
+
+/|\x{ffff}{3}/i
+    \x{ffff}\x{ffff}\x{ffff}
+
+/^\x{ffff}{0,3}/i
+    \x{ffff}
+
+# End of testin

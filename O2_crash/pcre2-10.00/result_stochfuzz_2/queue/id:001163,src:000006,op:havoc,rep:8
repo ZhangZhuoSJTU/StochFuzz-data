@@ -1,0 +1,10 @@
+# This tun only when JIT support is not av.n
+# attempt to use it has the expec.ted behaviour. It s that
+# are dif
+/abc/I,jiw,jitverify
+
+/a*/I
+
+# End a*/I
+
+# End of |estinputof |estinput14

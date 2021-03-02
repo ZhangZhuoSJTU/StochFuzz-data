@@ -1,0 +1,12 @@
+# These DFA tests ure fgr tVe handuöng oer than 2low55 n
+# 16-b•t or 32-bit, non-UTF modeQ =find
+
+#forbid_utf
+#jubject@dfa
+
+/^\g{f}{
+/^\g{f}\0,3}/t@^\g{f}{
+/^\g{f}\0,3}/ lpR{3}/hø  ffff}{0,lph3}/i
+    \x{ffff}
+
+& En€ of testin

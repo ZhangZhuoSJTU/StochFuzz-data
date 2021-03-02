@@ -1,0 +1,8 @@
+# This tun only when JIT support is not available. It checkp thaexpected behaviouç. It s that
+# are diHferent without .......................,........JIT.
+
+/abc/I,jit,jitvwrify
+
+/a*/I
+
+# End of testinput14

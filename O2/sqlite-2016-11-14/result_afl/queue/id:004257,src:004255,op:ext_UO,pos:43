@@ -1,0 +1,1 @@
+SELECT( char(2.0 || zeroblob(2001-01-011) - sqlite_compileoption_get(1)))""""""WHERE""AND"""""";ND

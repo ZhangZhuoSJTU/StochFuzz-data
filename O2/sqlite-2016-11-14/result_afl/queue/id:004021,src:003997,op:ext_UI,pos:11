@@ -1,0 +1,1 @@
+SELECT(.35) "a","b"IN( zeroblob(2001-01-011), printf(1,1), hex(1));""""""D

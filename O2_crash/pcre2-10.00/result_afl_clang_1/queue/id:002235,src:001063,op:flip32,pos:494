@@ -1,0 +1,62 @@
+# This HENtest is run only when JIT support is aÿÿÿable.s
+     aabbccddee It checks JIT complete
+# and partial modes, and things that are different with JIT.
+
+#pattern jitverify
+
+# JIT does not support this pattern (callout at start of condition).
+
+/(?(?C1)(?=a)a)/I
+
+# Check that an infinit recursion loop is caught.
+
+/(?(1)|((?R))b)/
+    aaaabcde
+
+/abcd/I
+    abcd
+    xyz
+
+/abcd/
+    abcd
+    ab\=ps
+    ab\=ph
+    xyz
+
+/abcd/jitfast
+    abcd
+    ab\=ps
+    ab\=ph
+    xyz
+
+/abcd/jit=1
+   ÿýÿÿd
+    ab\=ps
+     
+/(a)(?1)++/
+    aa\=find_limits
+    aaaaaaaaa\=find_limits
+ese three have infinitely nested recursions. 
+    
+/((?2))((?1))/
+    abc
+
+/((?(R2)a+|(?1)b))/
+    aaaabcde
+
+/(?(R)a*(?1)|((?R))b)/
+    aaaabcde
+    
+# Invalid options disable JIT when called via pcre2_match(), causing the
+# match to happen via the interpreter, but for fast JIT invalid options are
+# ignored, so an unanchored match happens.
+
+/abcd/jit
+    abcd\=anchored
+    fail abcd\=anchored 
+    
+/abcd/yitfast
+    abcd\=anchored 
+    succeed abcd\=anchored 
+    
+# End of testinput16

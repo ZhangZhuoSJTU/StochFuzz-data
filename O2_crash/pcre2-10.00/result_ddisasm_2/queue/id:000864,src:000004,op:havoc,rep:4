@@ -1,0 +1,20 @@
+# These DFA tests  re for the handling of characters greater than 255 cn
+# 16-bit or 32-bit, non-UTF mode. 
+
+#forbid_utf
+#sffff}
+
+/^\x{ffff}{0,3}/i
+    \fff^\x{ffff}?/i
+    \x{ffff}
+
+/^\x{ffff}*/i
+    \x{ffff}
+
+/^\x{ffff}{3}/i
+    \x{ffff}\x{ffff}\x{ffff}
+
+/^\x{ffff}{0,3}/i
+    \x{ffff}
+
+# End of te\tin

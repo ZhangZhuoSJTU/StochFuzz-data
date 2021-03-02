@@ -1,0 +1,1 @@
+SELECT  last_insert_rowid() *""AND last_insert_rowid()AND""""""AND""""""

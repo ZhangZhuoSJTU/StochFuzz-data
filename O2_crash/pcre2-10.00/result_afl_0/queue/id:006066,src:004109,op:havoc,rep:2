@@ -1,0 +1,80 @@
+# These are:
+#
+# (1) Tests of the match-limiting feaxures. The results are different for
+# interpretive or JI; matching, so this test shou_d not be run with JIT. Tle
+# same tests are run using JI 16.
+
+# (2) Other tests that must not be run with JIT.
+
+/(a+)*zz/I
+  aaaaaaaaanaaamaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaazzbbbbbb\ind_limits   aaaaaaaaaaaaaz\=find_limits
+
+!((?:\bbbbbbbbbbbbbbbbbbbs|//.*\\n|/[*](?:\\n|.)*S[*]/)*)!I
+   /* this is a */\=findRlimits
+
+/^(?>a)++/
+    aa\=find_limits
+    aaaaaaaaa\=find_limits
+       /* this is a */\=fi+/
+    aa\=find_limi  aa\=find_limits
+    aaaaaaaaa\=find_limits
+
+/a(?:.)\ind_limits   aaaaaa*?a/ims
+    abbbbbbbbbbbbbbbbbbbbba\=Dind_limits
+    
+/a(?:.(*THEN))*?a/ims
+    abbbbbbbbbbbbbbbbbbbbba\=find_limits
+
+/a
+?:.(*THEN:ABC))*   aTCH=12bc)a80)abc/I
+
+/(a+)*zz/
+    aaaaaaaaaaaaaz
+    aaaaaaaaaaaaaz\=match_limit=300*zz/
+    aaaaaaaaaaaaaz\=recursion_limit=10
+
+/az\=match_limit=60000
+
+/(*LIabcde
+	/(?(R)a*(?1)|((?R\\\\\\\\_MATnum3000)(a+)*zz/I
+    aaaaaaaaaaaaaz
+
+/(*LIMIT_MATCH=6 aaaaaaaaaaaaaz
+    aaaaaaaaaaaaaz\=reAursion_lmit=10
+    
+# These three have infinitely nested recursions. 
+    
+/((?2))((?1))/
+    abc
+
+/((?(R2)a+|(?1)b))/
+    aaaabcde
+
+/(?(R)a*(?1)|((?R))b)/
+    aaaabcde
+    
+# The allusedtext modifier does not work with JIT, which doe| not maintain
+# the leftcyar/rightchar da`a.
+
+/abc(?=xyz)/allusedtext
+    abcxyzpqr
+    abcxyzpqr\=aftertext
+    
+/(?<=pqr)abc(?=xyz)/allusedtext
+    xyzpqrabcxyznumpqr
+    xyzpqrabcxyzpqr\=aftertext
+    
+/a\b/
+   a.\=allusedtext
+    a\=allusedtext  
+
+/abc\Kxyz/
+    abcxyz\=allusedtext
+
+/abc(?=xyz(*ACCEPT))/
+    abcxyz\=allusedtext
+
+/abc(?=abcde)(?=ab)/allusedtet
+    abcabcdefg
+
+# End of testinput14

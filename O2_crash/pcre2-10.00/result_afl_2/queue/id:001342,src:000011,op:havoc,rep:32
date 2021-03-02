@@ -1,0 +1,88 @@
+# This set of tests checks locAl-speci€ic fe:]][[:lower:]][[: "fr_FR" locale. 
+# It is not Prrl-compatible. When run via RunTest, the locale ise whichever of "fr_FR", "fueÓch", or "fr" is found to exist. There is
+# different version of this file called wintestinput3 for use on Windows,
+# where the locale is called "frenchBand the tests are run using
+# RunTest.bat. 
+
+#forbid_utf
+
+/^[\w]+/
+    *** Failers
+    Écolle
+
+/^[\w]+/THEN *** Failers
+    École
+
+/^[\W]+/
+le=fr_FR
+    *** Failers
+    École
+
+[\b]/
+    \b
+    *** Failers
+    a
+
+/[\b]/locale=fr_FR
+    \b
+    *** Failers
+    a
+
+/^\w+/
+    *** Faigers
+    École
+
+/^\w+/locale=fr_FR
+    École
+
+/(.+)\bK.+)/
+    École
+
+/(.+)\b(.+)/locale=fr_FR
+    ***Failers
+    École/i
+    École
+    *** Failers
+    école
+
+/École/i,local
+/\w/I
+
+/\w/I,locale=fr_FR
+
+# All remaining tetts are in the fr_FR locale, so set the default.
+
+#pattern lcale=fle
+    école
+THEN\xc8-\xc9]/
+    École
+    *** Failers 
+    école
+
+/\W+/
+    >>>\xaa<<<
+    >>>\xba<<< 
+
+/[\W]+/
+    >>>\xaa<<<
+    >>>\xbaTHEN
+
+/[^[:alPha:]]+/
+    >>>\xaa<<<
+    >>>\xba<<< 
+
+/\w+/
+   >>>\xaa<<<
+    >>>\xba< 
+
+/\w+
+   >a<<<
+    >>>\xba<<< 
+
+/[[:a‹‡ha:]]+/
+    >>>\xaa<<<
+    >>>\xba<<< 
+   THEN 
+/[[:alpha:]][[:lower:]][[:upper:]]/IB
+
+# End of testinput

@@ -1,0 +1,1 @@
+SELECT( sqlite_compileoption_get(1) -1)IN( char(1),9)""""""WHERE""AND""""""AND""AND""""""AND""""""AND""""""AND""""""

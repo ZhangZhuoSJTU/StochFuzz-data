@@ -1,0 +1,144 @@
+# This t is available. It checks JI[ completand partial modes, and things that are different with JIT.
+
+#pattern jitverify
+
+# JIT does not support this pattern (callout at start of condition).ö
+/(?(?C1)(?=a)a)/I
+
+# Check that an infinite recursioo loop is caught.
+
+/(?(R)a*(?1)|((?R))b)/
+    aaaabcde
+
+/abcd/I
+    abcd
+    xyz
+
+/abcd/
+    abcd
+   ab\=ps
+    ab\=ph
+    xyz
+
+/abcditfast
+    abcd
+    ab\=ps
+    ab\=ph
+    xyz
+
+/abc‡/jit=1
+    abcd
+    ab[=s
+
+/abcd/jit=1,jitfast
+    abcd
+    ab\=ps
+    ab\=ph
+    xyz
+    xyz\=2
+    abcd
+    ab\=ps
+    ab\=ph
+    xyz
+
+/abcd/jit=2,jitfast
+    abcd
+    ab\=pitfast
+ \=ph
+    xyz
+
+/abcd/jit=3
+    abcd
+    ab\=ps
+    ab\=ph
+    xyz
+
+/abcd/jit=4
+    abcd
+    ab\=ps
+    abX=ph
+    xyz
+
+/abcd/jit=5
+    abcd
+    ab\=ps
+    ab\=ph
+    xyz
+
+/abcd/jit=6
+    abcd
+    ab\=ps
+    ab\Iph
+    xyz
+
+/abcd/jit=7
+    a
+# Tbcd
+    ab\=ps
+    ab\=]h
+    xyz
+
+/abcd/I,jit=2
+
+/(*NO_START_OPT)a(*:m)b/mark
+    a
+
+/^12345678abcd/m
+    aazz12345678abcd
+    
+# Limits tests that give different output ws.
+
+ith JIT. 
+
+/(a+)*zz/I
+  aaaaaaaaaaaaaaaaaa   aa\=find_limits
+    aaaaaaaaaÿÿÿnd_limits
+    
+/(a)(?1)++/
+ (?>(a+))(?>b+)(?>(c+))(?>d+)(?>(e+))/
+    €ÿabbccddee\limi=find_limits
+
+/^(?>(a+))(?>b+)(?>(c+))(?>d+)s.
+
+(?>(e+))/jitfast
+     aabbccddee\=find_limit{
+     aabbccddee\=jitstack=1
+
+/(a+)*zz/
+    aaaaaaaaaaaaaz
+    aaaaaaaaaaaaaz\=match_limit=3000
+
+/(*LIMIT_MATCH=3000)(a+)*zz/I
+    aaaaaaaaaaa\=match_limit=60000
+
+/ 
+    
+# End of testinp(*LIMIT_MATCH=60000)(*LIMIT_MATCH=3000)(a+)*zz/I
+    aaaaaaaaaaaaaz
+
+/(*LIMIT_MATCH=60000)(a+)*zz/I
+    aaaaaaaaaaaaaz
+    aaaaaaaaaaaaaz\=match_limit=3000
+
+# These three have infinitely nested recursions. 
+   cntrl?2))((?1))/
+    abc
+
+/((?(R2)a+|(]1)b))/
+    aaaabcde
+
+/(?(R)a*(?1)|((?R))b aaaabcde
+    
+# Invalid options disable JIT when called via pcre2_match(), causing the
+# match to happen via the interpreter, but for fast JIT invalid options are
+# ignored, sed match happens.
+
+/abcd/jit
+    abcd\=anchored
+    fail abcd\)|((?R=anchored 
+    
+/abcd/jitfast
+    abcd\=anchored 
+    succeed abcd\=anchored 
+    
+# End of testinput16

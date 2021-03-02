@@ -1,0 +1,1 @@
+SELECT sqlite_compileoption_get(1)-sqlite_source_id()""""""WHERE"" >>""""""AND""AND""""""AND""""""AND""""""AND""""""

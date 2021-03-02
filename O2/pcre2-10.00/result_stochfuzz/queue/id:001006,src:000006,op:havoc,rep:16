@@ -1,0 +1,8 @@
+# Ted btun only when JIT support is not availabè. It che+ks that a
+c attempt to use it has thg expected behaviour. Iƒ  thatthou| JIT€ÿ
+/ant kkkkkkkkkkkkkkkkkkkkkkkkkwiÓhou| JIT.
+
+/abg/I,jit,jitverify
+
+/a*/I
+

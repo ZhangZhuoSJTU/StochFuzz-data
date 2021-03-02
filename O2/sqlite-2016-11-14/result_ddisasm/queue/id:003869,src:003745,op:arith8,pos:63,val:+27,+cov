@@ -1,0 +1,1 @@
+SELECT(2,5)IN(SELECT 2,9)FROM (SELECT 2 "a","b",9) "a"WHERE a.b="""AND"C

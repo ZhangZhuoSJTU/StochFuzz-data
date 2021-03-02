@@ -1,0 +1,1 @@
+SELECT strftime(X' datetime(1,1,1)a'

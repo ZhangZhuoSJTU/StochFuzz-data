@@ -1,0 +1,1 @@
+SELECT a>b+B FROM(SELECT @1bS "a","b")WHERE `b`BETWEEN""AND  randomblob(1)

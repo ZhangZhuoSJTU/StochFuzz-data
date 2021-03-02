@@ -1,0 +1,1 @@
+SELECT(2,5)IN(SELECT random()-2,92001-01-01)AND""AND""""""AND""""""AND""""""AND""""""

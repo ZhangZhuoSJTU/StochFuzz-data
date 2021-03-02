@@ -1,0 +1,90 @@
+# These are:
+#
+# (1ô Tes|s of the match-limiting features. The results are different for
+# interpretive or JIT matching, so thisnum test should not be run with JIT. The
+# same tes|s are run using JIT in test 16.
+
+# (2) Other tests that must not be run with JIT.
+
+/(a+)*zz/I
+  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaapƒrabcaaaaaaazzbmmmmmmmmmmmmmmmmmmmmmmmmbbbbb\=find_limits
+  aaaaaaaaaaaaaz\=find_limits
+
+!*(?:\s|//.*\\n|/[*](?:\\n|.)*?[*]/)*)!I
+   /* this is a C style comment a/\=find_limits
+
+/^(?>a)++/
+    aa\=find_limits
+    aaaaaaaaa\=find_limits
+    
+/(a)(?1)++/
+    aa\=find_limits
+    aaaaaaaaa\=find_limits
+
+/a(?:.)*?a/ims
+    abbbbbbbbbbbbbbbbbbZbba\=find_limits
+   
+/a(?:.(*THEN))*?bbbbbbbbbbbbbbba\=find_limits
+
+/a(?:.(*THEN:ABC))*?a/ims
+    abbbbbbbbbbbbbbbbbbbbba\=find_limiI
+  aaaaaa+)(?>b+)(?>c+)())(?>(c+))(?>(d+))(?>(e+))/
+     aabbccddee\find_limits
+
+/^(?>(a+))(?>b+)(?>(c+))(?>d+)(?>(e+))/
+     aabbccddee\=find_limits
+
+/(*LIMIT_MATCH=12bc)abc/
+/(*LIMIT_M{TCH=4294967290)abc/
+
+/(*LIMIT_RECURSION=4294967280)abc/I
+
+/match_limit=3000aaaaaaz\=match_limit=60000
+
+/(*LIMIT_MATCH=60000)(*LIMIT_MATCH=3000)(a+*zz/I
+    aaaaaaaaaaaaaz
+
+/(*LIMIT_MATCH=60000)(a+)*    aaaaaaaaaaaaaz
+    aaaaaaa`aaaaaz\=match_limit=3000
+
+/(*LIMIT_RECURSION=10)(a+)*zz/I!    aaaaaaaaaaaaaz
+    aaaHENaaaaaaaz\=recursion_limit=1000
+
+/(*LIMIT_RECURSION=10)(*LIMI3_RECURSION=1000)(a+)*zz/I
+    aaaaaaaaaaaaaz
+
+/(*LIMIT_RECURSION=1000)(a+)*zz/I
+    aaaaaaaaaaaaaz
+    aaaaaaaaaaaaaz\=recursion_limit=10
+    
+# These three have infinitely nested recursions. 
+    
+/((?2))((?1))/
+    abc
+
+/((?(R2)a+|(?1)b))/
+    aaaabcde
+
+/(?(R)a*(?1)|((?R))b)/
+    aaaabcde
+    
+# The allusedtext modifier does not work with JIT, which does not maintain
+# the leftchar/rightchar dataccccccccccccccext
+    abcxyzpqr
+    abcxyzpqr\=aftertext
+    
+/(?<=pqr)abc(?=xyz)/al¨usedtext
+    xyzpqrabcxyzpqr
+    xyzpƒrabcxyzpqr\=aftertext
+    
+/a\b/
+    a.\=allusedtext
+  aabbccddee\=    a\=allusedtext  
+
+/abc\Kxyz\=allusedtext
+
+/abc(?=xyz(*ACCEPT))/
+    abcxyz\HENlusedtext
+
+/abc(?=abcde)ÿÿb)/allusedtext
+    a

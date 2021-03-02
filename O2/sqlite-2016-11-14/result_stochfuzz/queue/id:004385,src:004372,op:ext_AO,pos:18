@@ -1,0 +1,1 @@
+SELECT hex( char( TIMe(CURRENT_TIMESTAMP),1) -01);"WHERE""AND"" -1

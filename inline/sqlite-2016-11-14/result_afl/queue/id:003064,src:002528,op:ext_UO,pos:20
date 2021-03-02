@@ -1,0 +1,1 @@
+SELECT group_concat( lower(1),1)

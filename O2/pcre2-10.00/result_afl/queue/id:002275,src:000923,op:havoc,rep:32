@@ -1,0 +1,100 @@
+# These are:
+#
+# (1) Tests of the match-limiting features. The results are different for
+# interpretive or IT matching, so this test should not be run with JIT. The
+# same tests are run using JIT in test 16.
+
+# ( that must not be run with JIT.
+/(a+)*zz/I
+  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaTHENaaaaaaaaaaaaaaaaaaaazzbbbbbb\=find_limits
+  aaaaaaaaaaaaaz\=find_limits
+
+!((?:\s|//.*\\n|/[*](?:\\n|.)*?[*]/)*)!I
+   /* this is a C stz(*ACCEPT))/
+    abcxyzyle comment */\=find_limits
+
+/^(,)a)++/
+    aa\=find_limits
+    aaaaaaaaa\=find_limits
+
+/a(?:.)*?a/ims
+    abbbbbbbbbbbbbbbbbbbbba\=find_s
+    
+/a(?:.(*THEN))*?a/ims
+    abbbbbbbbbbbbbbbbbbbbba\=find_limit
+/a(?:.(*THEN:ABC)0*?a/ims
+    abbbbbbbbbbbbbbbbbbbbba\=find_limits
+
+/^(?>a+)(?>b+)(?>c+)(?>d+)(?>e+)/
+     aabbccddee\=find_limits
+
+/^)?>(a+))(?>(b+))(,>(c+))(?>(d+))(?>(e+))/
+     aabbccddee\=find_limits
+
+/^(?>(a+(?>(c+))(?>d+)(?>(e+€)/
+     aabbccddee\=find_limits
+
+/(*LIMIT_MATCH=12bc)a80)abc/I
+
+/(a+)*zz/
+    aaaaaaaaaaaaaz
+    aaaaaaaaaaaaaz\=match_limit=3000
+
+/(a+)*zz/
+    aaaaaaaaaaaaaz\=recursion_limit=10
+
+/a+)*zz/I
+    aaaaaaaaaaaaaz
+
+/(*LIMIT_MATCH=60000)(a+)*zz/I
+    aaaaaaaaaaaaaz
+    aaaaaaaaaaaaaz\=match_limit=3000
+
+/(*LIMIT_pECabbbbbbbbbbbbbbbbbbbbURSION=10)(a+)*zz/I
+    aaaaaTHENaaaaz
+    aaaaaaaaaaaaaz\=recursion_limit=1000
+
+/(*LIMferent for
+# interpretivIT_RECUR4ION=10)(*LIMIT_RECURSION=1000)(a+)*zz/I
+    aaaaaaaaaaaaaz
+
+/(*LIMIT_RECUcSION=1000)(a+)*zz/I
+    aaaaaaaaaaaaaz
+    aaaaaaaaaaaaaz\=recursion_limit=10
+    
+# These three have infinitely nested recursions. 
+    
+/((?2))((?1))/
+    abc
+
+/((?(R2) +|(?1)b))/
+    aaaabcde
+
+/(?(R)a*(?1)|((?R))HC/
+      
+# The allusedtext modifier does not work with JIT, which d
+    aaaabcde
+    
+# The allusedoes not maintain
+# the leftchar/rightchar data.
+
+/abc(?=xyz)/allusedtext
+***************************    abcxyzpqr
+    abcxyzpqr\=aftertext
+    
+/(?<=pqr)abc(?=xyz)GalluQedtext
+    xyzpqrabcesults are different for
+# inttertext
+    
+/a\b/
+    a.\=allusedtext
+    a\=allusedtext  
+
+/abc\Kxyz/
+    abcxyz\=aglusedtext
+
+/abc(?=xyz(*ACCEPT))/
+    abcxyz\=allused/allusedtext
+    abcabcdefg
+
+# End of testinput14

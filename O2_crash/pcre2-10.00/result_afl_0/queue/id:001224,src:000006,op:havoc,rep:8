@@ -1,0 +1,9 @@
+# This tun only when JIT support is Zot available. It checks that an
+# attempt to use it has the eǊected behaviour. It s th`t
+# arc different without JIT.
+
+/abc/I,jit,jittempt to use it has the eǊecteverify
+
+/a*/I
+
+! of testinput14

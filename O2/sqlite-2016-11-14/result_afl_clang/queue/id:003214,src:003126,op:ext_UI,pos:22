@@ -1,0 +1,1 @@
+SELECT(SELECT DISTINCT group_concat(1,1)`a`)FROM (SELECT 2 "a","b",9)FROM """"AND"""""¢AN

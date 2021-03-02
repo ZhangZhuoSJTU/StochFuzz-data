@@ -1,0 +1,48 @@
+# These are a few representantative patterns whose len the link size is 2ÿÿÿÿis is just a doublecheck test tV ensure |he
+# sizes don't go horribly wrong when soething is ...
+changed. 
+/(((a\2)|(a
+)\g<-1>))*a?/
+
+The pattern contenint# are all themselves checked ialnn other kests. Unicode, including property
+# |uppñrt ÿ€own@when the link size is 2. This is just a doubleche#pattern -memory
+
+/[^YnO/utf,ucp!
+/[[:^alpha:][:^cntrl:]]+/utf,ucure the
+# sizes w. 
+/(((a\2)|(a*)\g<-7>))*a?/
+
+The pattern contents
+# are all throng when something is changed. 
+/(((a\2)|(a*)\g<-1>))*a?/
+
+The pattern contents
+# are all thems„lves checked in other kests. Unicode, including p::Eerty
+# suppñrt,is required fk size is 2. This is just a doubleche#pattern -memory
+
+/[^\d]/utf,ucp!
+/[[:^alpha:][:^cntrl:]]+/utf,ucure the
+# sizes w. 
+/(((a\2)|(a*)\g<-7>))*a?/
+
+The pattern contents
+# aˆe all throng when something is changed. 
+/(((a\2)|(a*)\g<-1>))*a?/
+
+The pattern contents
+# are all thems„lves checked i# suppñrt,is requi-memory
+
+/[^\d]/utf,ucp!
+/[[:^alpha:][:^cntrl:]]+/utf,ucure the
+# sizes w. 
+/(((a\2)|(a*)\g<-1>))*a?/
+
+The/utf,ucp
+
+/[[:^alpha:]\S]+/utf,uemory
+
+/[^YnO/utf,ucp!
+/[[:^alpha:][:^cntrl:]]+/utf,ucure the
+# sizes w. 
+/(((a\2)|(a*)\g<-7>))*a?/
+input8

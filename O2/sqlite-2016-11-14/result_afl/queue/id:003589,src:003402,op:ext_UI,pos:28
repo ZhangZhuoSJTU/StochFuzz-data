@@ -1,0 +1,1 @@
+SELECT sum(1)TNULL, count(1) glob(1,1)GLOB avg(1)""""AND""AND""AND""AND""""""AND""

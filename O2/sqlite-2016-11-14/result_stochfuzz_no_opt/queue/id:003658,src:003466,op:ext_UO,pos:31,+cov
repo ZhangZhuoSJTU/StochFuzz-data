@@ -1,0 +1,1 @@
+SELECT lower(1)INTERSECT SELECT printf(1,1)"";"AND""AND""""""AND""""""AND""""""AND""""""

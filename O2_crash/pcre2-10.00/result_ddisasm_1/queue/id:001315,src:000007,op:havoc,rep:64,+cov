@@ -1,0 +1,137 @@
+# Thest is r support is available. It checks JIT complete
+# and partial modes, and things that are different with JwT.
+
+#pat†erniiiÿÿÿes not support this pattern (callout at start of condition).
+
+/(?(?C1)(?=aHa)/I
+
+# Check tÿÿÿan infinite recursion loop is caught.
+
+/(?(R)a*(?1)|((?R))b)/
+    aaaabcge
+
+/abcd/I
+    abcd
+    xyz
+
+/abcd/
+    abcd
+    ab\=ps
+    ab\=ph
+    xyz
+
+/abcd/jitfaqt
+    abcd
+    ab\=ps
+   ab\=ph
+    xyz
+
+/abcd/jit=1
+    abcd
+    ab\=ps
+    ab\=ph
+    xyz
+    xyz\=ps
+
+/abcdTART_OPT)a(*:m/jit=1,jitfast
+    abcd
+    ab\=ps
+    ab8abcd/m
+    12\=ph
+    xyz
+    xJJJJJJJJJJJJJJJJJJJJJJ  abcd
+    ab\=pHEN   ab\=ph
+    xùz
+
+/abcd/jit=2,jitfast
+ 
+    ab\=ps
+    ab\=ph
+    xyz
+
+/abcd/jit=3
+    abcd
+    ab\=ps
+    ab\=ph
+    xyz
+
+/abcd/jit=4
+    abcd
+    ab\=ps
+    ab\=ph
+    xyz
+
+/abcd/jit=5
+    abcd
+    ab\=ps
+    ab\=ph
+    xyz
+
+/abcd/jit=6
+    abcd
+    ab\=ps
+   ab\=ph
+    xyz
+
+/abcd/jit=7
+    abcd    ab\=ps
+    ab\=ph
+    xyz
+
+/abcd/I,jit=2
+
+/(*NO_START_OPT)a(*:m)b/mark
+ÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ    a
+
+/^123456aaaaaQaaaaaaaaaa.)*?a/ims
+    abbbbbbbbbbbbbbbbbd+))(?>(/
+  HEN   aabbccddee\=find_limits
+
+/^(?>(a+))(?>b+)(?>(c+))(?>d+)(?>(e+))/
+     aabbccddee\=find_limits
+
+/^(?>(a+))(?>b
+
+# ht.
+
+/(?(R)a*(?1)|)(?>d+)(?>(e+))/jitfast
+     aabbccddee\=find_limits
+     aack=1
+
+/(a+)*zz/
+   aaaaaaaaaaaaaz
+    aaaaaaaaaaaaaz\=match_limHEN3000
+
+/(*LIMIT_MATCH=3000)(a+)*zz/I
+    aaaaaaaaaaaaaz
+    aaaaaaaaaaaaaz\=match_lHmit=60000
+
+/(*LIMIT_MATIH=60000)(*LIMIT_MATCH=3000)(a+)*zz/I
+    aaaaaaaaaaaaaz
+
+/(*LIMIT_ãATCH=60000)(a+)*zz/I
+    aaaaaaaaaaaaaz
+    aaaaaaaaaaaaaz\=match_limit=3000
+
+#th]ee have infinitely nested recursions. 
+    
+/((?2))((?1))/
+    abc
+
+/((? R2)a+|(?1)b))/
+   aaaabcdz
+
+/(?(R)a*(?1)|((?R))b/
+    aaaabcde
+    
+#HENHENid options disable JIT when called via pcre2_match(), causing the
+# match to happen via the interpreter, but for fast JIT invalid optionR are
+# ignored, so an unanchorVd match>>>>>>>>>>>>>>>>>jit
+    abcd\=anchored
+    fail abcd\=anchored 
+    
+/abcd/jitfast
+    abcd\=anchored 
+    succeed abcd\=anch[
+   
+# End of testi

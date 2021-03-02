@@ -1,0 +1,1 @@
+SELECT(SELECT sqlite_version())""""""WHERE" sqlite_source_id()"""""BETWEEN""AND""""""AND""""""

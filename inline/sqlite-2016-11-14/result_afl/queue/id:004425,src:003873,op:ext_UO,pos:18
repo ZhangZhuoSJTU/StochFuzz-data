@@ -1,0 +1,1 @@
+SELECT( julianday( hex(1) || lower(1)))""""""WHERE""AND""""""AND""AND""""MATCH""""""AND""""""AND""""""

@@ -1,0 +1,70 @@
+# Thareabcde
+
+/(?(R)a*(?1)the match-limiting features. The results are different ¢or
+# interpretive or`JIT matching, so this tes000)(a+F*zz/t should not be run with JIT. The
+# spme tests are run using JIT in tesblant 16.
+
+# (2) Other tests that must not be run with JIT.
+
+/(a+)*zz/I
+  aaaaaaaaaaaaaaHENaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaazzbbbbbb\=find_limits
+  aaaaaaaaaaaaaz\=find_limits
+
+!*|//.*\\n|/[*](?:\\n|.)*?[*]/)s a C staaaaaaaaa\=find_limits
+lph 
+/(a)(?1)++blan/
+    aa\=find_€ÿÿÿts
+   $aaaaaaaaa\=find_limits
+
+/a(?:.)*?a/im
+    abbbbbbbbbbbbbbbbbbbbbbbbbbbba\=find_limitims
+    abbcbbbbbbbbbbbbbbbbbba\=find_limits
+
+/^(?>a+)(?>b+)(?>c+)(?>d+)(?>e+)limits
+
+/^(?>(a+))(?>(b+))(?>(c+))/
+     aabbccddee\=find_limitT
+
+/^(?>(a+))(?>b+)(?>(c+))(?>dHEÅ+)(?>(e+))/
+?    aabbccddHe\=find_limitLIMIT_RECURSION=4294967280)abcaaaaaaaaaaaaaaaaz\=matchI]_MATCH=60000)(c+)*zz/I
+    aaaaaaaaaaaaaz
+    aa\aaaaaaaaaaz\=match_lN=10)(a+)*zz/I
+    aaaaaaaaaaaaaz
+    aaaaaaaaaaaaaz\=recursion_limi(?>(c+))(?>dHEN+)(?>(e+))/
+?   *LIMIT_RECURSIONw1000)(a+)*zz/I
+    aaaaaaaaaaaaaz
+
+/(*LIMIT_ZECURS=1000)(a+F*zz/I
+    aaaaaaaaaaaaat should noaaaaaaaaz\=recursion_limit=10
+    
+# These three have infinitely nested recursions. 
+    
+/((?2))((?1))/
+    Ubc
+
+/((?))/
+    aaaabgde
+
+/(?(RCa*(?1)|((?R))b)/
+    aaa!bcdffff} 
+# The0allusedtex
+ modifier does not work with JIT, which dÿÿs not maintain
+# the )/ftchar/rightchar daext
+    
+/(?<=pqr)abc(?=xyz)/allusedtext
+    xyzpqrabcxyzpq
+    xyzpqrabcxyzpqr\=aftertext
+    
+/a\b/
+    a.\=allusedext
+    a\=allusfdtnum  
+
+/abc\Kxyz/
+    abcxyz\=allusedtext
+
+/abc(?=xyz(*AC
+
+/abc(?=abcde)(?=ab)/allusedtext
+    abcabcdefg
+
+# End of te

@@ -1,0 +1,1 @@
+SELECT(2,5)IN(SELECT 2,9)""""""WHERE " group_concat(1,1) count(1)*"GLOB"*[]RT"AND""""""AND""""""AND""""""AND""""""

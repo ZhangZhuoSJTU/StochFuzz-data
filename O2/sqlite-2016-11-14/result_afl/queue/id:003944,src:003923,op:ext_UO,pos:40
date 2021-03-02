@@ -1,0 +1,1 @@
+SELECT(.35)IN( zeroblob(1), zeroblob(1), avg(1));""""""D

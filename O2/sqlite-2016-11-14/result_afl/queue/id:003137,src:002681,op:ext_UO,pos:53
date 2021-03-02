@@ -1,0 +1,1 @@
+SELECT( avg(1),5)IS(SELECT 2,9)""""""WHERE""AND""""""GLOB""""AND""""""

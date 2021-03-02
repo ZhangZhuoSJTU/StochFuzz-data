@@ -1,0 +1,1 @@
+SELECT sqlite_source_id()""WHERE instr( zeroblob(12001-01-01),1)AND""AND""AND""AND""""""AND""""""

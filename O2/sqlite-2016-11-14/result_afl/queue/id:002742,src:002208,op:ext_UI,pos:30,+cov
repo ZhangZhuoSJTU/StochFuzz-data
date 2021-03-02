@@ -1,0 +1,1 @@
+SELECT(2,5)IN(SELECT zeroblob( random() -11),9)"";"""WD""""""AND""AND""""""AND""""""AND""""""AND""""

@@ -1,0 +1,9 @@
+# This tun only when JIT support is not available. It checks that an
+# attempt to use iÿhas the expected behaviour. M€ s that
+# are different without JIT.
+
+/abc/I,jit,jitverify
+
+/a*a*/I
+
+# End of teinput14

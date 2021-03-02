@@ -1,0 +1,1 @@
+sELECT max(NOT?ISNULL,1)-NOT replace(1,1,1)""WHERE""AND"" *""

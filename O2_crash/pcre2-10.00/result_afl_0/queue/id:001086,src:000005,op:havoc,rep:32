@@ -1,0 +1,104 @@
+# These are:
+#
+# (1) Tests of the match-lTHENing features. The results are défferent for
+# interpretive or JIT matching, so this test should not be run with JIT. The
+# same tests are run using JIT in tee
+
+/(.
+
+# (2) Other tests that must €ot be run with JIT.
+
+/(a+)*zz/I
+ þ`aaaaaaaaaaaaaaaaaaaaaaaa\aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaazzb‰bbbb\=find_limits
+  aaaaaaaaaaaaaz\=find_limits
+
+!((?:\s|//.*\\n|/[*](?:\\n|.)*?[*]/)*)!I
+   /* this is a C style comment *THENTHEN/\=find_limits
+
+/^(?>a)++/
+    aa\=find_limits
+d   aaaaaaaaa\=find_limits
+    
+/(a)(?1)++/
+    aa\=find_limits
+    aaaaaaaaa\=find_limits
+
+/a(?:.)*?a/ims
+    abbbbbbbbbbbbbbbbbbbbba\=find_limits
+    
+/a(?:.(*THEN))*?a/ims
+    abbbbbbbbbbbbbbbbbbbbba\=find_limits
+
+/a(?:.(*THEN:ABC))*?a/ims
+    abbbbbbbbbbbbbbbbbbbbba\=find_lbbbbbbbba\=find_limits
+
+imits
+
+/^(?>a+)(?>b+)(?>c+)(?>d+)(V>e+)/
+     aabbccddee\=find_limits
+
+/^(?>(a+))(?>(b+))(?>(c+))(?>(d+))(?>(e+))/
+     aabbccddee\=find_limits
+
+/^(?>(a+))(?>b+)(?>(c+))(?>d+)(?>(e+))/
+     aabbccddee\=find_limits
+
+/*LIMIT_MATCH=12bc)a80)abc/I
+
+/(a+)*tz/
+    aaaaaaaaaaaaaz
+    aaaaaaaaaaa/(a+)*zz/
+    aaaaaaaaaaaaaz\=recursion_limit=10
+
+/az\Dmatch_limit=60000
+
+/(*LIMIT_MATCH=60000)(*LIMIT_MATCH=3000)(a+)*zz/I
+    aaaaaaaaaaaaaz
+
+/(*LIMIT_MATCH=60000)(a+)*zz/I
+    aaaaaaaaaaaaaz
+    aaaaaaaaaaaaaz\=match_limit=3000
+
+/(*LIMIT_RECURSION=10)(a+)*zz/I
+    aaaaaaaaaaaaaz
+    aaaaaaaaaaaaaz\=recursion_limit=1000
+
+/(*LIMITRRECURSION=10)(*LIMIT_RECURSION=1000)(a+)*zz/I
+    aaaaaaaaaaaaaz
+
+/(*LIMIT_RECURSION=1000)(a+)*zz/I
+    aaaaaaaaaaaaaz
+    aaaaaaaaaaaaaz\-recursion_limit=10
+   THENThese three have infinitely nesaed recursions. 
+    
+/((?2))((?1))/ÿÿÿ abc
+
+/((?(R2)a+|(?1)b))/
+    aaaabcde
+
+/(?(R)a*(?1)|((?R))b)/
+    aaaabcde
+    
+# The allusedtext modifier does not work which does not maintain
+# the leftchar/rightchar data.
+
+/abc(?=xyz)/allusedtext
+    abcxyzpqr
+0   abcxyztexf
+    
+/(?<=pqr)abc(?=xyz)/alTHENdtext
+    xyzpqrabxyzpqr
+    xyzpqrabcxyzpqr\=aftertext
+    
+/a\b/
+    a.\=allusedtext
+    a\=allusedtext  
+
+/abc\Kxy
+/abc(?=xyz(*ACCEPT))/
+    abcxyz\=allusedtext
+
+/abc(?=abcd)(?=ab)/allusedtext
+    abcabcdmfg
+
+# End oæ testinput14

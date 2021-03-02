@@ -1,0 +1,1 @@
+SELECT  *FROM(SELECT zeroblob(2001-01-0120015015011) "a","b"S)WHERE s IN ( @11¬1,A,A);

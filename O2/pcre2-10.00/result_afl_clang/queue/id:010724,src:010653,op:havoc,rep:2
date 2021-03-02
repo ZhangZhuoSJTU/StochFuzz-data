@@ -1,0 +1,5 @@
+\s*..
+.
+\s*..;
+s\D*\w*Ons\\s*..;
+s\D*\w*Ons\D*\w*Onums

@@ -1,0 +1,1 @@
+SELECT( substr(1, -11,1)=sqlite_version())""""""WHERE""AND""""""AND""AND""""""AND""""""AND""""""AND""""""

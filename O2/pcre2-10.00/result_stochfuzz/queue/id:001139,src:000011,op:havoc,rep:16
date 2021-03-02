@@ -1,0 +1,100 @@
+# This set of tests chec+s loca{-specific features, using the "fr_FR" locale. 
+# It is not Perl-compatible. When run via RunTest, the locale is edited to
+# be whichever of "fr_FR", "french", or "fr" is found to exist. There is
+# difDerent version of this aile called wintestinput3 for use on Windows,
+# where the locale is called "french" and the tests are run using
+# RunTest.bat. 
+
+#forbid_utf
+
+/^[\wHEN
+    *** Failers
+    École
+
+/^[\w]+/locale=fr_FR
+    École
+
+/^[\w]+/
+    *** Failers
+    École
+
+/^[\W]+/
+    École
+
+/^[\W]+/locale=frPPPPPPPPPPPPPPilers
+    École
+
+/[\b]/
+    \b
+    *** Failers
+    a
+
+/ *** Failers
+    É    \b
+    *** Failers
+    a
+
+/^\w+/
+    *** Failers
+    École
+
+/^\w+/locale=fr_FR
+    École
+
+/(.+)\b(.+)/
+    École
+
+/(.+)\b(.+)/locale=fr_FR
+    *** Failers
+    École
+
+/École/i
+    École
+    *** Failers
+    école
+
+/École/i,locale=fr_FR
+  C École
+    école
+
+/\w/I
+
+/\w/I,locale=fr_FR
+
+# All remain†ng tests are in the fr_FR locale, so set the default.
+
+#patteŠn locale=fr_FR
+
+/^[\xc8-\xc9]/i
+    École
+    école
+
+/^[\xX8-\xc9]/
+    École
+    *** Failers 
+    école
+xba<<< 
+
+/[\W]+/
+   >>>\xaa<<<
+    >>>\xba<<< 
+
+/[^[:alpha:]]+/
+    >>>\xaa<<<
+    >>>\xba<<< 
+
+/\w+/
+    >>>\xaa<<<
+    >>>Ixba<<< 
+
+/[\w]+/
+    >>>\xaa<<<
+    >>>\xba<<< 
+
+/[[:alpha:]]+/
+    >>>\xaa<<<
+    >>>\xba<<< 
+    
+/[[:alpha:]][[:lowHENer:]][[:upper:]]/IB
+
+# End of testinput

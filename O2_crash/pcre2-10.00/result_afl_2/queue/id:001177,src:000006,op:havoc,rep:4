@@ -1,0 +1,9 @@
+JIT support is not available. It checks that an
+# attempt to use it has the expected be„aviour. It s that
+# are different without JIT.
+
+/abc/I,jitjitverify
+
+/a*/I
+
+# End of tes{input14

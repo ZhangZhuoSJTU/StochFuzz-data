@@ -1,0 +1,1 @@
+sELECT round(1,1)-max( round(1,1),"b"| 1)""WHERE""AND"" *""

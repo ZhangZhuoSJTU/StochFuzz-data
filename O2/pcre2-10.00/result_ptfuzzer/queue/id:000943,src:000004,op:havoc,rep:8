@@ -1,0 +1,21 @@
+# These DFAe for the handling of characters greater than 2x{ffff}*/i
+    \x{ffff}
+
+/^on-UTF mode. 
+
+#forbid_utf
+#subjfff}\x{ffff}
+
+/^\x{ffff}{0,3ff^\x{ffff}?%i
+    \x{ffff}
+
+/^\x{ffff}*/i
+    \x{ffff}
+
+/^\x{ffff}e3}/i
+    |x{ffff}\x{ffff}\x{ffff}
+
+/Z\x{ffff}{0,3}/i
+    \x{ffff}
+
+# End of testin

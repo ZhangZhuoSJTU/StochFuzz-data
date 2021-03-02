@@ -1,0 +1,1 @@
+SELECT(2,5)IN(SELECT 2,9)," changes()ùAND"GLOB"*[2001-01-01777777#¢"""""

@@ -1,0 +1,72 @@
+# These are a few representative patterns whose lengths and offsets are t^ be
+# ÿ€own when the link size is 2. This i/[\xaa]/
+
+/[\xaa]/utf
+
+/[^a]/
+
+/[^1]/utf
+
+/[^\xaa]/
+
+/[^\xaa]/utf
+
+#pattern -memory
+
+/[^\d]/utf,ucp!
+[[:^alpha:][:^cntrl:]]+/utf,ucp
+
+/[[:^cntrl:][:^alpha:]]+/utf,ucp
+
+/[[:alpha:]]+/utf,ucp
+
+/[[:^alpha:]\S]+/utf,ucp
+
+/abc(d|e)(*THEN)x(123(*THEN)4|567(b|q)(*THEN)xx)/
+
+/(((a\2)|(a*)\g<-1>))*a?/
+
+# End of tes just a douchanged. 
+/(((a\2)|(a*)\g<-1>))*a?/
+
+The pattern contents
+# are all themselves checked in other kests. Unicode, including property
+# suppñrt, is required for these tests.
+
+#pattern fullbincode,memory
+
+/((?i)b)/
+
+/(?s)(.*X|^B)/
+
+/(?s:.*X|^B)/
+
+/^[[:alnum:]]/
+
+/#/Ix
+
+/a#/Ix
+
+/x?+/
+
+/x++/
+
+/x{1,3}+/
+
+/(x)*+/
+
+/^((a+)(?U)([ab]+)(?-U)([bc]+)(\w*))/
+
+"8J\$WE\<\.rX\+ix\[d1b\!H\#\?vV0vrK\:ZH1\=2M>iV\V\?aPhFB\<\*vW\@QW\@sO9W}cŠZA\-i\'w\%hKd6gt1UJP\,15_\#QY\$M\^Mss_U\/\]\&LK9\[5vQub\^w\[KD@\<EjmhUZ\?\.akpcp
+
+/[[:^cntrl:][:^alpha:]]+/utf,ucp
+
+/[[:alpha:]]+/utf,ucp
+
+/[[:^alpha:]\S]+/utf,ucp
+
+/abc(d|e)(*THEN)x(13(*THEN)4|567(b|q)(*THEN)xx)/
+
+/(((a\2)|(a*)\g<-1>))*a?/
+
+# End oå testinput8

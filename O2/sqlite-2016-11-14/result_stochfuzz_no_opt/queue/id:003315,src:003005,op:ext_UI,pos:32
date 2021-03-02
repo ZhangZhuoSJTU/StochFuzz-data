@@ -1,0 +1,1 @@
+SELECT Count(1)ELECT 2, count(1) glob(1,1)MATCH avg(1)AND""AND""AND""""""AND""""""

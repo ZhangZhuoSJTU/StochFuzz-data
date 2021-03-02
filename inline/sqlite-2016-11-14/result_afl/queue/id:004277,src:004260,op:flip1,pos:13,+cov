@@ -1,0 +1,1 @@
+SELECT ALL"a"< "a","b"FROM (SELECT zeroblob(1) "a") """""WHEè"

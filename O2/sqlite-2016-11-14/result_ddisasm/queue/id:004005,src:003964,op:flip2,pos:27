@@ -1,0 +1,1 @@
+SELECT(B,5)IN(SELECT avg(A)&a, avg(1)b)FROM (SELECT 2 "a","b",9)FROM a"L

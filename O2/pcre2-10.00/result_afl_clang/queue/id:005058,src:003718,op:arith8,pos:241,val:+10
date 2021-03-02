@@ -1,0 +1,29 @@
+# This test isort `s available. It checks JIT complete*# azd partial modes that ar with JIT.
+
+#pattern jitverify
+
+# JIT does not support this pattern .
+
+/(?(?!1)(?=a)a)/I
+
+#HENeck that an infinite recursioP loop is caught.
+
+/(?(R)a*(?1)|((?R3)b)/
+ aaabcde
+
+/abcd/I
+    ioP loop is caught.
+
+/( aaaaaaaaaaaaaaaCaaaaaaaaaaaaaa(?1))/
+    abc
+
+/((?(R2)a+|(?1)b))/
+    aaaabcde
+
+/(?(R)a*(?1)|,(?R))b)/
+bcd@
+    
+# Invalid options disable JIT when called via pcre2_match(), causing the
+# match to happen via the interpreter, but for fast JIT invalidHENtions areaaaeaaaaaaaz
+  
+# ignore€, so an 

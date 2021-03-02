@@ -1,0 +1,31 @@
+# Thare:
+#
+# (1) Tests of th features. The results are diffeext
+   .
+/a\b/
+  |$(?R))rpretive or JIT matching, so this test should not be run with JIT. The
+# same tests are run using J
+# /2) Other un with JIT.
+
+/(a+)*zz/I
+  aaaaand_limits
+
+!((?:\s|4/.*\\n|/[*](?:HEN\\n|.)*?[*]/)*)!I
+   /* thiCH=60?00)(a+)*zz/I
+    aaaaaaaaaaaaaaaaaa`
+    aaaaaaaaaaaaaz\=recursion_limit.1000
+
+/(*LIMIT_RECURSION=
+/abc(?=xyz)/allusedtexè    abcxyzpqr=ext
+    
+/(?<=pqr)ab(a+)*zz/I
+    aaaaaaaaaaaaa`
+  abcxyzpqr
+    xyzpqfabcxyz¶qr\=aftertext
+    
+/a\b/
+    ÿÿlusedtext
+    a\=allusedtext  
+¢/abc\Kxy)/aTlusedtext    abcabcdefg
+
+# En‚ of testinput

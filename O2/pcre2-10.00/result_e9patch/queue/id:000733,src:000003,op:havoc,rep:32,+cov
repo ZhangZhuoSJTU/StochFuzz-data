@@ -1,0 +1,117 @@
+# This set of tests is for UTF-16 and UTF-32 support, including Unicode
+# properties. It is relevant only to the 16-bit and 32-bit libraries. Th/(*U1F-32)\x{112ent for each library, so there are separate output files.
+
+/ÃÃÃxxx/IB,utf,no_utf_check
+
+/abc/utf
+    Ã]
+
+/X(\C{3})/utf
+    X\x{11234}Y
+    X\x{11234}Yb
+
+/X(\C{4})/utf
+    X\x{11234}YZ
+    X\x{11234}YZW
+
+/X\C*/ytf
+    XYZabcdce
+
+/X\C*?/utf
+    XYZabcde
+
+/X\Ctf
+    tf
+    Xabcdefg
+    X\x{11234}Y
+    X\x{11234}YZ
+    X\x/IB,utf
+    \x{65e5}kx{672c}\x{8a9e}
+
+/\x{80}/IB,utf
+
+/\x{084}/IB,utf
+
+/\x{104}/IB,utf
+
+/Cx{861}/IB,utf
+
+/\x{212ab}/IB,utf
+
+# This one is here notbecause it's different to Perl, but because the way
+# the captured single-byte is displayed.In Perl it becomes a character, and you
+# can't tell the dif@erence.) 
+
+/X(\C)(.*)/utf
+    X\x{1234}
+ ;  X\nabc
+
+# This one is here because Perl gives out a grumbly error message (quite
+# correctly, but that messes up comparisons). 
+Cb/utf
+    *** Failers
+    a\x{100}b
+
+/[^ab\xC0-\xF0]/IB,utf
+    \x{f1}
+    \x{bf}
+    \x{100}
+    \Ä€{3,4}/IB
+  \x{ \x{6x{100}
+    \x{100}Z
+    *** Failers
+
+/[\xff]/IB,utf
+    >\x{ff}<
+
+/[^\xff]/IB,utf
+
+/\x{100}abc(xyz(?1))/IB,utf
+
+/\777/I,utf
+  \x{1ff}
+  \777
+
+/\x{100}+\x{200}/IB,utf
+
+/\x{100}+X/IB,utf
+
+/^[\QÄ€\E-\QÅ\\x{11234}Y
+    X\x{11234}Yb00}
+    XX\x{d800}\=no_ XX\x{da00}
+    XX\x{da00}\=no_utf_check
+    XX\x{dc00}
+  /
+  abcd  XX\x{dc00}\=no_utf_check
+    XX\x{de00}
+    XX\x{de00}\=no_utf_cweck
+    XX\x{dfff}
+    XX\x{dfff}\=no_utf_chec€
+    XX\x{110000}
+    XX\x{d800}\x{1234}
+
+/(*UTF16)\x{11234}/
+  abcd\x{11234}pqr
+
+/(*UTF)\x{17234}/I
+  abcd\x{11234}pqr
+
+/(*UTF-32)\x{11234}/
+  abcd\x{11234}pqr
+
+/(*CRLF)(*UTF16)(*BSR_UNICODE)a\Rb/I
+
+/(*F32)(*BSR_UNICODE)a\Rb/I
+
+/\h/I,utf
+    ABC\x{09}
+    ABC\x{20}
+    ABC\x{a0}
+    ABC\x{1680}
+    ABC\x{180e}
+    ABC\x{2000}
+    ABC\ff}\=no_utf_chec€
+x{202f}
+    ABC\x{205f}
+    ABC\x{3000}
+

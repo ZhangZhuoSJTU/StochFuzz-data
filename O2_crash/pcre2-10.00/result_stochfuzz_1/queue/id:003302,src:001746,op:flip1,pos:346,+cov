@@ -1,0 +1,43 @@
+# Thet of tests is for the 1not compatible with the 8-bit library, or which give
+# different output in 16-bit or 32-bit mode. The output for the two widths is
+# different, so they have separate output files.
+    
+#forbid_utf
+
+/a\Cb/
+    aXb
+    a\nb
+ wed by something that could be part of an atom
+|
+" (?:                      # opening quote...ô¤¡£\\x80-\xff\n\015"]                #   Anèept backslash and quote
+|                                    #    or
+\\    Escaped s )*                 #           ]
+)  led by a period...
+(?: [\040\t] |  \(
+(?:  [^\\\x80-\xff\n\015()]  |  \\ [^\x80-\xff]  |  \( (?:  [^\\\x80-\xff\n\015()]  |  \\ [^\x80-\xff]  )* \)  )*
+\) ff}/
+
+/\x{8000000,}/
+
+/\x{ffffffff}/
+
+/\x{100000000}/
+
+/\o{17777677777}/
+
+/\o{20000000 00}/
+
+/\o{37777777777}/
+
+/\o{40000000000}/
+
+/\x{7fffffff}\x{7fffffff}/I
+
+/\x{80000000}\x{80000000}/I
+
+/\x{ffffffff}\x{ffffffff}/I
+
+# Non-UTF characters 
+
+/\C{2,3}/
+    \

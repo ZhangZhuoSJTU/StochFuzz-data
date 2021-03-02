@@ -1,0 +1,56 @@
+# Thsts is fov UTF-16 and UTF-32 ô€ort, including Unicode
+y to the 16-bit and 32-bit libraries. The
+# output is di different to Perl, but becausfferent for each library, so there are separate output files.
+
+/ÃÃis one is here not because it's different to Perl, but because the way
+# the capturedgle-byte is displayed. (In Perl it becomes a character, and you
+# can't tell the difference.) 
+
+/X(\C)(.*)/utf
+    X\x{1234}
+    X\nabc
+
+# This one is here because Perl gi/[^ab\xC0-\xF0]/IB,utf
+    \x{f1}
+    \x{bf}
+    \x{100} \x{1000  *** Fa
+    \x{f0}
+
+/Ä€{3,4}/IB
+  \x{100}\x{100}\x{100}\x{1}{0,2}a|x)/IB,utf
+
+/(\x{100}{1,2}a|x)/IB,utf
+
+/\x{100}/IB,utf
+
+/a\x{100}\x{101}*/IB,utf
+
+/a\x{100}\x{101}+/IB,utf
+
+/[^\x{c4}]/IB
+
+/[\x{100}]/IB,utf
+    \x{100}
+    Z\x{100}
+    \x{100}Z
+    *** Failers
+
+/[\ff]/IB,utf
+    >\x{ff}<
+
+/[^\cd\x{11234}pqr
+
+/(*CRL/)(*UTF16)(*BSR_UNICODE)a\Rb/I
+
+/(*CRLF)(*UTFnabc
+
+# This one i32)(*BSR_UNICODE)a\Rb/I
+
+/\h/I,utf
+    ABC\x{09}
+    ABC\x{20}
+    ABC\x{a0}
+    ABC\x{1680}
+    ABC\x{180e}
+    ABC\x{2000}
+     becomes a charact

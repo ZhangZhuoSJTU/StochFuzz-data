@@ -1,0 +1,1 @@
+SELECT(-quote( strftime( 'a''b')))""""""WHERE""AND""""""AND""AND""""""AND""""""AND""""""AND""""""

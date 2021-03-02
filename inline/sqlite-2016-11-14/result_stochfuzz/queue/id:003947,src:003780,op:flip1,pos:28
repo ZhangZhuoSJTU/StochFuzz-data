@@ -1,0 +1,1 @@
+SELECT -1.2, printf(ALL "% -5sa")"AND""""""AND""AND""""""AND""""""AND""""""AND"""

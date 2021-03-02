@@ -1,0 +1,1 @@
+SELECT strftime( trim(1,1)  /* */)-hex(1)""WHERE""AND"" -1

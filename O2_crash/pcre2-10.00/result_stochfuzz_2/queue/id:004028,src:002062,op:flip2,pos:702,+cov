@@ -1,0 +1,77 @@
+# This set of tests is for the 16-bit and 32-bit libraries' basic (non-UTF)
+# features that are not compatible with the 8-bit library, or which give
+# different output in 16-bit or 32-bit mode. The output for the two widths is
+# different, so they have separate output files.
+    
+#forbid_utf
+
+/a\Cb/
+    aXb
+    a\nb
+  
+/[^\x{c4}]/IB
+  
+/\x{100}/I
+
+/  (?: [\040\t] |  \(
+(?:  [^\\\x80-\xff\n\015()]  |  \\ [^\x80-\xff]  |  \( (?:  [^\\\x80-\xff\n\015()]  |  \\ [^\x80-\xff]  )* \)  )*
+\)  )*                    # opening quote...
+[^\\\x80-\xff\n\015"]                #   Anything except backslash and quote
+|                     #    or
+\\ [^\x80-\xff]           #   Escaped something (something !=0}
+	?\H+/I
+  CR)
+)* "e
+)  )* # further okay, if led by a period
+(?: [\040\t] |  \(
+(?:  [^\\\x80-\xff\n\015()]  |  \\ [^\x80-\xff]  |  \( (?:  [^\\\x80-\xff\n\015()]  |  \\ [^\x80-\xff]  )* \)  )*
+\)  )*  @  (?: [\040\t] |  \(
+(?:  [^\\\x80-\xff\n\015()]  |  \\ [^\x80-\xff]  |  \( (?:  [^\\\x80-\xff\n\015()]       #           ]
+)                     #   . .further okay
+)*
+
+(?:  (?: [\040\t] |  \(
+(?:  [^\\\x80-\xff\n\015()]  |  \\ [^\x80-\xff]  |  \( (?:  [^\\\x80-\xff\n\015()]  |  \\ [^\x80-\xff]  )* \)  )*
+\)  )*  ,  (?: [\040\t] |  \(
+(?:  [^\\\x80-\xff\n\015()]  |  \\ [^\x80-\xff]  |  \( (?\xff\n\015()]  |  \\ [^\x80-\xff]  )* \)  )*
+\)  )*  @  (?: [\040\t] |  \(
+(?:  [^\\\x80-\xff\n\015()]  |  \\ [^\x80-\xff]  |  \( (?:  [^\\\x80-\xff\n\015()]  |  \\ [^\x80-\xff]  )* \)  )*
+\)  )*    (?:
+[^(\0\n\015()]  |  \\ [^\x80-\xff]  )* \)  )*
+\)  )*   (?:
+[^(\040)<>@,;:".\\\[\]\000-\037\x80-\xff]+    # some number of atom characters...
+(?![^(\040)<>@,;:".\\\[\]\000-\037\x80-\xff]) # ..not followed by something that could be part of an atom
+|   \[                         # [
+(?: [^\\\x80-\xff\n\015\[\]] |  \\ [^\x80-\xff]  )*    #    stuff
+\]                        #           ]
+)                     #   ...further okay
+)*
+#       address spec
+(?: [\040\t] |  \(
+(?:  [^\\\x80-\xff\n\015()]  |  \\ [^\x80-\x    \x{2027}\x{2030}\x{2028}\x{2029}
+    \x09\x0e\x84\x86\x85\x0a\x0b\x0c\x0d
+
+/[\v\x{dc00}]+/IB
+    \x{2027}\x{2030}\x{2028}\x{2029}
+    \x09\x0e\x84\x86\x85\x0a\x0b\x0c\x0d
+
+/\V+/I
+    \x{2028}\x{2029}\x{2027}\x{2030}
+    \x85\x0a\x0b\x0c\x0d\x09\x0e\x84\x86
+
+/[\V\x{d800}]+/
+    \x{2028}\x{2029}\x{2027}\x{2030}
+    \x85\x0a\x0b\x0c\x0d\x09\x0e\x84\x86
+
+/\R+/I,bsr=unicode
+    \x{2027}\x{2030}\x{2028}\x{2029}
+    \x09\x0e\x84\x86\x85\x0a\x0b\x0c\x0d
+
+/\x{d800}\x{d7ff}\x{dc00}\x{dc00}\x{dcff}\x{dd00}/I
+    \# Check character ranges 
+
+/[\H]/IB
+
+/[\V]/IB
+
+# End of testinpu

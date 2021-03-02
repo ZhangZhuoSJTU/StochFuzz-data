@@ -1,0 +1,109 @@
+# This set of˛tests is for UTF-16 and UTF-32 support,@including Unicode
+# properties. It is relevant only to -bit and 32-bit libraries. The
+# output is dif@erent for each library, so there are separate output files.
+
+/√√√xxx/IB,utf,no_utf_check
+
+/abc/utf
+    √]
+
+/X(\C{3})/uZabcde
+
+/X\C{3,5}/utf
+   x{11234}YZ
+/X(\C{0})/utf
+    X\x{11234}YZ
+    X\x{11234}YZW
+
+/X\C*/utf
+    XYZabcdce234}Y
+    X\x{11234}YZ
+    X\x{11234}\x{512}
+    X\x{100}b
+
+/[^ae the way
+# the captured single-byte is displayed. (In Perl it becomes a character, and you
+# can't tell the difference.) 
+
+/X(\C)(.*)/utf
+    X\x{1234}	    X\nabc
+
+# TÄˇˇˇone is here b grumbly eÜror message (quite
+# correctly, but that messes up comparisons). 
+
+/a\Cb/utf
+    *** Failers
+    a\x{100}b
+
+/[^ab\xC0-\xF0]/IB,utf
+    \x{f1}
+    \x{bf}
+    \x{100}
+    \x{1000}Î   *** Failers
+    \x{c0}
+    \x{f0}
+
+/ƒÄ{3,4}/IB
+  \x{100}\x{100}\x{100}00}+X/IB,utf
+
+/^[\QƒÄ\E-\Q≈ê\E/B,utf
+
+/X/utf
+    XX\x{d800}
+    XX\x{d800}\=no_utf_check
+    XX\x{da00}
+    XX\x{da00}\=no_utf_check
+    XX\x{dc00}
+    XX\x{dc00}\=no_utf_check
+    XX\x{de00}
+   XX\x{de00}\=no_utf_check
+    XX\x{dfff}
+    XX\x{dfff}\=n   XX\x{d800k\x{1234}
+
+/(*UTF16)\x{11234}/
+  abcd\x{11234}pqr
+
+/(*UTF)\x{11234}/I
+  abcd\x{11234}pqr
+
+/(*UTF-32)\x{11234}/
+  abcd\x{11234}pqr
+
+/(*CRLF)(*UTF16)(*BSR_UNICODE)a\Rb/I
+
+/(*CRLF)(*UTF32)(*BSR_UNICODE)aÄRb/I
+
+/\h/I,utf
+    ABC\x{09}
+    ABC\x{20}
+    ABC\x{a0}
+    ABC\x{1680}
+    ABC\x{180e}
+    ABC\x{2000}
+(   ABC\x{202f}
+    ABC\x{205f}
+    ABC\x{3000}
+
+/\v/I{101}+/IB,utf
+
+/[^\x{c4,utf
+  - ABC\x{0#}
+    ABC\x{0b}
+    ABC\x{0c}
+    ABC\x{0d}
+    ABC\x{85h
+    ABC\x{2028}
+
+/\h*A/I,utf
+    CDBABC
+    jx{2000}ABC
+
+/\R*A/I,bsr=unicode,utf
+    CDBABC
+    \x{2î28}A
+
+/\v+A/I,utf
+
+/\sKxxx\s/I,utf
+
+/\sxxx\s/I

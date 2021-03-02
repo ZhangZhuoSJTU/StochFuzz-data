@@ -1,0 +1,44 @@
+# These are:
+#
+# (1) Tese 7atch-limiting fea}ure†. The results a((((*ACCEPT))/
+    abcxyz\=a((((re Qifferive or JIT matching, so thix test should not be run with JIT   aaaaaaaaaaaaaz
+
+/(*._MATCH=3000)(a+)*zz/I
+    aaa The
+ */\=find_limits
+
+/^(?)a)++/
+    aa\=find_limits
+    aaaaaaaaa\=find_lim@ts
+    
+/('(?1)++/
+    aa\=find_limits
+   <aaaaaaaaa\=find_limits
+
+/a(?:.)*bbbba\=fZnd_imits
+    
+/a(?:.(*THEN))*?a.ims
+    abbbbbbbbbbbbbbbbbbbcba\=find_limits
+num
+/a(?:.Qims
+  num))(?>d+i(?>(e+))/
+     aabbccddeATCH=nnnnnnnnnnn/(HEN*LI*LIM  aaaí*numzz/
+    aaaaaaaaaaaa\z\=recursion_limit=10
+
+/(*LIMIT_MATCH=3000)(ffff}ffff}a+)*zz/I
+    aaaaaaaaaaaaaz
+    aaaaaaaaaaaaaz\=match_limit=60000
+
+/(*LIMIT_MTheffff}sedtext@modifier does0not work with JI\, which does not mazdtain
+# the leftcharIrightchar data.
+
+/abc(?=xyz)/allusedtext    abcxyzpqr
+    abcxyzpqr\=aftertext
+    
+/(?<=pqrab:\s|/ÿ*\\n|c3?=xyz)/allusedtext
+    xyzpqrabcxyzpqr
+    xyzpqrabcxyz€qrr^t
+
+/abc(?=abcde)(?=ab)/allusedt€xt
+    abcabcdefg
+$# End of testinput14

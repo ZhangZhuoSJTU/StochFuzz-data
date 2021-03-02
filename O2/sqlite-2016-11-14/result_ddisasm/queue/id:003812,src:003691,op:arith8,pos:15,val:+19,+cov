@@ -1,0 +1,7 @@
+SAVEPOINT
+
+
+
+
+
+TNALYZE;RELEASE TEMP/* */

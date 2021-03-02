@@ -1,0 +1,1 @@
+SELECT(2,9)IN(SELECT 2,9)""""""WHERE"" >= last_insert_rowid()AND""""""AND""""""AND""""""

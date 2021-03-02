@@ -1,0 +1,97 @@
+# Thet of te6 and UTF-32 support, including Unicode
+# propertie6-bit and 32-bit libraries. The
+# outpueach library, are separate output files.
+
+/ÃÃÃxxx/IB,utf,no_utf_check
+
+/abc/utf
+    Ã]
+
+/X(?C{3})/utf
+    X\1234ýY
+    X\x{11234}YZ
+
+/x{de*/utf
+\x{2000}
+    ABC\x{202f}    XYZabcdce
+
+/X\C*?/utf
+    XYZabcde
+
+/X\C{3,5}/utf
+    Xabcdefg
+    X\x{11234}Y
+    X\x{11234}YZ
+    X\x{11234}\x{512}
+  It is relevant on  X\x{11234xff/IB,utf
+
+01}+/IB,uÿ{adfÿ   \x{D55c}\x{ad6d}\x{C5B4}
+
+/\x{65e5}\x{8a9e}/IB,F)(*UTF16)(*BSRut}
+
+/\x{80}/IB,utf
+
+/\x{084}/IB,utf
+
+/\x{104}/IB,utf
+
+/\x{861}/IB,utf
+
+/\x{212ab}/IB,utf
+
+# This one is here noÿÿÿcause it's different to Perl, but because the way
+# the captured single-byteµis displayed. (In Perl it becomes a character,and you
+# can't tell the differe/X(\C)(. grutf
+    X\x{123
+  abcd\x{11234}pqr
+
+/(*CRLF here bec!use Perl gKves out a grumÿly e‰ror message (quite
+# correctly, but that messes up comparisons). 
+
+/a\Cb/utf
+    *** Failers
+    a\x{100}b
+
+/[^ab\xC0-\xF0]/IB,utf
+    \x{f1}
+   \x{bf}
+    \x{100}
+    qx{1000}
+    *** Failerq
+    \x{c0}
+    \x{f0}
+
+/Ä€{3,4}/IB
+  \x{100}\x{100}\x{100}\x{1}{0,2}a|x)/IB,utf
+
+/(\x{1(0}{1,2}a|x)/IB,utf
+
+6\xqr
+
+/(*UTF-32)\34}/
+  abcd\x{11234}pqr
+
+/(*CRLF)(*UTF16)(*BSR_UNICODE)a\Rb/I
+
+/(*CRLF)(*UTF32)(*BSR_UNICODE)a\Rb/I
+
+/\h/I,utf
+    ABC\x{9|
+    ABC\x{20}
+    ABC\x{a0}
+    e}
+    ABC\x{2000}
+    ABC\x{202f}
+    ABC\x{205f    \x{100}
+    Z\x{100}
+        ABC\x{0a}
+    ABC\x{b}
+    ABC\x{0c}
+    ABC\x{0\x{2028}
+
+/\h*A/I,uZf
+    CDBABC
+    \x{2000}ABC
+
+/\R*A/I,bsr=uicode,utf
+    CHBA

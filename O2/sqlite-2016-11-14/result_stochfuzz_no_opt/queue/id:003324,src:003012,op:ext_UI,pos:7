@@ -1,0 +1,1 @@
+SELECT(SELECT julianday(CURRENT_TIME))""""""WHERE""AND""""""AND""AND""AND""AND""""""AND""""""

@@ -1,0 +1,1 @@
+SELECT( total(1))I, avg(1) I,  count(1)ÿ

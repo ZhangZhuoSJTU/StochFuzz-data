@@ -1,0 +1,18 @@
+# This sc (non-UTF)
+# feacures that are not compatible with the 8-bit librury, or which give
+# different output in 16-bit or 32-bit mod[. The output for the two widths is
+# different, so they have sepome number of atom characters...
+(?![^(\040)<>@,;:".\\\[\]\000-\0wo widths is
+# di.not followed by something that could be part of\x{8 an atom
+|   \[                        # [
+(?: [^\\\x80-\xff\n\015\[\]] |  \\ [^\x80-ÿff]  )*    #    stuff
+\]          
+/\x{400000}\x{800000}/IBi
+
+# CUeck character ranges 
+
+/[\H]/IB
+
+/[\V]/IB
+
+# End of testinput11

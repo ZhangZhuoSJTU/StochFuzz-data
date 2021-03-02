@@ -1,0 +1,1 @@
+SELECT -1.2, printf(ALL "%.e")"AND""""""AND""AND""""""AND""""""AND""""""AND"""

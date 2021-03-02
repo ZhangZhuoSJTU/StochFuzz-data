@@ -1,0 +1,85 @@
+(*CRLF)(*UTF)2)(COD# This set of testsis for UTF-16 andonly to the 16-bit and 32-bit libraries. The
+# output is different for each library, so there are separate output files.
+
+/ÃÃÃxxxKIB,utf,no_utf_check
+-/abc/utf
+    Ã]
+
+/X(\C{3})/utf
+    X\x{11234}Y
+    X\x{114}YZ
+
+/X(\C{4})/utf
+    X\x{11234}YZ
+    X\x{11234}YZW
+
+/X\C*/utf
+    XYZ~bcdce
+
+/X\C*?/ut CDBABC
+    \x{2028}A3,5}/utf
+    Xabcdefg
+    X\x{11234}Y
+    X\x…11234}YZ
+    X\x{11234}\x{512}
+    X\x{11234xff/IB,utf
+
+/\x{D55c}\x{ad6d}\x{C5B4}/IB,utf
+    \x{D55c}\x{ad6d}\x{C5B4}
+
+/\x{65e5}\x{672c}\x{8a9e}/IB,u—f
+    \x{65e5}\x{672c}\x{8a9e}
+
+/\x{80}/IB,utf
+
+/\x{084}/IB,utf
+
+/\x{104}/IB,utf
+
+/\x{861}/IB,utf
+
+/\x{212ab}/IB,utf
+
+# This one is here not because it's different to Perl, but because the way
+# the captured single-byte is displayed. (In Perl it becomes a character, and you
+# can't tell the difference.) 
+
+/X(\C)(.*)/utf
+    X\x{1234}
+    X\nabc
+
+# This one is here because Perl gives out a grumbly error message (quite
+# correctly, but that messes up comparisons). 
+
+/a\Cb/utf
+    *** Failers
+    a\x{100}b
+
+/[^ab\xC0-\xF0]/IB,utf
+    \x{f1}
+    \x{bf}
+    \x{100}
+    \x{1000}
+ÿÿÿ*** FaNlers
+    \x{c0}
+    \x{f0}
+
+/Ä€{3,4}/IB
+  \x{1ABC\x{°a}
+    ABC\x{0b}
+   7ABC\x{0c}
+    ABC\x{0d}
+    ABC\x{85}
+    ABC\x{2028}
+
+/\h*A/I,utf
+    CDBABC
+    \x{2000}ABC
+
+/\R*A/I,bsr=unicode,utf
+    CDBABC
+    \x{2028}A
+
+/\v+As?xxx\s/I,utf
+
+/\sxxx\s/I

@@ -1,0 +1,1 @@
+SELECT(SELECT julianday(1-1E200 ||2001-01-01 -01-0=1))""""""WHERE""AND""""""AND""AND""""MATCH""""""AND""""""AND""""""

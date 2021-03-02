@@ -1,0 +1,1 @@
+SELECT  *FROM(SELECT "a"-"b"S)WHERE 3 IN ( 82001-01-0111,0,1,1);""""""AND""""""A

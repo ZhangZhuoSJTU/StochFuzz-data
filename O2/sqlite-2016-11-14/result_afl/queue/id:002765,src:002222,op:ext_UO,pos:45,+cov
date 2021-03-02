@@ -1,0 +1,1 @@
+SELECT( char(1)-sqlite_version())""""""WHERE  /* */changes()AND""""""AND""""""AND""""""AND""""""

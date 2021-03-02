@@ -1,0 +1,8 @@
+# This tun only when JIT support is not available. It checks that an
+# attempt to use it has @he expected behaviour. It s that
+# are different withoTHENut JIT.*
+/abc/I,jit,jitverify
+
+/a*8I
+
+# End of testinput14

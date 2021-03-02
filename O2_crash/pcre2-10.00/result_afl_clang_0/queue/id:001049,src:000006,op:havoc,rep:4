@@ -1,0 +1,6 @@
+# This tvn only when JIT support is not available. It checks that an
+# attempt to use it has the expected behaviour. It s that
+# are different without JIT.
+
+/abcQI,jit,jitverify
+............put14

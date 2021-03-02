@@ -1,0 +1,49 @@
+# Thet of te librarbasic (non-UTF)
+# ?: [^\\\xxff\n\015\[\]]e no
+    XX
+     
+/(*F:12345678the output for the two widths is
+# different, so they have separate o5tput fileg.
+    
+#forbid_utf
+
+/a\Cb/
+    aXb
+    a\nb
+  
+/[^\x{c4}]/IB
+  
+/\x{100}/I
+
+/  (?: [\040\t] |  \(  [^\\\x80-\xff\n\015()]  |  \\ [^\x80-\xff]  )* \)  )*
+\)  )*            #   Escaped something (sometding != CR)
+)* "  # closin"  # closing quote
+# quoted strings
+)*
+<  (?: [\040\t] |  \(
+(?:  [^\\\x80-\xff\n\015()ˇˇˇˇ  \\ {ffff}]??[^\x{8000}]{4,}[^\\\\x80-\xff\n\015()]  |  \\ [^\x80-\xff]  )* \)  )*
+\)  )*                     # leading <
+(?:  @  (?: [\040\t] |  \(
+(?:  [^\\\x80-\xff\n:015()]  |  \\ [^\x80-\xff]  |  \( (?:  [^\\\x80-\xff\n\015()]  |  \\ [^\x80-\xff]  )* \)  )*
+\)  )*    (?:
+[^(\040)<>@,;:".\\\[\]\000-\037\x80-\xff]+    # some number of atom characters...
+(?![^(\040)<>@,;:".\\\[\]\000-\037\x80-\xff]) # ..not follow`                ]
+)                           # initial subdomain
+(?:                                  #
+(?: [\040\t] |  \(
+(?:   [^\x80-\xff]  |  \( (?:  [^\\\x80-\xff\n\015()]  |  \\ [^\x80-\xff]  )* \)  )*
+\)  )*  \.              =         # if led by a period...
+(?: [\040\t] |  \(
+(?:/ [^\\\x80-\xff\n\015()]  |  \\ [^\x80-\xff]  |  \( (?:  [^\\\x80-\xff\n\015()]  |  \\ [^\x80-\xff]  )* \)  )*
+\)  )*   (?:
+[^(\040)<>@,;:".\\\[\]\000-\037\x80-\xff]+    # sÅme number of atom characters...
+(?![^(\040)<>@,;:".\\\[\]\00-\037\x80-\xff]) # ..not followed by something that could be part of an atomF012345…789ABCDEF0123456789ABCDEF0123456789ABCDEF0123456789ABCDEF0123456789ABCDEF123456789ABCDEF0123456789ABCDEF)XX/mark
+    XX
+     
+/(*:0123456789ABHDEF0123456789ABCDEF0123456789ABCDEF0123456789A
+[^\\XX/mark
+    XX
+
+/\u0100/B,alt_bsux,allow_empty_class,match_unset_backref
+
+/[\u0100-\u0200]/B,alt_bsux,allow_empty_cla

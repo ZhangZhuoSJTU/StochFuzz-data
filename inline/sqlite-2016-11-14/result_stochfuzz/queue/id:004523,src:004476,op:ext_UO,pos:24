@@ -1,0 +1,1 @@
+sELECT lower( julianday( hex(1)))""WHERE""AND"" *""

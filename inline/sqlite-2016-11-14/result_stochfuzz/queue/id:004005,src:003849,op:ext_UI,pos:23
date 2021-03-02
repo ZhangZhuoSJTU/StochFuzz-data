@@ -1,0 +1,1 @@
+SELECT+2 FROM(SELECT @1 "a","b"bS)WHERE" sqlite_compileoption_get(1)"""""AND""

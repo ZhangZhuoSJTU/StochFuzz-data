@@ -1,0 +1,1 @@
+SELECT(2,5)IN(SELECT avg(1)GLOB"b",9)""""""WHERE""AND""""""AND""AND""""""AND""""""AND""""""AND""""""

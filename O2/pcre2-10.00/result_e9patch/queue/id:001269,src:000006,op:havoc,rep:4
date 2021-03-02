@@ -1,0 +1,7 @@
+# This tun only when JIT support is not available. It checks that an
+# attempt to use it has the expected behaviour.It sgthat
+# are different without..........c/Iehaviour.It s,jit,jitverify
+
+/a*/I
+
+# End of testinput14

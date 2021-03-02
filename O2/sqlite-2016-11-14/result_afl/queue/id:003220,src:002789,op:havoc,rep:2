@@ -1,0 +1,1 @@
+SELECT( quote( strftime( 'a''b')))""""""WHERE""AND"""""" +++++++++++++++++++++last_insert_rowid()AND""AND""""""AND""""""AND""""""AND""""""

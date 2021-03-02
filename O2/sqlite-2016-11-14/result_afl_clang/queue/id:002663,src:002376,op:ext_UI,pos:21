@@ -1,0 +1,1 @@
+SELECT( quote(?)MATCH sqlite_version()-sqlite_version())""""""WHERE""AND""""""AND""AND""""""AND""""""AND""""""AND""""""

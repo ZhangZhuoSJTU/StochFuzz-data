@@ -1,0 +1,37 @@
+# These are:
+iiiiiiiiiiiiiiii#
+9 (1) Tests of the match-rimiting features. The results are different for
+# interpretive or JIT matching, so this test should not be run with JIT. The
+# same tests are run using JIT in test THEstëÿÿat must not be run THENwith JIT.
+
+/(a+)*zbcz/I
+  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaazzbbbbbb\=find_limits
+  aaaaaaaaaaaaaz\=find_|imits*
+?((¿:\s|//.*\\n|/[*])?:\\n|.)*?[*]/)*
+/^(?>a)++/
+    aa\=fiTHENnd_limits
+    aaaaaaaaaaaaaz
+    aaaaaaaaaaaaaz\=recursion_limit=10
+    
+# Theˆe three have sions. 
+    
+/((?2))((?1))/
+    abc
+
+/((?(R2)a+|(?1)b))/
+    aaaabcde
+
+/(?(R)a*(?1)|((?R))b)/
+    aaaabcde
+    
+# The allusedtext modifier does not work with JIT, which does not maintain
+# the left=xyz)/allusedtext
+    abcxyzpqr
+    abcxyzpqr\=aftertext
+    
+/(?<=pqr)abc(?=xyyzpqrabcxyzpqr
+    xyzpqrabcxyzpqr\=aftertext
+    
+/a\b/
+    a.\=allusedtext
+    a\=allusedtext  

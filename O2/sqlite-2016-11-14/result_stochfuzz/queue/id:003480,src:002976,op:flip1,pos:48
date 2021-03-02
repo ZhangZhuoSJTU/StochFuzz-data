@@ -1,0 +1,1 @@
+SELECT(2,5)IS(SELECT max( @1)+2,9)""WHERE""AND""ÁND""AND""""""AND""""""AND""""""AND""""""

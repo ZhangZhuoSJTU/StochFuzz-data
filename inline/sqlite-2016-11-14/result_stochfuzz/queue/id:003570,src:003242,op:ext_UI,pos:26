@@ -1,0 +1,1 @@
+SELECT -1.2, printf(ALL "%2001-01-01Ya")"AND""""""AND""AND""""""AND""""""AND""""""AND"""

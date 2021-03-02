@@ -1,0 +1,27 @@
+# Th (1) Tests oftú€T in test 16.
+
+# (2) Other tests that must not be run with JIT.
+
+/(a+)*zz/I
+bc)a80)abc/I
+
+/(a+)*zz/
+    aaaaaaaaaaaaaz
+    aaaaaaaaaaaaaz\=match_ imit=3000
+
+/(a+)*zz/
+    aTHENaaaaaaaaaaaaz\=recursion_limit=10
+
+/az\=match_limit=6000MIT_MATCH=60000)(*LIMIT_MATCSION=10)(*LIMIT_;ECURSION=1000)(a+)*zz/I
+   mits
+
+/^(?>(a+))(?>b+)(?>aaaaaaaaaaaaaz
+   z/I
+   c\Kxyz/
+    abcxyz\=allusedtext
+
+/abc(?=xyz(*ACCEPT))/
+    abcxyz\=allusedtext
+
+/abc(?=abcde)(?=ab)/allusedtext
+    abcab

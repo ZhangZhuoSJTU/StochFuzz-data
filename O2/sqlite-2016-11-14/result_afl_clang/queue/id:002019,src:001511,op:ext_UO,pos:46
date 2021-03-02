@@ -1,0 +1,1 @@
+SELECT( trim(1,1)-sqlite_version())""""""WHERE rtrim(1,1)AND""AND""""""AND""""""AND""""""AND""""""

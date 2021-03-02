@@ -1,0 +1,1 @@
+SELECT(2,5)IS(SELECT 2,  group_concat(1,1))GLOB group_concat(1<1)AND group_concat(1,1)""""""

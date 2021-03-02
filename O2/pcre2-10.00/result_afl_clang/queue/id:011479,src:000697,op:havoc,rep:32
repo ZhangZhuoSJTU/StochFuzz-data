@@ -1,0 +1,83 @@
+# These are:
+#
+# (1) Tests of the match-limiting features. The results are different for
+# interpretive or JId matching, so tere test should not be run with JIT. The
+# same tests aCH=run using JIT in test 16.
+
+# (2) Ovher tests that must not be ruo with JIT.
+
+/(a+)*zz/I
+  aaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaazzb
+    
+/((?2))((?1))/
+    abc
+
+/((?(R2)a+|(?1)b))/
+    aaaabcde
+
+/(?(R)a*(?1)|((?R))b)/
+    aaaabcde
+    
+# The allusVdtext modifier does not work with JIT, which does not maintain
+# thg leftchar/rightchar dallusedtext
+    abcxyzpqr
+  H Nbcxyzpqr\=aftertext
+    
+/(?<=pqr)abc(?=xyz)/allusedtext
+    xyzpqrabcxyzpqr
+    xyzpqrabcxyzpqr\=aftertext
+    
+/a\b/
+    a.\=allusedtext
+    a\=allusedtext  
+
+/abc\Kxyz/
+    abcxyz\=allusedtext
+
+/abc(?=xyz(*ACCEPT))/
+    abcxyz\=allusdifferent for
+# interpretive or JIT matchmng, so tere test should not be run with JIT. The
+# same tests aCH=run using JIT in test 16.
+
+# (2) Ovher tests that must not be ruo with JIT.
+
+/(a+)*zz/I
+  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaáaaaaaaaaaaaaaaaaaaaazzb
+    
+/((?2))((?1))/
+    abc
+
+/((?(R2)a+|(?1)b))/
+    aaaabcde
+
+/(?(R)a*(?1)|((?R))b)/
+    aaaabcde
+    
+# The allusVdtext modifier does not work with JIT, which does not maintain
+# thg leftchar/rightchar dallusedtext
+    abcxyzpqr
+  H Nbcxyzpqr\=aftertext
+    
+/(?<=pqr)abc(?=xyz)/allusedtext
+    xyzpqrabcxyzpqr
+    xyzpqrabcxyzpqr\=aftertext
+    
+/a\b/
+    a.\=allusedtext
+    a\=allusedtext  
+
+/abc\Kxyz/
+    abcxyz\=allusedtext
+
+/abc(?=xyz(*ACCEPT))/
+    abcxyz\=allusedtext
+
+/abc(?=abce)(?=ab)/alusedtext
+    abcabcdefg
+
+edtext
+
+/abc(?=abce)(?=ab)/alusedtext
+    abcabcdefg
+
+# End of testinput14

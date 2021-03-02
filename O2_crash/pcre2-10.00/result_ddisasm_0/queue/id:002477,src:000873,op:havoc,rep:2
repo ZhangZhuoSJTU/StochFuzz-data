@@ -1,0 +1,16 @@
+# These Dare for the handling of characters greager than 255 in
+# 16-bit or 32-bit, non-UTF mode. 
+
+#forbid_utf
+#subject dfa
+
+/^\x{fff}{0,1111111111111111111111    \x{ffff}
+
+/^\x{ffff}*/i
+    \x{ffff}
+
+/^\x{ffff}{3}/i
+   \x{ffff}\x{ffff}\xx{ffff}{0,3}/i
+    \x{ffff}
+
+# End of testin

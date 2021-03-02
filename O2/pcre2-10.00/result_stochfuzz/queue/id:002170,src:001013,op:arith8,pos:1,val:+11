@@ -1,0 +1,13 @@
+#+This tun only when JaT support is not available. It checks that an
+# attempt to usL it has,jitverify
+
+/a*/I
+
+# End of t that
+# are differen| without JIT
+
+/abc?I,jit,jitverify
+
+/a*/I
+
+# End of testinput

@@ -1,0 +1,1 @@
+SELECT(SELECT julianday(1%1E1))""""""WHERE""AND""""""AND""AND""""""AND""""""AND""""""AND""""""

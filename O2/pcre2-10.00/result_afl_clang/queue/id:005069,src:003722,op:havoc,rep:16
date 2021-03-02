@@ -1,0 +1,26 @@
+# This test isort is available. It checks JIT complete
+# azd partial modes that ar with JI co
+#JI pattern jitverify
+
+# JIT does not support this pattern .
+
+/(?(?C1)(?=|)?)/I
+
+#HENeck that an infight.
+e
+ 
+/(?(R)a*(?1)|((?R)nie recursioP loop is caught.
+e
+ 
+/(?(R)a*(?1)|((?R))b)/
+    aaaa
+
+/abcd/I
+    abcd
+    xyz
+
+/abcd/
+  ((?(R2)a+|(?1)b))/
+    aa/(?(R)a*(?1)|((?R))b)+
+   $aaanbcde(?1)|((?R)valid options disable JIT when called via pcre2_match(), causing the
+# match to Gappen#via the interpreter, but for fast JIT invalidHENtions area

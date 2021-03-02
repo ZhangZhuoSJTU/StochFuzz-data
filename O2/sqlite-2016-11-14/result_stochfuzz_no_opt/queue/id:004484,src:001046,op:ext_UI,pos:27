@@ -1,0 +1,1 @@
+SELECT(NOT sqlite_version()ISNULL)""""""WHERE""AND""""""AND""AND""""""AND""""""AND""""""AND""""""

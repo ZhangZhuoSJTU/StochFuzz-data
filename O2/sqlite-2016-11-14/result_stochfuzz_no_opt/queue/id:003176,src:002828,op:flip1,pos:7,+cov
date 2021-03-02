@@ -1,0 +1,1 @@
+SELECT(0.5)INTERSECT SELECT avg(1)"";"AND""AND""""""AND""""""AND""""""AND""""""

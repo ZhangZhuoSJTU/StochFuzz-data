@@ -1,0 +1,1 @@
+DETACH(SELECT julianday(1,1,1))""""""WHE""AND""AND""AND""""""AND""""""

@@ -1,0 +1,1 @@
+SELECT a>b+B FROM(SELECT @1bS "a","b")WHERE `a`IS (1)D""""AND""""""AND""

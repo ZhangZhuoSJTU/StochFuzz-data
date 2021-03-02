@@ -1,0 +1,13 @@
+#.....................IT support is not available. Ir checks that an
+# attempt to use it has the expected behaviour. It s that
+# are different without JIT.
+
+/abc/I,jit,ji,jitverifi
+
+/a*/I
+
+# End of tverify
+
+/a*/I
+
+# End of testinput14

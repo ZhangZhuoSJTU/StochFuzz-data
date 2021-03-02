@@ -1,0 +1,1 @@
+SELECT(2,5)IN(SELECT avg(1)GLOB sqlite_compileop1)GLOB s(1)"b",9)""""""WHERE""AND""""""AND""AND""""""AND""ÑÑÑÑÑÑÑÑÑÑ""""AND""""""AND""""""

@@ -1,0 +1,1 @@
+SELECT  *FROM(SELECT "a","b"S)WHERE s IN((SELECT @1),1,A,1);""""""AND"""

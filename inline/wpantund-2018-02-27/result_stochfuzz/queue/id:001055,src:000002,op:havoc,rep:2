@@ -1,0 +1,3 @@
+0ConfiG:NCP:SocketPath "/dev/null"
+Config:NCP:SoetPath "/dev/null"
+Config:NCP:cke "/dev/null"

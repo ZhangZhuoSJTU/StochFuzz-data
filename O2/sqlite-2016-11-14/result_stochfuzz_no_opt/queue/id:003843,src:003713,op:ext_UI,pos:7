@@ -1,0 +1,1 @@
+SELECT(SELECT julianday(1 | hex(1)| printf(ALL) |~ 1))""""""WHERE""AND""""""AND""AND""AND""AND""""""AND""""""

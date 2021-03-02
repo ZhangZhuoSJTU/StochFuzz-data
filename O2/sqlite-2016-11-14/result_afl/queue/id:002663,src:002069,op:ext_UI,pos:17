@@ -1,0 +1,1 @@
+SELECT replace( " sqlite_compileoption_get(1)a",1,1)""""""WHERE""AND""""""AND""AND""AND""AND""""""AND""""""

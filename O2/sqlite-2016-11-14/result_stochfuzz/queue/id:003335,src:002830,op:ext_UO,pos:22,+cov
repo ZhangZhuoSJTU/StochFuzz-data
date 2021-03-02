@@ -1,0 +1,1 @@
+SELECT DISTINCT lower( ltrim(1,1))"AND""""""AND""AND""""""AND""""""AND""""""AND"""

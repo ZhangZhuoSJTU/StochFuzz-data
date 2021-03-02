@@ -1,0 +1,1 @@
+SELECT(2,5)IN(SELECT 2,9)""""""WHERE""NOT glob(1,1)"""AND""""""AND""""""

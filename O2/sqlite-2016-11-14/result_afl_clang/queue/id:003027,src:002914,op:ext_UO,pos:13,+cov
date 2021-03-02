@@ -1,0 +1,1 @@
+SELECT(SELECT `a`)FROM (SELECT 2 "a","b",9)FROM """AND+"""""AND"""""¢AN

@@ -1,0 +1,1 @@
+SELECT( julianday(1 || zeroblob(-20012001501-01-01-01) +1,1))""""""WHERE""AND""""""ÁND""

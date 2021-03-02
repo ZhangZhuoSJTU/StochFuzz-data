@@ -1,0 +1,6 @@
+\s...
+\s*...
+s\s*...
+s\D*\w*Ons\D*\w*8nums\2*\w*O.
+s.
+\D*\w*Ons\D*\w*8nums\D*\w*\5*\w*Ons\D*\w*8nums\Dns\D*\w*8nums

@@ -1,0 +1,1 @@
+SELECT( upper(12001-0 || 1.01)-sqlite_version())""""""WHERE""AND""""""AND""AND""""""AND""""""AND""""""AND""""""

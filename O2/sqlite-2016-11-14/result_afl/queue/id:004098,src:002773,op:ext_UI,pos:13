@@ -1,0 +1,1 @@
+SELECT( char(CURRENT_DATE -11)MATCH-sqlite_version())""""""WHERE""AND""""""AND""AND""""""AND""""""AND""""""AND""""""

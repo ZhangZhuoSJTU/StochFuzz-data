@@ -6,7 +6,7 @@ The experiment data of StochFuzz paper
 + `O2_crash`: The time-to-discovery experiment using the normal Google FTS
 + `inline`: The experiments using the crafted Google FTS with data forcely inlining
 + `ijon`: The IJON experiment
-+ `retrowrite`: The experiment using the fuzzing benchmark from RetroWrite
++ `retrowrite`: The experiment using the fuzzing benchmark from RetroWrite paper
 
 Under each working directory (e.g., O2/freetype2-2017/), there are multiple subdirectories named with the `result_` prefix. These subdirectories are the fuzzing metadata.
 

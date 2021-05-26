@@ -1,8 +1,8 @@
 # StochFuzz-data
 
-Experiment data of StochFuzz paper
+The experiment data of StochFuzz paper
 
-+ `O2`: The experiments using the Google FTS
++ `O2`: The experiments using the normal Google FTS
 + `O2_crash`: The time-to-discovery experiment using the normal Google FTS
 + `inline`: The experiments using the crafted Google FTS with data forcely inlining
 + `ijon`: The IJON experiment
